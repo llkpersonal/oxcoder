@@ -5,9 +5,9 @@ using System.Text;
 using OXCoder.IBLL;
 using OXCoder.DBModel;
 using OXCoder.IDAL;
-using OXCoder.DALFactory;
+using OXCoder.DALImpl;
 
-namespace OXCoder.BLLFactory
+namespace OXCoder.BLLImpl
 {
     public class UserService:IBLL.IUserService
     {

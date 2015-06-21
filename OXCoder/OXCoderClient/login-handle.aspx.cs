@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using OXCoder.DBModel;
 using OXCoder.IBLL;
-using OXCoder.BLLFactory;
+using OXCoder.BLLImpl;
 namespace OXCoderClient
 {
     public partial class login_handle : System.Web.UI.Page

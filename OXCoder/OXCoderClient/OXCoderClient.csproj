@@ -111,9 +111,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLLFactory\BLLFactory.csproj">
+    <ProjectReference Include="..\BLLFactory\BLLImpl.csproj">
       <Project>{2147c21f-4342-4911-b4b5-fa65357c0c68}</Project>
-      <Name>BLLFactory</Name>
+      <Name>BLLImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
       <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>

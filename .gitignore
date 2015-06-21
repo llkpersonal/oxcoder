@@ -1,3 +1,4 @@
 # file can be ignored.
 OXCoder/*/obj/Debug
 OXCoder/*/bin/Debug
+*.cache
