@@ -28,7 +28,7 @@ namespace OXCoder.DALImpl
             DBModel.OXUserDataContext context = new OXUserDataContext();
             try
             {
-                context.ox_user.InsertOnSubmit(new ox_user { email = email, pwd = pwd });
+                context.ox_user.InsertOnSubmit(new ox_user { email = email, pwd = pwd, role = Convert.ToInt16(role) });
                 context.SubmitChanges();
                 return true;
             }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73776104-F082-40E9-B1B6-9EC4D14382EA}</ProjectGuid>
+    <ProjectGuid>{A4E28DB2-FB4C-4661-9F46-59A03756AB92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.IDAL</RootNamespace>

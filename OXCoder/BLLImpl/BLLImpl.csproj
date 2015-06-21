@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1841ABD9-C033-466E-9244-9A9C96B7AE5D}</ProjectGuid>
+    <ProjectGuid>{2147C21F-4342-4911-B4B5-FA65357C0C68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.BLLImpl</RootNamespace>

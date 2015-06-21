@@ -95,8 +95,9 @@
 											<li id="li-person" class=""><a href="./signup.html#j2-profile" data-toggle="pill">企业</a></li>
 										</ul>
 										<form action="./register-handle.aspx" method="post" id="defaultForm" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-											<input type="hidden" id="regflag" name="regflag" value="1">
-											<div class="form-group has-success">
+											<input type="hidden" id="regflag" name="regflag" value="0">
+											
+                                            <div class="form-group has-success">
 												<div class="col-xs-12">
 													<div class="input-group">
 														<span class="input-group-addon"><i class="fa fa-envelope"></i></span> <input type="text" id="login-email" name="email" class="form-control input-lg" placeholder="请输入常用邮箱地址" data-bv-field="email">
@@ -185,10 +186,10 @@
 	<script type="text/javascript">
 	    $(document).ready(function () {
 	        $("#li-work").click(function () {
-	            $("#regflag").val(1);
+	            $("#regflag").val(0);
 	        });
 	        $("#li-person").click(function () {
-	            $("#regflag").val(2);
+	            $("#regflag").val(1);
 	        });
 
 	        $('#defaultForm').bootstrapValidator({

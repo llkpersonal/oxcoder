@@ -56,7 +56,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="signin.aspx">登录</a></li>
-					<li><a href="http://www.oxcoder.com/signup.htm">注册</a></li>
+					<li><a href="register.aspx">注册</a></li>
 				</ul>
 			</div>
 		</div>

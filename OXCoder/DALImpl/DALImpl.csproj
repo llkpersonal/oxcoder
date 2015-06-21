@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4DDEB32D-C2FD-4371-BE64-1283C85A4DA8}</ProjectGuid>
+    <ProjectGuid>{0881CC30-6E88-46B9-9DDC-495ED1571C27}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.DALImpl</RootNamespace>
