@@ -2,3 +2,8 @@ E:\Procedures\C#\OXCoder\OXCoderClient\bin\OXCoderClient.dll
 E:\Procedures\C#\OXCoder\OXCoderClient\bin\OXCoderClient.pdb
 E:\Procedures\C#\OXCoder\OXCoderClient\obj\Debug\OXCoderClient.dll
 E:\Procedures\C#\OXCoder\OXCoderClient\obj\Debug\OXCoderClient.pdb
+Y:\code\csharp\oxcoder\OXCoder\OXCoderClient\bin\OXCoderClient.dll
+Y:\code\csharp\oxcoder\OXCoder\OXCoderClient\bin\OXCoderClient.pdb
+Y:\code\csharp\oxcoder\OXCoder\OXCoderClient\obj\Debug\OXCoderClient.csprojResolveAssemblyReference.cache
+Y:\code\csharp\oxcoder\OXCoder\OXCoderClient\obj\Debug\OXCoderClient.dll
+Y:\code\csharp\oxcoder\OXCoder\OXCoderClient\obj\Debug\OXCoderClient.pdb
