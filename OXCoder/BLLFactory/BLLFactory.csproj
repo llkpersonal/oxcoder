@@ -7,7 +7,7 @@
     <ProjectGuid>{2147C21F-4342-4911-B4B5-FA65357C0C68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLLFactory</RootNamespace>
+    <RootNamespace>OXCoder.BLLFactory</RootNamespace>
     <AssemblyName>BLLFactory</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

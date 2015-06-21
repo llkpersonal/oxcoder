@@ -7,7 +7,7 @@
     <ProjectGuid>{0881CC30-6E88-46B9-9DDC-495ED1571C27}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DALFactory</RootNamespace>
+    <RootNamespace>OXCoder.DALFactory</RootNamespace>
     <AssemblyName>DALFactory</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
