@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>个人用户管理</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="../css/xreset.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/holder.js"></script>
+  </head>
+
+  <body class="fontChange">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" style="color:#ffffff">OXcoder后台</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"/><span class="fontChange"> admin</span></a></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"/><span class="fontChange"> 退出</span></a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li style="margin-left:20px; font-size:15px;margin-bottom:10px"><strong>用户管理</strong></li>
+            <li class="active"><a href="#">
+                <span class="glyphicon glyphicon-dashboard" aria-hidden="true"/><span class="fontChange"> 个人用户管理</span></a></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"/><span class="fontChange"> 企业用户管理</span></a></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"/><span class="fontChange"> 企业入驻审批 <span class="badge">42</span></span></a></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"/><span class="fontChange"> 邀请码管理</span></a></li> 
+          </ul>
+          <ul class="nav nav-sidebar">
+              <li style="margin-left:20px; font-size:15px;margin-bottom:10px"><strong>挑战管理</strong></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-expand" aria-hidden="true"/><span class="fontChange"> 挑战信息管理</span></a></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-calendar" aria-hidden="true"/><span class="fontChange"> 统计挑战题目管理</span></a></li>
+            
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li style="margin-left:20px; font-size:15px;margin-bottom:10px"><strong>练习场管理</strong></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-play" aria-hidden="true"/><span class="fontChange"> 练习场题目管理</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li style="margin-left:20px; font-size:15px;margin-bottom:10px"><strong>收入</strong></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"/><span class="fontChange"> 收入管理</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li style="margin-left:20px; font-size:15px;margin-bottom:10px"><strong>通知</strong></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"/><span class="fontChange"> 通知管理</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li style="margin-left:20px; font-size:15px;margin-bottom:10px"><strong>管理员</strong></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"/><span class="fontChange"> 管理员管理</span></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
+            <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>总注册用户</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+             
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>日活跃用户</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+              
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>周活跃用户</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+            
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>月活跃用户</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+            
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>昨日注册用户</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+              
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>昨日接受挑战次数</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstyle">
+               
+                <h2 style="margin-top:33px;">1200</h2>
+                <h4>昨日做挑战用户</h4>   
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder divstylefont">
+                统计：1.每周用户数走势图 2.每周登录用户数走势图 3.每周接受挑战数量走势图 4.每日做挑战数量走势图 
+                5.用户编程方向统计(接受挑战方向的饼图) 6.用户薪资统计(接受挑战薪资的饼图) 7.绑定各个社交账号比率的饼图     
+            </div>
+            </div>
+          <div id="divform" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3 control-label"><p class="contractname">关键词：</p></label>
+                  <div class="input-group col-sm-4 input-group-sm">
+                    <input name="contractName" type="text" class="form-control" placeholder="姓名、邮箱">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </span>
+                  </div><!-- /input-group -->
+              </div>
+
+        <div class="bs-example selftable">
+      <table class="table table-hover table-condensed table-sm">
+        <thead>
+          <tr id="table1">
+            <th>#</th>
+            <th>姓名</th>
+            <th>年龄</th>
+			<th>性别</th>
+            <th>手机</th>
+            <th>邮箱</th>
+            <th>身价</th>
+            <th>级别</th>
+			<th>技术类型</th>
+            <th>接受挑战数量</th>
+            <th>绑定社交账号</th>
+			<th>更新时间</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>18</td>
+			<td>中</td>
+            <td>8008208820</td>
+            <td>123@126.com</td>
+            <td>8888</td>
+			<td>1</td>
+            <td>java</td>
+            <td>3</td>
+            <td>weibo,CSDN,github</td>
+			<td>2015-05-20 19:44:30</td>
+			
+            <td><button class="btn btn-warning btn-sm">
+                 屏蔽</button>
+                <br/>
+                <button class="btn btn-success btn-sm">
+                详情（数据统计）
+                </button>
+                <br/>
+                <button class="btn btn-warning btn-sm">
+                Rock</button>
+                <button class="btn btn-warning btn-sm">
+                时间机器
+                </button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    <nav class="navposition">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+            <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </div><!-- /example -->
+    
+  </div>      
+            
+            
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
