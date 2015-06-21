@@ -7,11 +7,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B2D3F366-3E78-4FA1-9C5E-1315E8C9EA6D}</ProjectGuid>
+    <ProjectGuid>{2701C40A-7F1F-475B-9336-85AE09B99139}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OXCoder.OXCoderClient</RootNamespace>
+    <RootNamespace>OXCoderClient</RootNamespace>
     <AssemblyName>OXCoderClient</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
@@ -57,21 +57,43 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HomePage.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="index_files\banner3.png" />
+    <Content Include="index_files\Bitmap3.png" />
+    <Content Include="index_files\bootstrap-filestyle.js" />
+    <Content Include="index_files\bootstrap-select.min.js" />
+    <Content Include="index_files\bootstrap-switch.min.js" />
+    <Content Include="index_files\bootstrap.min.js" />
+    <Content Include="index_files\jquery-1.11.0.min.js" />
+    <Content Include="index_files\jquery.sparkline.min.js" />
+    <Content Include="index_files\languages.png" />
+    <Content Include="index_files\pic.gif" />
+    <Content Include="index_files\summernote.min.js" />
+    <Content Include="index_files\website6.png" />
+    <Content Include="index_files\website7.png" />
+    <Content Include="index_files\wlogo_sm.png" />
     <Content Include="login-handle.aspx" />
+    <Content Include="register-handle.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="signin.aspx" />
+    <Content Include="signin_files\01.png" />
+    <Content Include="signin_files\bootstrap-filestyle.js" />
+    <Content Include="signin_files\bootstrap-select.min.js" />
+    <Content Include="signin_files\bootstrap-switch.min.js" />
+    <Content Include="signin_files\bootstrap.min.js" />
+    <Content Include="signin_files\bootstrapValidator.js" />
+    <Content Include="signin_files\jquery-1.11.0.min.js" />
+    <Content Include="signin_files\jquery.sparkline.min.js" />
+    <Content Include="signin_files\pic.gif" />
+    <Content Include="signin_files\script.js" />
+    <Content Include="signin_files\style_new.css" />
+    <Content Include="signin_files\summernote.min.js" />
+    <Content Include="signin_files\wlogo.png" />
+    <Content Include="signup.html" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,6 +109,20 @@
       <DependentUpon>login-handle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register-handle.aspx.cs">
+      <DependentUpon>register-handle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register-handle.aspx.designer.cs">
+      <DependentUpon>register-handle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +139,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="signin_files\core.php" />
+    <Content Include="signin_files\z_stat.php" />
+    <Content Include="index_files\core.php" />
+    <Content Include="index_files\z_stat.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,16 +151,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLLFactory\BLLImpl.csproj">
-      <Project>{2147c21f-4342-4911-b4b5-fa65357c0c68}</Project>
+    <ProjectReference Include="..\BLLImpl\BLLImpl.csproj">
+      <Project>{1841abd9-c033-466e-9244-9a9c96b7ae5d}</Project>
       <Name>BLLImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
-      <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>
+      <Project>{26ab0632-64c6-45b9-8a18-260bd5cd7757}</Project>
       <Name>DBModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
-      <Project>{883bc1e5-3a30-4074-98a1-98a9fdc360de}</Project>
+      <Project>{b5d2acc1-1124-4b9d-9e2c-7ad608d59f72}</Project>
       <Name>IBLL</Name>
     </ProjectReference>
   </ItemGroup>
@@ -139,7 +179,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:19174/</IISUrl>
+          <IISUrl>http://localhost:28927/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

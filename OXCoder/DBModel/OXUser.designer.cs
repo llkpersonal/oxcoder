@@ -86,13 +86,15 @@ namespace OXCoder.DBModel
 		
 		private string _gender;
 		
-		private int _age;
+		private System.Nullable<int> _age;
 		
 		private string _tel;
 		
 		private string _pwd;
 		
 		private int _id;
+		
+		private short _role;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -104,7 +106,7 @@ namespace OXCoder.DBModel
     partial void OnnameChanged();
     partial void OngenderChanging(string value);
     partial void OngenderChanged();
-    partial void OnageChanging(int value);
+    partial void OnageChanging(System.Nullable<int> value);
     partial void OnageChanged();
     partial void OntelChanging(string value);
     partial void OntelChanged();
@@ -112,6 +114,8 @@ namespace OXCoder.DBModel
     partial void OnpwdChanged();
     partial void OnidChanging(int value);
     partial void OnidChanged();
+    partial void OnroleChanging(short value);
+    partial void OnroleChanged();
     #endregion
 		
 		public ox_user()
@@ -179,8 +183,8 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_age", DbType="Int NOT NULL")]
-		public int age
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_age", DbType="Int")]
+		public System.Nullable<int> age
 		{
 			get
 			{
@@ -255,6 +259,26 @@ namespace OXCoder.DBModel
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_role", DbType="SmallInt NOT NULL")]
+		public short role
+		{
+			get
+			{
+				return this._role;
+			}
+			set
+			{
+				if ((this._role != value))
+				{
+					this.OnroleChanging(value);
+					this.SendPropertyChanging();
+					this._role = value;
+					this.SendPropertyChanged("role");
+					this.OnroleChanged();
 				}
 			}
 		}

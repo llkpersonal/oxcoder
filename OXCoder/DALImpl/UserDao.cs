@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using OXCoder.IDAL;
 using OXCoder.DBModel;
+
 namespace OXCoder.DALImpl
 {
     public class UserDao:IDAL.IUserDao

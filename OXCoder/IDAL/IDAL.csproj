@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A4E28DB2-FB4C-4661-9F46-59A03756AB92}</ProjectGuid>
+    <ProjectGuid>{73776104-F082-40E9-B1B6-9EC4D14382EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.IDAL</RootNamespace>
@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
-      <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>
+      <Project>{26ab0632-64c6-45b9-8a18-260bd5cd7757}</Project>
       <Name>DBModel</Name>
     </ProjectReference>
   </ItemGroup>

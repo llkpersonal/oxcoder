@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0881CC30-6E88-46B9-9DDC-495ED1571C27}</ProjectGuid>
+    <ProjectGuid>{4DDEB32D-C2FD-4371-BE64-1283C85A4DA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.DALImpl</RootNamespace>
@@ -45,11 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
-      <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>
+      <Project>{26ab0632-64c6-45b9-8a18-260bd5cd7757}</Project>
       <Name>DBModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
-      <Project>{a4e28db2-fb4c-4661-9f46-59a03756ab92}</Project>
+      <Project>{73776104-f082-40e9-b1b6-9ec4d14382ea}</Project>
       <Name>IDAL</Name>
     </ProjectReference>
   </ItemGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B901116-C4B2-4270-AA8F-2C020D032F52}</ProjectGuid>
+    <ProjectGuid>{26AB0632-64C6-45B9-8A18-260BD5CD7757}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.DBModel</RootNamespace>

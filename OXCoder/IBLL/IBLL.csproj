@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{883BC1E5-3A30-4074-98A1-98A9FDC360DE}</ProjectGuid>
+    <ProjectGuid>{B5D2ACC1-1124-4B9D-9E2C-7AD608D59F72}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.IBLL</RootNamespace>

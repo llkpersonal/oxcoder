@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2147C21F-4342-4911-B4B5-FA65357C0C68}</ProjectGuid>
+    <ProjectGuid>{1841ABD9-C033-466E-9244-9A9C96B7AE5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OXCoder.BLLImpl</RootNamespace>
@@ -43,20 +43,20 @@
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DALFactory\DALImpl.csproj">
-      <Project>{0881cc30-6e88-46b9-9ddc-495ed1571c27}</Project>
+    <ProjectReference Include="..\DALImpl\DALImpl.csproj">
+      <Project>{4ddeb32d-c2fd-4371-be64-1283c85a4da8}</Project>
       <Name>DALImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
-      <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>
+      <Project>{26ab0632-64c6-45b9-8a18-260bd5cd7757}</Project>
       <Name>DBModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
-      <Project>{883bc1e5-3a30-4074-98a1-98a9fdc360de}</Project>
+      <Project>{b5d2acc1-1124-4b9d-9e2c-7ad608d59f72}</Project>
       <Name>IBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
-      <Project>{a4e28db2-fb4c-4661-9f46-59a03756ab92}</Project>
+      <Project>{73776104-f082-40e9-b1b6-9ec4d14382ea}</Project>
       <Name>IDAL</Name>
     </ProjectReference>
   </ItemGroup>
