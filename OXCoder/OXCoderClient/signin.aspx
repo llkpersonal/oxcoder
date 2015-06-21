@@ -83,14 +83,14 @@
 											<div class="form-group">
 												<div class="col-xs-12">
 													<div class="input-group">
-														<span class="input-group-addon"><i class="fa fa-envelope"></i></span> <input type="email" id="login-email" name="email" class="form-control input-lg" value="12301123@bjtu.edu.cn" placeholder="请输入邮箱地址" data-bv-field="email">
+														<span class="input-group-addon"><i class="fa fa-envelope"></i></span> <input type="email" id="login-email" name="email" class="form-control input-lg" placeholder="请输入邮箱地址" data-bv-field="email">
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<div class="col-xs-12">
 													<div class="input-group">
-														<span class="input-group-addon"><i class="fa fa-key"></i></span> <input type="password" id="login-password" name="pwd" class="form-control input-lg" value="130811" placeholder="请输入密码" data-bv-field="pwd">
+														<span class="input-group-addon"><i class="fa fa-key"></i></span> <input type="password" id="login-password" name="pwd" class="form-control input-lg" placeholder="请输入密码" data-bv-field="pwd">
 													</div>
 												</div>
 											</div>
