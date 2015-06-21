@@ -7,7 +7,7 @@
     <ProjectGuid>{883BC1E5-3A30-4074-98A1-98A9FDC360DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IBLL</RootNamespace>
+    <RootNamespace>OXCoder.IBLL</RootNamespace>
     <AssemblyName>IBLL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
