@@ -43,9 +43,9 @@
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+    <ProjectReference Include="..\DALFactory\DALImpl.csproj">
       <Project>{0881cc30-6e88-46b9-9ddc-495ed1571c27}</Project>
-      <Name>DALFactory</Name>
+      <Name>DALImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
       <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>

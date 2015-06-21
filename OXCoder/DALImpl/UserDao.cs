@@ -21,5 +21,20 @@ namespace OXCoder.DALImpl
             }
             
         }
+
+        public bool addUser(String email, String pwd, int role)
+        {
+            DBModel.OXUserDataContext context = new OXUserDataContext();
+            try
+            {
+                context.ox_user.InsertOnSubmit(new ox_user { email = email, pwd = pwd });
+                context.SubmitChanges();
+                return true;
+            }
+            catch (InvalidOperationException e)
+            {
+                return false;
+            }
+        }
     }
 }
