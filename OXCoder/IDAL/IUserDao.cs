@@ -21,5 +21,6 @@ namespace OXCoder.IDAL
          */
         bool addUser(String email, String pwd, int role);
 
+        void ChangeRole(int uid,short role);
     }
 }

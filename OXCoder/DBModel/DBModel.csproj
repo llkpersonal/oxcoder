@@ -40,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OXCompany.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OXCompany.dbml</DependentUpon>
+    </Compile>
     <Compile Include="OXUser.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -54,6 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="OXCompany.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OXCompany.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="OXUser.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>OXUser.designer.cs</LastGenOutput>
@@ -70,6 +80,11 @@
   <ItemGroup>
     <None Include="OXUser.dbml.layout">
       <DependentUpon>OXUser.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXCompany.dbml.layout">
+      <DependentUpon>OXCompany.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

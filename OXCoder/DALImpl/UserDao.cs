@@ -16,7 +16,8 @@ namespace OXCoder.DALImpl
             { 
                 ox_user user = context.ox_user.Single(d => d.email == email);
                 return user;
-            }catch(InvalidOperationException e)
+            }
+            catch(InvalidOperationException e)
             {
                 return null;
             }
@@ -40,6 +41,14 @@ namespace OXCoder.DALImpl
             {
                 return false;
             }
+        }
+
+        public void ChangeRole(int uid, short role)
+        {
+            DBModel.OXUserDataContext context = new OXUserDataContext();
+            ox_user user = context.ox_user.Single(d => d.id == uid);
+            user.role = role;
+            context.SubmitChanges();
         }
     }
 }

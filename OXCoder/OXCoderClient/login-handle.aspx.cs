@@ -23,13 +23,18 @@ namespace OXCoderClient
                 ox_user user = userService.GetUser(email);
                 short role = user.role;
                 Session["user"] = email;
-                if (role == 1)
+                Session["uid"] = user.id;
+                if (role == 0)
                 {
                     Response.Redirect("user-index.aspx");
                 }
-                else if (role == 0)
+                else if (role == 1)
                 {
                     Response.Redirect("hr-to-new-info.aspx");
+                }
+                else if (role == 2)
+                {
+                    Response.Redirect("hr-recruit-list.aspx");
                 }
                 //Response.Write("登录成功"+role);
                 

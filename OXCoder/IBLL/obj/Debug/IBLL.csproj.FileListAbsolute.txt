@@ -13,3 +13,10 @@ D:\ilovestudy\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.dll
 D:\ilovestudy\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.pdb
 D:\ilovestudy\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.dll
 D:\ilovestudy\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.pdb
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\IBLL.dll
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\IBLL.pdb
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.dll
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.pdb
+Y:\code\csharp\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+Y:\code\csharp\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.dll
+Y:\code\csharp\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.pdb

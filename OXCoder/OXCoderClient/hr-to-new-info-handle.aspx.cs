@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using OXCoder.IBLL;
+using OXCoder.BLLImpl;
 
 namespace OXCoderClient
 {
@@ -12,9 +14,13 @@ namespace OXCoderClient
         protected void Page_Load(object sender, EventArgs e)
         {
             string cname = Request.Params["cname"];
-            string provefile = Request.Params["provefile"];
+            HttpFileCollection files = Request.Files;
+            HttpPostedFile file = files[0];
+            file.SaveAs("Y:\\"+Session["uid"]+".jpg");
             string telephone = Request.Params["phone"];
-
+            ICompanyService companyService = new CompanyService();
+            companyService.AddNewCompany(Convert.ToInt32(Session["uid"]), cname, telephone, Session["uid"] + ".jpg");
+            Response.Redirect("hr-recruit-list.aspx");
         }
     }
 }

@@ -92,33 +92,27 @@
 							<div class="form-group">
 								<label><h3 class="grey">公司全称</h3></label> <input type="text" name="cname" class="form-control" id="corp-name" placeholder="请输入公司在营业执照上的全称" data-bv-field="cname"> <span class="help-block has-error" id="hint1">
 							<small class="help-block" data-bv-validator="notEmpty" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司在营业执照上的全称</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">公司全称不能超过30个字符</small></span></div>
-                            
+                            
+
 							<div class="form-group">
 								<label>
                                     <h3 class="grey">公司相关证明文件</h3>
 								</label> 
                                
-                                <div class="bootstrap-filestyle input-group">
-                                    <input type="text" name="provefile" class="form-control " disabled="" placeholder="Choose file">
-                                     <span class="input-group-btn" tabindex="0">  
-                                         <label for="corp-pic" class="btn btn-default">
-                                             	<span class="glyphicon glyphicon-folder-open"></span>  
-
-                                         </label>
-
-                                     </span>
-
-                                </div> 
-                                <span>如营业执照、组织代码证、税务登记证或工牌等扫描文件</span><span class="help-block has-error" id="hint2">
+                                <div class="form-group">
+								<label><h3 class="grey">公司相关证明文件</h3></label>
+                                     <input type="file" name="image" tabindex="-1" style="position: fixed; left: -500px;" id="corp-pic" accept="image/*" data-bv-field="image">
+                                    <div class="bootstrap-filestyle input-group">
+                                        
+                                        <span class="input-group-btn" tabindex="0"> </span></div> <span>如营业执照、组织代码证、税务登记证或工牌等扫描文件</span><span class="help-block has-error" id="hint2">
 
 							<small class="help-block" data-bv-validator="notEmpty" data-bv-for="image" data-bv-result="NOT_VALIDATED" style="display: none;">请上传公司营业执照、组织代码证、税务登记证或工牌等扫描文件</small></span></div>
-
 							<div class="form-group">
 								<label><h3 class="grey">招聘负责人联系方式</h3></label> <input type="text" name="phone" class="form-control" id="phone" data-bv-field="phone">
 								<span>请输入招聘负责人的手机</span> <span class="help-block has-error" id="hint3">
 							<small class="help-block" data-bv-validator="notEmpty" data-bv-for="phone" data-bv-result="NOT_VALIDATED" style="display: none;">请输入联系方式</small><small class="help-block" data-bv-validator="phone" data-bv-for="phone" data-bv-result="NOT_VALIDATED" style="display: none;">请输入正确的联系方式</small></span></div>
 							<div class="form-group form-actions">
-								<button type="submit" class="btn btn-primary btn-lg" style="border-radius: 3px;" onclick="isNull()">确认</button>
+								<button type="submit" class="btn btn-primary btn-lg" style="border-radius: 3px;">确认</button>
 							</div>
 						</form>
 
