@@ -20,6 +20,13 @@ namespace OXCoder.BLLImpl
             return password==user.pwd;
         }
 
+        public ox_user GetUser(string email)
+        {
+            IDAL.IUserDao userDao = new UserDao();
+            ox_user user = userDao.FindUserByEmail(email);
+            return user;
+        }
+
         public int Register(String email, String pwd, int role)
         {
             IDAL.IUserDao userDao = new UserDao();

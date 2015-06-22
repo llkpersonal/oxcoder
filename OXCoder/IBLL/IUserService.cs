@@ -2,12 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using OXCoder.DBModel;
 namespace OXCoder.IBLL
 {
     public interface IUserService
     {
+        /**
+         * 通过邮件获取用户 根据用户输入的密码和数据库中的密码做比较
+         * @return
+         *      true 登录成功
+         *      false 登录失败
+         */
         bool CheckUserByEmailAndPassword(string email,string password);
+
+
+        /**
+         * 通过邮件获取用户
+         */
+        ox_user GetUser(string email);
 
         /**
          * 先查询看有没有填写邮件的用户，然后再增加记录
