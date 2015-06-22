@@ -23,6 +23,10 @@ namespace OXCoder.DALImpl
             
         }
 
+        public bool AddCompanyBasicInfo()
+        {
+            return true;
+        }
         public bool addUser(String email, String pwd, int role)
         {
             DBModel.OXUserDataContext context = new OXUserDataContext();

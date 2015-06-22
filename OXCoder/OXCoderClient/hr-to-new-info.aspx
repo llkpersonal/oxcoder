@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hr-to-new-info.aspx.cs" Inherits="OXCoderClient.hr_to_new_info" %>
+﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hr-to-new-info.aspx.cs" Inherits="OXCoderClient.hr_to_new_info" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://www.oxcoder.com/hr-to-new-info.action -->
@@ -87,19 +87,19 @@
 					<div class="row">
 						<!-- 错误信息 -->
 						<font color="red"></font>
-						<form id="defaultForm" method="post" class="form-vertical bv-form" action="http://www.oxcoder.com/signup2-sub.action" enctype="multipart/form-data" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+						<form id="defaultForm" method="post" class="form-vertical bv-form" action="./hr-to-new-info-handle.aspx" enctype="multipart/form-data" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 
 							<div class="form-group">
 								<label><h3 class="grey">公司全称</h3></label> <input type="text" name="cname" class="form-control" id="corp-name" placeholder="请输入公司在营业执照上的全称" data-bv-field="cname"> <span class="help-block has-error" id="hint1">
 							<small class="help-block" data-bv-validator="notEmpty" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司在营业执照上的全称</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">公司全称不能超过30个字符</small></span></div>
-
+                            
 							<div class="form-group">
 								<label>
                                     <h3 class="grey">公司相关证明文件</h3>
 								</label> 
                                
                                 <div class="bootstrap-filestyle input-group">
-                                    <input type="text" class="form-control " disabled="" placeholder="Choose file">
+                                    <input type="text" name="provefile" class="form-control " disabled="" placeholder="Choose file">
                                      <span class="input-group-btn" tabindex="0">  
                                          <label for="corp-pic" class="btn btn-default">
                                              	<span class="glyphicon glyphicon-folder-open"></span>  

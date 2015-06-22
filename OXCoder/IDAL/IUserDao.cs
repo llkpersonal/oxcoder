@@ -7,6 +7,13 @@ namespace OXCoder.IDAL
 {
     public interface IUserDao
     {
+        /**
+         * 添加用户基本信息
+         */
+        bool AddCompanyBasicInfo();
+        /**
+         * 根据邮件查询用户
+         */
         ox_user FindUserByEmail(string email);
 
         /**

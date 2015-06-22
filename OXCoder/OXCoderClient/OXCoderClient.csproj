@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomePage.aspx" />
+    <Content Include="hr-to-new-info-handle.aspx" />
     <Content Include="hr-to-new-info.aspx" />
     <Content Include="index.aspx" />
     <Content Include="index_files\banner3.png" />
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-to-new-info-handle.aspx.cs">
+      <DependentUpon>hr-to-new-info-handle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-to-new-info-handle.aspx.designer.cs">
+      <DependentUpon>hr-to-new-info-handle.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-to-new-info.aspx.cs">
       <DependentUpon>hr-to-new-info.aspx</DependentUpon>
