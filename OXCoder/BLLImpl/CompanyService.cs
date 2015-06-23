@@ -5,6 +5,7 @@ using System.Text;
 using OXCoder.IBLL;
 using OXCoder.IDAL;
 using OXCoder.DALImpl;
+using OXCoder.DBModel;
 
 namespace OXCoder.BLLImpl
 {
@@ -16,6 +17,18 @@ namespace OXCoder.BLLImpl
             companyDao.AddCompanyInformation(uid, name, tel, provefile);
             IUserDao userDao = new UserDao();
             userDao.ChangeRole(uid, 2);
+        }
+
+        public void UpdateNewCompany(int uid, string name, string tel, string provefile) 
+        {
+            ICompanyDao companyDao = new CompanyDao();
+            companyDao.UpdateCompanyInformation(uid, name, tel, provefile);
+
+        }
+        public ox_company GetCompanyByUid(int uid)
+        {
+            ICompanyDao companyDao = new CompanyDao();
+            return companyDao.FindCompanyByUid(uid);
         }
     }
 }

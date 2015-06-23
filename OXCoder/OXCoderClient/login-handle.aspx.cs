@@ -24,15 +24,27 @@ namespace OXCoderClient
                 short role = user.role;
                 Session["user"] = email;
                 Session["uid"] = user.id;
+                //开发者首页
                 if (role == 0)
                 {
                     Response.Redirect("user-index.aspx");
                 }
+                //首次登录的企业用户
                 else if (role == 1)
                 {
                     Response.Redirect("hr-to-new-info.aspx");
                 }
+                //第一步填写基本信息
                 else if (role == 2)
+                {
+                    Response.Redirect("signup2-sub.aspx");
+                }
+                //第二步公司特色标签
+                else if (role == 3)
+                {
+                    Response.Redirect("hr-info-step3.aspx");
+                }
+                else if (role == 4)
                 {
                     Response.Redirect("hr-recruit-list.aspx");
                 }

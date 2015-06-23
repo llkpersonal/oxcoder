@@ -11,6 +11,7 @@ namespace OXCoderClient
     public partial class hr_to_new_info : System.Web.UI.Page
     {
         protected string name = string.Empty;
+        protected string email = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,7 +24,7 @@ namespace OXCoderClient
         private void SetData()
         {
             IUserService userService = new UserService();
-            string email = Session["user"].ToString();
+            email = Session["user"].ToString();
             name = userService.GetUser(email).name;
 
         }

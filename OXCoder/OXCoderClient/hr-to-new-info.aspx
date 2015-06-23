@@ -67,7 +67,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="http://www.oxcoder.com/hr-to-new-info.action#" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=name %></span> <b class="caret"></b></a>
+                            <a href="http://www.oxcoder.com/hr-to-new-info.action#" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=email %></span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:;">账户余额</a></li>
                                 <li><a href="javascript:;">企业信息</a></li>
@@ -95,16 +95,16 @@
                             
 
 							<div class="form-group">
-								<label>
-                                    <h3 class="grey">公司相关证明文件</h3>
-								</label> 
-                               
+								
                                 <div class="form-group">
 								<label><h3 class="grey">公司相关证明文件</h3></label>
                                      <input type="file" name="image" tabindex="-1" style="position: fixed; left: -500px;" id="corp-pic" accept="image/*" data-bv-field="image">
                                     <div class="bootstrap-filestyle input-group">
                                         
-                                        <span class="input-group-btn" tabindex="0"> </span></div> <span>如营业执照、组织代码证、税务登记证或工牌等扫描文件</span><span class="help-block has-error" id="hint2">
+                                        <span class="input-group-btn" tabindex="0"> </span>
+
+                                    </div>
+                                     <span>如营业执照、组织代码证、税务登记证或工牌等扫描文件</span><span class="help-block has-error" id="hint2">
 
 							<small class="help-block" data-bv-validator="notEmpty" data-bv-for="image" data-bv-result="NOT_VALIDATED" style="display: none;">请上传公司营业执照、组织代码证、税务登记证或工牌等扫描文件</small></span></div>
 							<div class="form-group">

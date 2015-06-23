@@ -94,6 +94,8 @@
     <Content Include="signin_files\summernote.min.js" />
     <Content Include="signin_files\wlogo.png" />
     <Content Include="signup.html" />
+    <Content Include="signup2-sub-handle.aspx" />
+    <Content Include="signup2-sub.aspx" />
     <Content Include="test.aspx" />
     <Content Include="user-index-handle.aspx" />
     <Content Include="user-index.aspx" />
@@ -163,6 +165,20 @@
     </Compile>
     <Compile Include="signin.aspx.designer.cs">
       <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup2-sub-handle.aspx.cs">
+      <DependentUpon>signup2-sub-handle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup2-sub-handle.aspx.designer.cs">
+      <DependentUpon>signup2-sub-handle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup2-sub.aspx.cs">
+      <DependentUpon>signup2-sub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup2-sub.aspx.designer.cs">
+      <DependentUpon>signup2-sub.aspx</DependentUpon>
     </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
