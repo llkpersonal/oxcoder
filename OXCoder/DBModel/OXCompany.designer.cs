@@ -88,11 +88,11 @@ namespace OXCoder.DBModel
 		
 		private string _website;
 		
-		private System.Nullable<int> _province;
+		private string _province;
 		
-		private System.Nullable<int> _city;
+		private string _city;
 		
-		private System.Nullable<int> _size;
+		private string _size;
 		
 		private string _description;
 		
@@ -116,11 +116,11 @@ namespace OXCoder.DBModel
     partial void OnlogoChanged();
     partial void OnwebsiteChanging(string value);
     partial void OnwebsiteChanged();
-    partial void OnprovinceChanging(System.Nullable<int> value);
+    partial void OnprovinceChanging(string value);
     partial void OnprovinceChanged();
-    partial void OncityChanging(System.Nullable<int> value);
+    partial void OncityChanging(string value);
     partial void OncityChanged();
-    partial void OnsizeChanging(System.Nullable<int> value);
+    partial void OnsizeChanging(string value);
     partial void OnsizeChanged();
     partial void OndescriptionChanging(string value);
     partial void OndescriptionChanged();
@@ -219,8 +219,8 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_province", DbType="Int")]
-		public System.Nullable<int> province
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_province", DbType="NVarChar(MAX)")]
+		public string province
 		{
 			get
 			{
@@ -239,8 +239,8 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_city", DbType="Int")]
-		public System.Nullable<int> city
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_city", DbType="NVarChar(MAX)")]
+		public string city
 		{
 			get
 			{
@@ -259,8 +259,8 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size", DbType="Int")]
-		public System.Nullable<int> size
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size", DbType="NVarChar(MAX)")]
+		public string size
 		{
 			get
 			{

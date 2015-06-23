@@ -6,9 +6,9 @@
       <Column Name="briefname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="logo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="website" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="province" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="city" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="size" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="province" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="size" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="tag" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
