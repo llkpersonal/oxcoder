@@ -11,5 +11,6 @@ namespace OXCoder.IDAL
         ox_company FindCompanyByUid(int uid);
         void UpdateCompanyInformation(int uid, string name, string telephone, string provefile);
         void UpdateCompanyBasicInformation(int uid, string cname, string briefname, string logo, string website, string province, string city, string size, string desc);
+        void UpdateCompanyTagsInDatabase(int uid, string tags);
     }
 }

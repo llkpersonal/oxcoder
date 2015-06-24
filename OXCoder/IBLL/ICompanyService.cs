@@ -12,5 +12,6 @@ namespace OXCoder.IBLL
         ox_company GetCompanyByUid(int uid);
         void UpdateNewCompany(int uid, string name, string tel, string provefile);
         void UpdateCompanyBasicInfo(int uid, string cname, string briefname, string logo, string website, string province, string city, string size, string desc);
+        void UpdateCompanyTagsInfo(int uid, string tags);
     }
 }

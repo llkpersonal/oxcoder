@@ -38,5 +38,13 @@ namespace OXCoder.BLLImpl
             ICompanyDao companyDao = new CompanyDao();
             return companyDao.FindCompanyByUid(uid);
         }
+
+        public void UpdateCompanyTagsInfo(int uid, string tags)
+        {
+            ICompanyDao companyDao = new CompanyDao();
+            companyDao.UpdateCompanyTagsInDatabase(uid, tags);
+            IUserDao userDao = new UserDao();
+            userDao.ChangeRole(uid, 4);
+        }
     }
 }

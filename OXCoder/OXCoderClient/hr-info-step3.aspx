@@ -87,87 +87,87 @@
 						<img src="./hr-info-step3_files/corp_step2.png">
 						<div class="tag-group">
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E4%BA%94%E9%99%A9%E4%B8%80%E9%87%91"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E4%BA%94%E9%99%A9%E4%B8%80%E9%87%91"><button class="btn btn-order">
 										五险一金
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%B9%B4%E5%BA%95%E5%8F%8C%E8%96%AA"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%B9%B4%E5%BA%95%E5%8F%8C%E8%96%AA"><button class="btn btn-order">
 										年底双薪
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E8%82%A1%E4%BB%BD%E6%9C%9F%E6%9D%83"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E8%82%A1%E4%BB%BD%E6%9C%9F%E6%9D%83"><button class="btn btn-order">
 										股份期权
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%B9%B4%E7%BB%88%E5%88%86%E7%BA%A2"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%B9%B4%E7%BB%88%E5%88%86%E7%BA%A2"><button class="btn btn-order">
 										年终分红
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E7%BB%A9%E6%95%88%E5%A5%96%E9%87%91"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E7%BB%A9%E6%95%88%E5%A5%96%E9%87%91"><button class="btn btn-order">
 										绩效奖金
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%B2%97%E4%BD%8D%E6%99%8B%E5%8D%87"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%B2%97%E4%BD%8D%E6%99%8B%E5%8D%87"><button class="btn btn-order">
 										岗位晋升
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%B9%B4%E5%BA%A6%E6%97%85%E6%B8%B8"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%B9%B4%E5%BA%A6%E6%97%85%E6%B8%B8"><button class="btn btn-order">
 										年度旅游
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%BC%B9%E6%80%A7%E5%B7%A5%E4%BD%9C"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%BC%B9%E6%80%A7%E5%B7%A5%E4%BD%9C"><button class="btn btn-order">
 										弹性工作
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%85%8D%E8%B4%B9%E7%8F%AD%E8%BD%A6"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%85%8D%E8%B4%B9%E7%8F%AD%E8%BD%A6"><button class="btn btn-order">
 										免费班车
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E6%89%81%E5%B9%B3%E7%AE%A1%E7%90%86"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E6%89%81%E5%B9%B3%E7%AE%A1%E7%90%86"><button class="btn btn-order">
 										扁平管理
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E6%8A%80%E8%83%BD%E5%9F%B9%E8%AE%AD"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E6%8A%80%E8%83%BD%E5%9F%B9%E8%AE%AD"><button class="btn btn-order">
 										技能培训
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E7%AE%A1%E7%90%86%E8%A7%84%E8%8C%83"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E7%AE%A1%E7%90%86%E8%A7%84%E8%8C%83"><button class="btn btn-order">
 										管理规范
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E8%8A%82%E6%97%A5%E7%A4%BC%E7%89%A9"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E8%8A%82%E6%97%A5%E7%A4%BC%E7%89%A9"><button class="btn btn-order">
 										节日礼物
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E4%B8%93%E9%A1%B9%E5%A5%96%E9%87%91"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E4%B8%93%E9%A1%B9%E5%A5%96%E9%87%91"><button class="btn btn-order">
 										专项奖金
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E4%BA%A4%E9%80%9A%E8%A1%A5%E5%8A%A9"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E4%BA%A4%E9%80%9A%E8%A1%A5%E5%8A%A9"><button class="btn btn-order">
 										交通补助
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E7%AE%A1%E5%90%83%E7%AE%A1%E4%BD%8F"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E7%AE%A1%E5%90%83%E7%AE%A1%E4%BD%8F"><button class="btn btn-order">
 										管吃管住
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%8D%88%E9%A4%90%E8%A1%A5%E5%8A%A9"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%8D%88%E9%A4%90%E8%A1%A5%E5%8A%A9"><button class="btn btn-order">
 										午餐补助
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%AE%9A%E6%9C%9F%E4%BD%93%E6%A3%80"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%AE%9A%E6%9C%9F%E4%BD%93%E6%A3%80"><button class="btn btn-order">
 										定期体检
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E5%B8%85%E5%93%A5%E5%A4%9A"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E5%B8%85%E5%93%A5%E5%A4%9A"><button class="btn btn-order">
 										帅哥多
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E7%BE%8E%E5%A5%B3%E5%A4%9A"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E7%BE%8E%E5%A5%B3%E5%A4%9A"><button class="btn btn-order">
 										美女多
 									</button></a>
 							
-								<a href="http://www.oxcoder.com/hr-info-step3-to.action?flag=add&strchoose=&chooseTagStr=%E9%A2%86%E5%AF%BC%E5%A5%BD"><button class="btn btn-order">
+								<a href="hr-info-step3-handle.aspx?flag=add&strchoose=&chooseTagStr=%E9%A2%86%E5%AF%BC%E5%A5%BD"><button class="btn btn-order">
 										领导好
 									</button></a>
 							
@@ -182,11 +182,11 @@
 						</div>
 
 						<div class="tag-group">
-							
+							<%=tagsHtml %>
 						</div>
 						<span class="text-danger">您只能选择3个标签，要选择最有竞争力的3个呦~</span>
 						<div class="form-group form-actions pull-right">
-							<form action="http://www.oxcoder.com/hr-info-step3-sub.action">
+							<form action="hr-info-step3-handle2.aspx">
 								<input type="hidden" name="tagstr" id="tagstr" value="">
 								<button type="submit" class="btn btn-new1 btn-lg" style="border-radius: 3px;">保存&amp;下一步</button>
 							</form>
@@ -272,7 +272,7 @@
             alert("标签长度过短");
             return false;
         }
-        var a = "hr-info-step3-to.action?flag=add&strchoose="
+        var a = "hr-info-step3-handle.aspx?flag=add&strchoose="
 				+ $("#tagstr").val() + "&chooseTagStr=" + tag;
         window.location.replace(a);
         // window.location.href(a);
