@@ -22,9 +22,20 @@ namespace OXCoderClient
                         Response.Redirect("hr-info-step3.aspx");
                         return;
                     }
-                    tagCookie.Value = tagCookie.Value + HttpUtility.UrlEncode("-" + Request.Params["chooseTagStr"]);
-                    //tagCookie.Values.Set("tags", tagCookie.Value);
-                    Response.AppendCookie(tagCookie);
+                    bool flag = true;
+                    string newTag = Request.Params["chooseTagStr"];
+                    for (int i = 0; i < nowtags.Length; i++)
+                    {
+                        if (HttpUtility.UrlDecode(nowtags[i]) == newTag)
+                            flag = false;
+                    }
+                    if (flag)
+                    {
+                        tagCookie.Value = tagCookie.Value + HttpUtility.UrlEncode("-" + Request.Params["chooseTagStr"]);
+                        //tagCookie.Values.Set("tags", tagCookie.Value);
+                        Response.AppendCookie(tagCookie);
+                    }
+
                 }
                 else
                 {
