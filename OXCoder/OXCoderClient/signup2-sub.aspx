@@ -91,7 +91,7 @@
                                 
                                 <div class="form-group">
                                     <label><h3 class="grey">公司全称</h3></label>
-                                    <input type="text" id="corp-name" name="cname" class="form-control" placeholder="请输入公司全称" value="aa" data-bv-field="cname">
+                                    <input type="text" id="corp-name" name="cname" class="form-control" placeholder="请输入公司全称" value=<%=cname %> data-bv-field="cname">
                                 </div>
 
                                 <div class="form-group">
@@ -133,12 +133,12 @@
                                     <label><h3 class="grey">公司规模</h3></label>
                                     <select name="scale" class="form-control" id="corp-big" data-bv-field="scale">
                                         <option value="">请选择</option>
-                                        <option value="1">少于15人</option>
-                                        <option value="2">15~50人</option>
-                                        <option value="3">50~150人</option>
-                                        <option value="4">150~500人</option>
-                                        <option value="5">500~2000人</option>
-                                        <option value="6">2000人以上</option>
+                                        <option value="少于15人">少于15人</option>
+                                        <option value="15~50人">15~50人</option>
+                                        <option value="50~150人">50~150人</option>
+                                        <option value="150~500人">150~500人</option>
+                                        <option value="500~2000人">500~2000人</option>
+                                        <option value="2000人以上">2000人以上</option>
                                     </select>
                                     <span class="text-danger" id="error4" style="display:none;">请选择公司规模</span>
                                     <span class="help-block has-error" id="hint3">

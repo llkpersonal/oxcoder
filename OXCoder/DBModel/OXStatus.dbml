@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="oxcoderdb" Class="OXStatusDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.31.34.190;Initial Catalog=oxcoderdb;User ID=oxcoder" SettingsObjectName="OXCoder.DBModel.Properties.Settings" SettingsPropertyName="oxcoderdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ox_status" Member="ox_status">
+    <Type Name="ox_status">
+      <Column Name="statusid" Type="System.String" DbType="NChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="projectid" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sourcecode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="submittime" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="time" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

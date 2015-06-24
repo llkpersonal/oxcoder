@@ -58,6 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomePage.aspx" />
+    <Content Include="hr-info-step3-handle.aspx" />
+    <Content Include="hr-info-step3-handle2.aspx" />
+    <Content Include="hr-info-step3-info.aspx" />
+    <Content Include="hr-info-step3.aspx" />
     <Content Include="hr-recruit-list.aspx" />
     <Content Include="hr-to-new-info-handle.aspx" />
     <Content Include="hr-to-new-info.aspx" />
@@ -126,6 +130,34 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-info-step3-handle.aspx.cs">
+      <DependentUpon>hr-info-step3-handle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-info-step3-handle.aspx.designer.cs">
+      <DependentUpon>hr-info-step3-handle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-info-step3-handle2.aspx.cs">
+      <DependentUpon>hr-info-step3-handle2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-info-step3-handle2.aspx.designer.cs">
+      <DependentUpon>hr-info-step3-handle2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-info-step3-info.aspx.cs">
+      <DependentUpon>hr-info-step3-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-info-step3-info.aspx.designer.cs">
+      <DependentUpon>hr-info-step3-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-info-step3.aspx.cs">
+      <DependentUpon>hr-info-step3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-info-step3.aspx.designer.cs">
+      <DependentUpon>hr-info-step3.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-recruit-list.aspx.cs">
       <DependentUpon>hr-recruit-list.aspx</DependentUpon>

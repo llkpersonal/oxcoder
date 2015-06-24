@@ -18,6 +18,7 @@ namespace OXCoderClient
             int uid = Convert.ToInt32(Session["uid"]);
             ox_company company = companyService.GetCompanyByUid(uid);
             cname = company.companyname;
+
         }
     }
 }

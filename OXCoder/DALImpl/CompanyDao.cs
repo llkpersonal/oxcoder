@@ -59,5 +59,13 @@ namespace OXCoder.DALImpl
                 return null;
             }
         }
+
+        public void UpdateCompanyTagsInDatabase(int uid, string tags)
+        {
+            DBModel.OXCompanyDataContext companyDataContext = new OXCompanyDataContext();
+            ox_company company = companyDataContext.ox_companies.Single(d => d.userid == uid);
+            company.tag = tags;
+            companyDataContext.SubmitChanges();
+        }
     }
 }

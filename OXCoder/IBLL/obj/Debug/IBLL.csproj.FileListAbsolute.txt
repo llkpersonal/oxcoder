@@ -23,3 +23,10 @@ Y:\code\csharp\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.pdb
 E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.dll
 E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.pdb
 E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\bin\Debug\IBLL.dll
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\bin\Debug\IBLL.pdb
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.dll
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\bin\Debug\DBModel.pdb
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.dll
+E:\Procedures\DotNET\oxcoder\OXCoder\IBLL\obj\Debug\IBLL.pdb
