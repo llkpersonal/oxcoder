@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="oxcoderdb" Class="OXUserChallengeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.31.34.190;Initial Catalog=oxcoderdb;User ID=oxcoder" SettingsObjectName="OXCoder.DBModel.Properties.Settings" SettingsPropertyName="oxcoderdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ox_user_challenge" Member="ox_user_challenge">
+    <Type Name="ox_user_challenge">
+      <Column Name="ucid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="challengeid" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

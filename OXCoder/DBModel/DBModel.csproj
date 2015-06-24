@@ -40,15 +40,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OXChallenge.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OXChallenge.dbml</DependentUpon>
+    </Compile>
     <Compile Include="OXCompany.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OXCompany.dbml</DependentUpon>
     </Compile>
+    <Compile Include="OXProject.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OXProject.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="OXProjectChallenge.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OXProjectChallenge.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="OXStatus.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OXStatus.dbml</DependentUpon>
+    </Compile>
     <Compile Include="OXUser.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OXUser.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="OXUserChallenge.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OXUserChallenge.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -59,14 +84,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="OXChallenge.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OXChallenge.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="OXCompany.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>OXCompany.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="OXProject.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OXProject.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OXProjectChallenge.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OXProjectChallenge.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OXStatus.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OXStatus.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="OXUser.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>OXUser.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OXUserChallenge.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OXUserChallenge.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -85,6 +135,31 @@
   <ItemGroup>
     <None Include="OXCompany.dbml.layout">
       <DependentUpon>OXCompany.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXUserChallenge.dbml.layout">
+      <DependentUpon>OXUserChallenge.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXChallenge.dbml.layout">
+      <DependentUpon>OXChallenge.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXProject.dbml.layout">
+      <DependentUpon>OXProject.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXProjectChallenge.dbml.layout">
+      <DependentUpon>OXProjectChallenge.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXStatus.dbml.layout">
+      <DependentUpon>OXStatus.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
