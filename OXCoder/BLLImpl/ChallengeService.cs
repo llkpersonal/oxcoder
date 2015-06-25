@@ -87,5 +87,10 @@ namespace OXCoder.BLLImpl
         {
             throw new NotImplementedException();
         }
+
+        public bool AcceptChallenge(string challengeId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

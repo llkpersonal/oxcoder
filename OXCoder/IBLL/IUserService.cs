@@ -36,6 +36,16 @@ namespace OXCoder.IBLL
         /**
          * 当注册时发送邮件给注册的用户
          */
-        bool sendEmailForRegister(String email);
+        bool SendEmailForRegister(String email);
+
+        /*
+         * 修改密码
+         */
+        bool ModifyPwd(String email, String newPwd);
+
+        /*
+         * 修改基本信息
+         */
+        bool ModifyInfo(String name, String gender, int age, String tel);
     }
 }

@@ -54,5 +54,7 @@ namespace OXCoder.IBLL
          */
         List<OXChallengeDetail> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn);
 
+
+        bool AcceptChallenge(string challengeId);
     }
 }
