@@ -16,16 +16,9 @@ namespace OXCoderClient
             
             if (!IsPostBack)
             {
-                SetData();
+                
             }
         }
 
-        private void SetData()
-        {
-            IUserService userService = new UserService();
-            string email = Session["user"].ToString();
-            name = userService.GetUser(email).name;
-
-        }
     }
 }

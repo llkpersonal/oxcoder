@@ -45,6 +45,12 @@ namespace OXCoder.DALImpl
             challengeDataContext.ox_challenge.InsertOnSubmit(challenge);
             challengeDataContext.SubmitChanges();
         }
-    
+
+
+
+        public List<ox_challenge> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
