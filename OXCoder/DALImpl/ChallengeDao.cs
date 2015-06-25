@@ -37,7 +37,7 @@ namespace OXCoder.DALImpl
         public List<ox_challenge> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus)
         {
             OXChallengeDataContext challenge_context = new OXChallengeDataContext();
-            OXUserChallengeDataContext userchallenge_context = new OXUserChallengeDataContext();
+            OXUserChallengeDataContext userChallenge_context = new OXUserChallengeDataContext();
             List<ox_challenge> challengeList = new List<ox_challenge>();
             int cstatus = 0;
 
@@ -48,7 +48,7 @@ namespace OXCoder.DALImpl
 
             try
             {
-                var query = from c in challenge_context.ox_challenge join uc in userchallenge_context.ox_user_challenge on c.challengeid equals uc.challengeid where c.status == cstatus && uc.userid == userId && uc.status == userchallengeStatus select c;
+                var query = from c in challenge_context.ox_challenge join uc in userChallenge_context.ox_user_challenge on c.challengeid equals uc.challengeid where c.status == cstatus && uc.userid == userId && uc.status == userchallengeStatus select c;
 
                 foreach (var q in query)
                 {
