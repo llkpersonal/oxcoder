@@ -8,7 +8,7 @@
 <meta name="description" content="">
 <meta name="author" content="BootstrapStyler">
 
-<title>猿圈 你好企业完善企业信息
+<title>猿圈 <%=cname %>企业完善企业信息
 </title>
 
 <!-- Bootstrap core CSS -->
@@ -64,7 +64,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
-				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好</span> <b class="caret"></b></a>
+				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="./hr-payment-info.html">账户余额</a></li>
 						<li><a href="./enterprise-info.html">企业信息</a></li>
@@ -92,7 +92,7 @@
 
 						<div class="form-group form-actions" style="margin-top: 40px;">
 							<p class="grey">您已填写完企业基本信息，现在可以去新增挑战邀请了呦~~</p>
-							<a href="./hr-new-recruit.action"><button type="button" class="btn btn-new1 btn-lg" style="border-radius: 3px;">新增挑战邀请</button></a>
+							<a href="./hr-new-recruit.aspx"><button type="button" class="btn btn-new1 btn-lg" style="border-radius: 3px;">新增挑战邀请</button></a>
 
 						</div>
 

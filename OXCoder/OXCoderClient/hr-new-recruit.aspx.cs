@@ -9,7 +9,7 @@ using OXCoder.IBLL;
 using OXCoder.DBModel;
 namespace OXCoderClient
 {
-    public partial class hr_info_step3_info : System.Web.UI.Page
+    public partial class hr_new_recruit : System.Web.UI.Page
     {
         protected string cname = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
@@ -17,7 +17,6 @@ namespace OXCoderClient
             int uid = Convert.ToInt32(Session["uid"]);
             ICompanyService companyService = new CompanyService();
             cname = companyService.GetCompanyByUid(uid).companyname;
-
         }
     }
 }

@@ -62,7 +62,9 @@
     <Content Include="hr-info-step3-handle2.aspx" />
     <Content Include="hr-info-step3-info.aspx" />
     <Content Include="hr-info-step3.aspx" />
+    <Content Include="hr-new-recruit.aspx" />
     <Content Include="hr-recruit-list.aspx" />
+    <Content Include="hr-sub-new-recruit.aspx" />
     <Content Include="hr-to-new-info-handle.aspx" />
     <Content Include="hr-to-new-info.aspx" />
     <Content Include="index.aspx" />
@@ -159,12 +161,26 @@
     <Compile Include="hr-info-step3.aspx.designer.cs">
       <DependentUpon>hr-info-step3.aspx</DependentUpon>
     </Compile>
+    <Compile Include="hr-new-recruit.aspx.cs">
+      <DependentUpon>hr-new-recruit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-new-recruit.aspx.designer.cs">
+      <DependentUpon>hr-new-recruit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="hr-recruit-list.aspx.cs">
       <DependentUpon>hr-recruit-list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="hr-recruit-list.aspx.designer.cs">
       <DependentUpon>hr-recruit-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-sub-new-recruit.aspx.cs">
+      <DependentUpon>hr-sub-new-recruit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-sub-new-recruit.aspx.designer.cs">
+      <DependentUpon>hr-sub-new-recruit.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-to-new-info-handle.aspx.cs">
       <DependentUpon>hr-to-new-info-handle.aspx</DependentUpon>
