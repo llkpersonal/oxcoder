@@ -103,7 +103,7 @@
 											<h2 class="h2-tab">
 												<a href="./hr-recruit-list.action?flag=history" class="off">挑战历史</a>
 											</h2>
-											<a href="./hr-new-recruit.action"><button class="btn btn-new1 pull-right" style="margin-top: 20px;">新增挑战邀请</button></a>
+											<a href="./hr-new-recruit.aspx"><button class="btn btn-new1 pull-right" style="margin-top: 20px;">新增挑战邀请</button></a>
 										</section>
 										<!-- /.page-header -->
 										<div id="Div1">

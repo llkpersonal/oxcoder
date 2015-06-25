@@ -9,6 +9,7 @@
       <Column Name="submittime" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
       <Column Name="time" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="memory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ucid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

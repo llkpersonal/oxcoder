@@ -16,6 +16,7 @@
 
 <!-- Font Awesome CSS -->
 <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+<link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
 <!-- Bootstrap Switch -->
 <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -100,7 +101,7 @@
                                             <div class="form-group has-success">
 												<div class="col-xs-12">
 													<div class="input-group">
-														<span class="input-group-addon"><i class="fa fa-envelope"></i></span> <input type="text" id="login-email" name="email" class="form-control input-lg" placeholder="请输入常用邮箱地址" data-bv-field="email">
+														<span class="input-group-addon"><i class="icon-envelope"></i></span> <input type="text" id="login-email" name="email" class="form-control input-lg" placeholder="请输入常用邮箱地址" data-bv-field="email">
 													</div>
 												</div>
 											</div>
@@ -108,7 +109,7 @@
 											<div class="form-group has-success">
 												<div class="col-xs-12">
 													<div class="input-group">
-														<span class="input-group-addon"><i class="fa fa-key"></i></span> <input type="password" id="login-password" name="pwd" class="form-control input-lg" placeholder="请输入密码" data-bv-field="pwd">
+														<span class="input-group-addon"><i class="icon-key"></i></span> <input type="password" id="login-password" name="pwd" class="form-control input-lg" placeholder="请输入密码" data-bv-field="pwd">
 													</div>
 												</div>
 											</div>
