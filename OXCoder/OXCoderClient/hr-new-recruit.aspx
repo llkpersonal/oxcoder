@@ -249,10 +249,10 @@
 												<li class="level-tag" relevel="5"><a href="#" data-toggle="pill">12k~15k</a></li>
 												<li class="level-tag" relevel="6"><a href="#" data-toggle="pill">15k以上</a></li>
 											</ul>
-											<h4 class="col-md-12 col-no-left-padding"><input name="" value="1" id="check-camera" type="checkbox">使用随机拍照功能</h4>
+											<h4 class="col-md-12 col-no-left-padding"><input name="recamera" value="1" id="check-camera" type="checkbox">使用随机拍照功能</h4>
                                                     <span class="col-md-12 col-no-left-padding text-muted">使用该功能后，将开启参加挑战人员的摄像头，保证人员的真实性，但会在一定程度上减少参加挑战的人数。</span>
 											<h4 class="col-md-12 col-no-left-padding">
-												<input name="" value="1" id="check-public" type="checkbox" checked="checked">设为公开挑战
+												<input name="republic" value="1" id="check-public" type="checkbox" checked="checked">设为公开挑战
 											</h4>
 											<span class="col-md-12 col-no-left-padding text-muted">选择公开挑战，您发布的挑战将在首页显示，猿圈用户的可自由开始挑战；若不选择，用户只有您邀请后才可开始挑战。</span>
 
@@ -480,25 +480,25 @@
 
 	    //这里设置项目的类型
 	    $('#a-java').click(function () {
-	        $("#input-retype").val("1");
+	        $("#input-retype").val("Java");
 	    });
 	    $('#a-android').click(function () {
-	        $("#input-retype").val("2");
+	        $("#input-retype").val("Android");
 	    });
 	    $('#a-ios').click(function () {
-	        $("#input-retype").val("3");
+	        $("#input-retype").val("iOS");
 	    });
 	    $('#a-c').click(function () {
-	        $("#input-retype").val("4");
+	        $("#input-retype").val("C语言(BETA)");
 	    });
 	    $('#a-cpp').click(function () {
-	        $("#input-retype").val("5");
+	        $("#input-retype").val("C++(BETA)");
 	    });
 	    $('#a-php').click(function () {
-	        $("#input-retype").val("6");
+	        $("#input-retype").val("PHP(BETA)");
 	    });
 	    $('#a-python').click(function () {
-	        $("#input-retype").val("7");
+	        $("#input-retype").val("Python(BETA)");
 	    });
 	    $('#a-ruby').click(function () {
 	        $("#input-retype").val("8");

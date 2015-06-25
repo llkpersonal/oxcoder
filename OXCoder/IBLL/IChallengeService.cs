@@ -27,6 +27,16 @@ namespace OXCoder.IBLL
          */
         List<OXChallengeDetail> GetChallengeListByUser(int userId, int status);
 
-
+        /*
+         * 按照降序的顺序得到挑战的list
+         * @param companyid 公司Id
+         * @param challengename 发布挑战的名称
+         * @param challenglevel 挑战等级
+         * @param photo 是否打开相机 0 不开 1 开
+         * @param publicorprivate 是否公开 0 不公开 1 公开
+         * @param salary 提供薪资
+         * @param type 挑战类型
+         */
+        void AddNewChallenge(string challengeid, int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type);
     }
 }

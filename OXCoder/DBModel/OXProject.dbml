@@ -7,6 +7,10 @@
       <Column Name="templatefile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="timelimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="memorylimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="difficulty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tags" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="projectname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

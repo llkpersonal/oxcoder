@@ -15,5 +15,6 @@ namespace OXCoder.IDAL
 
         List<DBModel.ox_challenge> GetChallengeListByUser(int userId, int status);
 
+        void AddChallengeBasicInfo(string challengeid, int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type);
     }
 }

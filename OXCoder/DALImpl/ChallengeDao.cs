@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using OXCoder.IDAL;
+using OXCoder.DBModel;
 namespace OXCoder.DALImpl
 {
     public class ChallengeDao : IDAL.IChallengeDao
@@ -16,5 +17,24 @@ namespace OXCoder.DALImpl
         {
             throw new NotImplementedException();
         }
+
+        public void AddChallengeBasicInfo(string challengeid,int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type)
+        {
+            OXChallengeDataContext challengeDataContext = new OXChallengeDataContext();
+            ox_challenge challenge = new ox_challenge();
+            challenge.challengeid = challengeid;
+            challenge.companyid = companyid;
+            challenge.challengename = challengename;
+            challenge.begintime = DateTime.Now;
+            challenge.endtime = DateTime.Now.AddMonths(1);
+            challenge.challengelevel = challenglevel;
+            challenge.photo = photo;
+            challenge.publicorprivate = publicorprivate;
+            challenge.salary = salary;
+            challenge.type = type;
+            challengeDataContext.ox_challenge.InsertOnSubmit(challenge);
+            challengeDataContext.SubmitChanges();
+        }
+    
     }
 }

@@ -43,5 +43,11 @@ namespace OXCoder.BLLImpl
 
             return resList;
         }
+
+        public void AddNewChallenge(string challengeid, int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type) 
+        {
+            IChallengeDao challengeDao = new ChallengeDao();
+            challengeDao.AddChallengeBasicInfo(challengeid,companyid, challengename, challenglevel, photo, publicorprivate, salary, type);
+        }
     }
 }
