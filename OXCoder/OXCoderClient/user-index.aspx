@@ -91,7 +91,7 @@
 			
 				<ul class="nav navbar-nav navbar-right">
 					
-					<li class="dropdown"><a href="http://www.oxcoder.com/index.htm#" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=name %></span> <b class="caret"></b></a>
+					<li class="dropdown"><a href="http://www.oxcoder.com/index.htm#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好，</span> <%=Session["name"] %> <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="http://www.oxcoder.com/user-to-change-pwd.htm">修改密码</a></li>
 							<li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
