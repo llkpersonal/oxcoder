@@ -139,16 +139,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="OXUserChallenge.dbml.layout">
-      <DependentUpon>OXUserChallenge.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="OXChallenge.dbml.layout">
-      <DependentUpon>OXChallenge.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="OXProject.dbml.layout">
       <DependentUpon>OXProject.dbml</DependentUpon>
     </None>
@@ -161,6 +151,16 @@
   <ItemGroup>
     <None Include="OXStatus.dbml.layout">
       <DependentUpon>OXStatus.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXUserChallenge.dbml.layout">
+      <DependentUpon>OXUserChallenge.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OXChallenge.dbml.layout">
+      <DependentUpon>OXChallenge.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

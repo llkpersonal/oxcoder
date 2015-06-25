@@ -86,6 +86,8 @@ namespace OXCoder.DBModel
 		
 		private string _challengeid;
 		
+		private System.Nullable<int> _status;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -96,6 +98,8 @@ namespace OXCoder.DBModel
     partial void OnuseridChanged();
     partial void OnchallengeidChanging(string value);
     partial void OnchallengeidChanged();
+    partial void OnstatusChanging(System.Nullable<int> value);
+    partial void OnstatusChanged();
     #endregion
 		
 		public ox_user_challenge()
@@ -143,7 +147,7 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challengeid", DbType="NChar(255)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challengeid", DbType="NChar(36)")]
 		public string challengeid
 		{
 			get
@@ -159,6 +163,26 @@ namespace OXCoder.DBModel
 					this._challengeid = value;
 					this.SendPropertyChanged("challengeid");
 					this.OnchallengeidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Int")]
+		public System.Nullable<int> status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
 				}
 			}
 		}

@@ -8,8 +8,18 @@ namespace OXCoder.DBModel
 {
     public class OXChallengeDetail : ox_challenge
     {
-        public ArrayList ProjectList = null;
+        private ArrayList projectList;
+        public ArrayList ProjectList
+        {
+            get { return projectList; }
+            set { projectList = value; }
+        }
 
-        public ox_company Company = null;
+        private ox_company company;
+        public ox_company Company
+        {
+            get { return company; }
+            set { company = value; }
+        }
     }
 }

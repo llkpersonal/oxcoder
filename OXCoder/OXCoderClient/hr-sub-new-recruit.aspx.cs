@@ -14,6 +14,18 @@ namespace OXCoderClient
     {
         protected string projectHtml = string.Empty;
         protected string cname = string.Empty;
+        protected string selectedHtml = "";
+
+        private bool AlreadyExists(string[] arr,string str)
+        {
+            if (arr == null) return false;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == str) return true;
+            }
+            return false;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //读取公司名
@@ -51,6 +63,14 @@ namespace OXCoderClient
             //显示project
             IProjectService projectService = new ProjectService();
             List<ox_project> list = projectService.GetProject(shorttype);
+            HttpCookie projectCookie = Request.Cookies["project"];
+            string[] arrTags = null;
+
+            if (projectCookie != null)
+            {
+                string tags = HttpUtility.UrlDecode(projectCookie.Value);
+                arrTags = tags.Split(';');
+            }
 
             foreach(ox_project project in list)
             {
@@ -65,14 +85,11 @@ namespace OXCoderClient
                 {
                     htmlDifficulty += "<i class=\"icon-star\"></i>";
                 }
-                projectHtml = projectHtml + "<div class=\"col-md-4\"><div class=\"panel panel-default project\"><div class=\"panel-body\" style=\"padding-bottom: 0;\"><div class=\"row\"><div class=\"col-xs-12\"><div class=\"pull-left\"><h4>" + project.projectname + "</h4><h5 class=\"text-muted\">" + shorttype + "项目 </h5></div><div class=\"pull-right client-info\"><a style=\"color: white\" href=\"http://www.oxcoder.com/hr-set-challenge.action?flag=new&relevel=1&pid=1&exercise=&difficulty=\" class=\"btn btn-primary btn-sm\">添加</a></div></div><!-- /.col-xs-12 --><div class=\"col-md-12\" style=\"min-height: 68px;\"><ul class=\"companyTags\">" + htmlTags + "</ul></div></div><!-- /.row --></div><!-- /.panel-body --><div class=\"panel-footer\"><div class=\"row\"><div class=\"col-sm-4\"><span class=\"small muted\">项目难度</span></div><!-- /.col-sm-4 --><div class=\"col-sm-8\"><p>" + htmlDifficulty + "</p></div><!-- /.col-sm-8 --></div><!-- /.row --></div><!-- /.panel-footer --></div><!-- /.panel --></div>";
-            }
-
-            //把challengeid加入cookie
-            HttpCookie challengeCookie = new HttpCookie("challengeid");
-            challengeCookie.Name = "challengeid";
-            challengeCookie.Value = challengeid;
-            Response.Cookies.Add(challengeCookie);
+                if (!AlreadyExists(arrTags, project.projectid))
+                    projectHtml = projectHtml + "<div class=\"col-md-4\"><div class=\"panel panel-default project\"><div class=\"panel-body\" style=\"padding-bottom: 0;\"><div class=\"row\"><div class=\"col-xs-12\"><div class=\"pull-left\"><h4>" + project.projectname + "</h4><h5 class=\"text-muted\">" + shorttype + "项目 </h5></div><div class=\"pull-right client-info\"><a style=\"color: white\" href=\"hr-sub-new-recruit-handle.aspx?flag=new&projectid=" + project.projectid + "\" class=\"btn btn-primary btn-sm\">添加</a></div></div><!-- /.col-xs-12 --><div class=\"col-md-12\" style=\"min-height: 68px;\"><ul class=\"companyTags\">" + htmlTags + "</ul></div></div><!-- /.row --></div><!-- /.panel-body --><div class=\"panel-footer\"><div class=\"row\"><div class=\"col-sm-4\"><span class=\"small muted\">项目难度</span></div><!-- /.col-sm-4 --><div class=\"col-sm-8\"><p>" + htmlDifficulty + "</p></div><!-- /.col-sm-8 --></div><!-- /.row --></div><!-- /.panel-footer --></div><!-- /.panel --></div>";
+                else
+                    selectedHtml = selectedHtml + "<div class=\"col-md-4\"><div class=\"panel panel-default project\"><div class=\"panel-body\" style=\"padding-bottom: 0;\"><div class=\"row\"><div class=\"col-xs-12\"><div class=\"pull-left\"><h4>"+project.projectname+"</h4><h5 class=\"text-muted\">by&nbsp;猿圈团队</h5></div><div class=\"pull-right client-info\"><a style=\"color: white\" href=\"hr-set-challenge.action?flag=del&amp;relevel=3&amp;pid=10&amp;exercise=10,11&amp;difficulty=\" class=\"btn btn-primary btn-sm\">删除</a></div></div><!-- /.col-xs-12 --><div class=\"col-md-12\" style=\"min-height: 68px;\"><ul class=\"companyTags\">"+htmlTags+"</ul></div></div><!-- /.row --></div><!-- /.panel-body --><div class=\"panel-footer\"><div class=\"row\"><div class=\"col-sm-4\"><span class=\"small muted\">项目难度</span></div><!-- /.col-sm-4 --><div class=\"col-sm-8\"><p>"+htmlDifficulty+"</p></div><!-- /.col-sm-8 --></div><!-- /.row --></div><!-- /.panel-footer --></div><!-- /.panel --></div>";
+            }           
         }
     }
 }
