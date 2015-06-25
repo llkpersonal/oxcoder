@@ -24,6 +24,7 @@ namespace OXCoderClient
                 short role = user.role;
                 Session["user"] = email;
                 Session["uid"] = user.id;
+                Session["name"] = user.name;
                 //开发者首页
                 if (role == 0)
                 {

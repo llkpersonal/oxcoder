@@ -33,7 +33,8 @@ namespace OXCoder.DALImpl
             DBModel.OXUserDataContext context = new OXUserDataContext();
             try
             {
-                context.ox_user.InsertOnSubmit(new ox_user { email = email, pwd = pwd, role = Convert.ToInt16(role) });
+                string name = email.Split('@')[0];
+                context.ox_user.InsertOnSubmit(new ox_user { email = email, pwd = pwd, name = name, role = Convert.ToInt16(role) });
                 context.SubmitChanges();
                 return true;
             }

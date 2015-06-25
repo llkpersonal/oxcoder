@@ -8,7 +8,9 @@ namespace OXCoder.DALImpl
 {
     public class ProjectDao : IDAL.IProjectDao
     {
-
+        /*
+         * 通过Challenge的id查询Project的list
+         */
         public System.Collections.ArrayList GetProjectList(string challengeId)
         {
             throw new NotImplementedException();

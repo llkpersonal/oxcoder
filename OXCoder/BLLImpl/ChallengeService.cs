@@ -16,23 +16,25 @@ namespace OXCoder.BLLImpl
         {
             IChallengeDao challengeDao = new ChallengeDao();
             IProjectDao projectDao = new ProjectDao();
+            ICompanyDao companyDao = new CompanyDao();
             List<ox_challenge> list = challengeDao.GetChallengeList(orderByColumn);
             List<OXChallengeDetail> resList = new List<OXChallengeDetail>();
             foreach(ox_challenge c in list)
             {
                 OXChallengeDetail detail = (OXChallengeDetail)c;
                 detail.ProjectList = projectDao.GetProjectList(c.challengeid);
+                detail.Company = companyDao.FindCompanyByUid(c.companyid);
                 resList.Add(detail);
             }
 
             return resList;
         }
 
-        public List<DBModel.OXChallengeDetail> GetChallengeListByUser(int userId, int status)
+        public List<DBModel.OXChallengeDetail> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus)
         {
             IChallengeDao challengeDao = new ChallengeDao();
             IProjectDao projectDao = new ProjectDao();
-            List<ox_challenge> list = challengeDao.GetChallengeListByUser(userId,status);
+            List<ox_challenge> list = challengeDao.GetChallengeListByUser(userId, userchallengeStatus, challengeStatus);
             List<OXChallengeDetail> resList = new List<OXChallengeDetail>();
             foreach (ox_challenge c in list)
             {

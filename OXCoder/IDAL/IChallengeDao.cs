@@ -13,7 +13,7 @@ namespace OXCoder.IDAL
          */
         List<DBModel.ox_challenge> GetChallengeList(int orderByColumn);
 
-        List<DBModel.ox_challenge> GetChallengeListByUser(int userId, int status);
+        List<DBModel.ox_challenge> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus);
 
     }
 }

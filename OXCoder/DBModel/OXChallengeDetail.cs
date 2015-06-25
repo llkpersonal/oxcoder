@@ -10,6 +10,6 @@ namespace OXCoder.DBModel
     {
         public ArrayList ProjectList = null;
 
-
+        public ox_company Company = null;
     }
 }

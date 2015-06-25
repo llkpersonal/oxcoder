@@ -18,15 +18,17 @@ namespace OXCoder.IBLL
         /*
          * 查询个人挑战
          * @param userId 用户的Id
-         * @param status 我的挑战的状态
+         * @param userchallengeStatus 我的挑战的状态
          *                  0：不限制状态（即不需要状态的查询条件）
          *                  1：未完成的挑战
          *                  2：通过的挑战
          *                  3：未通过的挑战
+         * @param challengeStatus 挑战本身的状态 
+         *                  "underway" 正在进行
+         *                  "history"  已经结束的
          * @return 
          */
-        List<OXChallengeDetail> GetChallengeListByUser(int userId, int status);
-
+        List<OXChallengeDetail> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus);
 
     }
 }
