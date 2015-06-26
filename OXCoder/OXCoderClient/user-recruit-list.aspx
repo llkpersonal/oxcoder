@@ -66,7 +66,7 @@
 			
 				<ul class="nav navbar-nav navbar-right">
 					
-					<li class="dropdown"><a href="./user-recruit-list.aspx#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好</span> <%=(String)Session["name"] %><b class="caret"></b></a>
+					<li class="dropdown"><a href="./user-recruit-list.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好</span> <%=(String)Session["name"] %><b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="./user-to-change-pwd.aspx">修改密码</a></li>
 							<li><a href="./logout.aspx">注销</a></li>
@@ -140,7 +140,7 @@
 									<li>
 										<ul class="companyTags">
 											<%
-                                            String[] tags = c.Company.tag.Split(',');
+                                            String[] tags = c.Company.tag.Split(';');
                                             foreach(String t in tags)
                                             {
                                                 Response.Write("<li>" + t + "</li>");

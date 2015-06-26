@@ -258,9 +258,9 @@
             <div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top: 20px;">
                 <section id="middle" style="margin-bottom: 20px;">
                     排序： 
-                    <a href="http://www.oxcoder.com/index.aspx?flag=3&salary=0&province=&city=&retype=0&searchCondition=" class="btn btn-order" id="btn-order-on">时间</a>
-                    <a href="http://www.oxcoder.com/index.aspx?flag=1&salary=0&province=&city=&retype=0&searchCondition=" class="btn btn-order">热度</a>
-                    <a href="http://www.oxcoder.com/index.aspx?flag=2&salary=0&province=&city=&retype=0&searchCondition=" class="btn btn-order">薪资</a>
+                    <a href="javascript:orderDisplay('time');" class="btn btn-order" <%if (null == orderByColumn || "time".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>时间</a>
+                    <a href="javascript:orderDisplay('hotpoint');" class="btn btn-order" <%if ("hotpoint".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>热度</a>
+                    <a href="javascript:orderDisplay('salary');" class="btn btn-order" <%if ("salary".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>薪资</a>
                 </section>
                 <!--  排序这边默认什么都不选。默认排序按推荐、热度、时间搞一个算法，推荐一直在最前
                     筛选地区那边默认为用户的期望工作地点 -->
@@ -296,7 +296,7 @@
                                                 </div>
                                                 <div class="pull-right client-info hidden-md"><span class="percent text-danger">
                                                     <img class="img-circle" style="width: 60px; height: 60px" src="./logo/<%=c.Company.logo %>"></span>                                    </div>
-                                                <span class="hot-tag">推荐</span>                            </div>
+                                            </div>
                                             <div class="panel-body ">
                                                 <ul class="list-unstyled">
                                                     <li>月薪： <%=c.salary %></li>
@@ -304,7 +304,7 @@
                                                     <li>
                                                         <ul class="companyTags">
                                                             <%
-                                                            String[] tags = c.Company.tag.Split(',');
+                                                            String[] tags = c.Company.tag.Split(';');
                                                             foreach(String t in tags)
                                                             {
                                                                 Response.Write("<li>" + t + "</li>");
@@ -407,7 +407,13 @@
             <input type="hidden" name="retype" value="0">
         </form>
     </div>
-    <script>
+    <script type="text/javascript">
+
+        function orderDisplay(type)
+        {
+
+        }
+
         $(function () {
             // Append buttons gonext, gopre, gotop to the body as you like.
             /* $('<div id="mycontrols"><a id="gonext" href="javascript:;" title="下一页"></a><a href="javascript:;" id="gotop"></a><a id="gopre" href="javascript:;"  title="上一页"></a></div>').appendTo('body'); */

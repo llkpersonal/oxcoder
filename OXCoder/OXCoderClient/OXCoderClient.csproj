@@ -84,8 +84,32 @@
     <Content Include="index_files\website7.png" />
     <Content Include="index_files\wlogo_sm.png" />
     <Content Include="login-handle.aspx" />
+    <Content Include="recruit-project-detail_files\BiaoBai.html" />
+    <Content Include="recruit-project-detail_files\bootstrap-filestyle%281%29.js" />
+    <Content Include="recruit-project-detail_files\bootstrap-filestyle.js" />
+    <Content Include="recruit-project-detail_files\bootstrap-select.min%281%29.js" />
+    <Content Include="recruit-project-detail_files\bootstrap-select.min.js" />
+    <Content Include="recruit-project-detail_files\bootstrap-switch.min%281%29.js" />
+    <Content Include="recruit-project-detail_files\bootstrap-switch.min.js" />
+    <Content Include="recruit-project-detail_files\bootstrap.min%281%29.js" />
+    <Content Include="recruit-project-detail_files\bootstrap.min.js" />
+    <Content Include="recruit-project-detail_files\jquery-1.11.0.min%281%29.js" />
+    <Content Include="recruit-project-detail_files\jquery-1.11.0.min.js" />
+    <Content Include="recruit-project-detail_files\jquery.sparkline.min%281%29.js" />
+    <Content Include="recruit-project-detail_files\jquery.sparkline.min.js" />
+    <Content Include="recruit-project-detail_files\pic.gif" />
+    <Content Include="recruit-project-detail_files\script%281%29.js" />
+    <Content Include="recruit-project-detail_files\script.js" />
+    <Content Include="recruit-project-detail_files\style%281%29.css" />
+    <Content Include="recruit-project-detail_files\style.css" />
+    <Content Include="recruit-project-detail_files\style_new%281%29.css" />
+    <Content Include="recruit-project-detail_files\style_new.css" />
+    <Content Include="recruit-project-detail_files\summernote.min%281%29.js" />
+    <Content Include="recruit-project-detail_files\summernote.min.js" />
+    <Content Include="recruit-project-detail_files\wlogo_sm.png" />
     <Content Include="register-handle.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="recruit-project-detail.aspx" />
     <Content Include="signin.aspx" />
     <Content Include="signin_files\01.png" />
     <Content Include="signin_files\bootstrap-filestyle.js" />
@@ -268,6 +292,13 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="recruit-project-detail.aspx.cs">
+      <DependentUpon>recruit-project-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recruit-project-detail.aspx.designer.cs">
+      <DependentUpon>recruit-project-detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -357,6 +388,8 @@
     <Content Include="user-to-change-pwd_files\z_stat.php" />
     <Content Include="user-resume_files\core.php" />
     <Content Include="user-resume_files\z_stat.php" />
+    <Content Include="recruit-project-detail_files\core.php" />
+    <Content Include="recruit-project-detail_files\z_stat.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
