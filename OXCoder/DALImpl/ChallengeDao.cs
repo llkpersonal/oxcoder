@@ -81,7 +81,11 @@ namespace OXCoder.DALImpl
         }
 
 
-
+        /**
+         * 通过给定的参数 查询challenge的list
+         * 参数有可能为空，当参数为空时，该参数不作为查询限制条件
+         * 
+         */
         public List<ox_challenge> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn)
         {
             OXCompanyDataContext company_context = new OXCompanyDataContext();
@@ -91,32 +95,71 @@ namespace OXCoder.DALImpl
 
             try
             {
-                if (orderByColumn.Equals("time"))
+                OXChallengeDataContext query = new OXChallengeDataContext();
+                var qu = from c in query.ox_challenge select c;
+
+                if (null != techName)
                 {
-                    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.begintime descending select ch;
-                    foreach (var q in query)
-                    {
-                        challengeList.Add(q);
-                    }
+                    qu = qu.Where(t => t.type == techName);
                 }
-                else if (orderByColumn.Equals("hotpoint"))
+                if (null != salary)
                 {
-                    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.codernum descending select ch;
-                    foreach (var q in query)
-                    {
-                        challengeList.Add(q);
-                    }
+                    qu = qu.Where(t => t.salary == salary);
                 }
-                else if (orderByColumn.Equals("salary"))
+                if (null != techName)
                 {
-                    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.salary descending select ch;
-                    foreach (var q in query)
-                    {
-                        challengeList.Add(q);
-                    }
+                    qu = qu.Where(t => t.type == techName);
+                }
+                //if (null != city)
+                //{
+                //    qu = qu.Where(t => t. == city);
+                //}
+                if (null != key)
+                {
+                    qu = qu.Where(t => t.challengename.Contains(key));
                 }
 
-                return challengeList;
+
+                if ("hotpoint".Equals(orderByColumn))
+                {
+                    qu = qu.OrderByDescending(t => t.codernum);
+                }
+                else if ("salary".Equals(orderByColumn))
+                {
+                    qu = qu.OrderByDescending(t => t.salary);
+                }
+                else
+                {
+                    qu = qu.OrderByDescending(t => t.begintime);
+                }
+
+                return qu.ToList();
+                //if (null == orderByColumn || "time".Equals(orderByColumn))
+                //{
+                //    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.begintime descending select ch;
+                //    foreach (var q in query)
+                //    {
+                //        challengeList.Add(q);
+                //    }
+                //}
+                //else if (orderByColumn.Equals("hotpoint"))
+                //{
+                //    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.codernum descending select ch;
+                //    foreach (var q in query)
+                //    {
+                //        challengeList.Add(q);
+                //    }
+                //}
+                //else if (orderByColumn.Equals("salary"))
+                //{
+                //    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.salary descending select ch;
+                //    foreach (var q in query)
+                //    {
+                //        challengeList.Add(q);
+                //    }
+                //}
+                //
+                //return challengeList;
             }
             catch (InvalidOperationException e)
             {

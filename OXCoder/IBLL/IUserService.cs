@@ -46,6 +46,6 @@ namespace OXCoder.IBLL
         /*
          * 修改基本信息
          */
-        bool ModifyInfo(String name, String gender, int age, String tel);
+        bool ModifyInfo(int userId, String name, String gender, int age, String tel);
     }
 }

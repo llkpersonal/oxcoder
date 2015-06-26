@@ -14,13 +14,15 @@ namespace OXCoderClient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (null != Session && null != Session["uid"])
+            
+            if (null != Session)
             {
+                Int32 uid = Convert.ToInt32(Session["uid"]);
                 String challengeId = Request.Params["reid"];
                 if (challengeId != null)
                 {
                     IChallengeService challengeService = new ChallengeService();
-                    if (challengeService.AcceptChallenge(challengeId))
+                    if (challengeService.AcceptChallenge(uid,challengeId))
                     {
                         Response.Write("user-rescruit-list.aspx");
                     }
@@ -33,7 +35,7 @@ namespace OXCoderClient
             }
             else
             {
-                Response.Write("login.aspx");
+                Response.Write("signin.aspx");
             }
         }
     }

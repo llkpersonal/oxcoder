@@ -20,12 +20,12 @@ namespace OXCoder.DALImpl
             try
             {
                 var query = from p in project_context.ox_project join pc in projectChallenge_context.ox_project_challenge on p.projectid equals pc.projectid where pc.challengeid == challengeId select p;
-
-                foreach (var q in query)
-                {
-                    projectList.Add(q);
-                }
-                return projectList;
+                return query.ToList<ox_project>();
+                //foreach (var q in query)
+                //{
+                //    projectList.Add(q);
+                //}
+                //return projectList;
             }
             catch (InvalidOperationException e)
             {

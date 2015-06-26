@@ -22,5 +22,9 @@ namespace OXCoder.IDAL
         bool addUser(String email, String pwd, int role);
 
         void ChangeRole(int uid,short role);
+
+        bool ModifyInfo(int userId, string name, string gender, int age, string tel);
+
+        bool ModifyPwd(string email, string newPwd);
     }
 }
