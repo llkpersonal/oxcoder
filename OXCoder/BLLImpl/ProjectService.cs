@@ -16,5 +16,11 @@ namespace OXCoder.BLLImpl
             List<ox_project> list = projectDao.GetProjectByType(type);
             return list;
         }
+
+        public ox_project GetProjectDetail(string projectId)
+        {
+            IProjectDao projectDao = new ProjectDao();
+            return projectDao.GetProject(projectId);
+        }
     }
 }
