@@ -13,20 +13,14 @@ namespace OXCoder.DALImpl
             OXChallengeDataContext context = new OXChallengeDataContext();
             try
             {
-                IEnumerable<ox_challenge> challenges = null ;
-                if(orderByColumn == 1)
-                    challenges = context.ox_challenge.OrderByDescending(c => c.begintime);
-                else if(orderByColumn == 2)
-                    challenges = context.ox_challenge.OrderByDescending(c => c.codernum);
-                else if(orderByColumn == 3)
-                    challenges = context.ox_challenge.OrderByDescending(c => c.salary);
-
-                List<ox_challenge> challengesList = new List<ox_challenge>();
-                foreach (ox_challenge c in challenges)
-                {
-                    challengesList.Add(c);
-                }
-                return challengesList;
+                if (orderByColumn == 1)
+                    return context.ox_challenge.OrderByDescending(c => c.begintime).ToList();
+                else if (orderByColumn == 2)
+                    return context.ox_challenge.OrderByDescending(c => c.codernum).ToList();
+                else if (orderByColumn == 3)
+                    return context.ox_challenge.OrderByDescending(c => c.salary).ToList();
+                else
+                    return null;
             }
             catch (InvalidOperationException e)
             {
@@ -38,7 +32,6 @@ namespace OXCoder.DALImpl
         {
             OXChallengeDataContext challenge_context = new OXChallengeDataContext();
             OXUserChallengeDataContext userChallenge_context = new OXUserChallengeDataContext();
-            List<ox_challenge> challengeList = new List<ox_challenge>();
             int cstatus = 0;
 
             if (challengeStatus.Equals("underway"))
@@ -48,13 +41,9 @@ namespace OXCoder.DALImpl
 
             try
             {
-                var query = from c in challenge_context.ox_challenge join uc in userChallenge_context.ox_user_challenge on c.challengeid equals uc.challengeid where c.status == cstatus && uc.userid == userId && uc.status == userchallengeStatus select c;
+                var query = from c in challenge_context.ox_challenge.ToList() join uc in userChallenge_context.ox_user_challenge.ToList() on c.challengeid equals uc.challengeid where c.status == cstatus && uc.userid == userId && uc.status == userchallengeStatus select c;
 
-                foreach (var q in query)
-                {
-                    challengeList.Add(q);
-                }
-                return challengeList;
+                return query.ToList();
             }
             catch (InvalidOperationException e)
             {
@@ -87,36 +76,25 @@ namespace OXCoder.DALImpl
             OXCompanyDataContext company_context = new OXCompanyDataContext();
             OXChallengeDataContext challenge_context = new OXChallengeDataContext();
 
-            List<ox_challenge> challengeList = new List<ox_challenge>();
-
             try
             {
                 if (orderByColumn.Equals("time"))
                 {
-                    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.begintime descending select ch;
-                    foreach (var q in query)
-                    {
-                        challengeList.Add(q);
-                    }
+                    var query = from ch in challenge_context.ox_challenge.ToList() join co in company_context.ox_company.ToList() on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.begintime descending select ch;
+                    return query.ToList();
                 }
                 else if (orderByColumn.Equals("hotpoint"))
                 {
-                    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.codernum descending select ch;
-                    foreach (var q in query)
-                    {
-                        challengeList.Add(q);
-                    }
+                    var query = from ch in challenge_context.ox_challenge.ToList() join co in company_context.ox_company.ToList() on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.codernum descending select ch;
+                    return query.ToList();
                 }
                 else if (orderByColumn.Equals("salary"))
                 {
-                    var query = from ch in challenge_context.ox_challenge join co in company_context.ox_company on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.salary descending select ch;
-                    foreach (var q in query)
-                    {
-                        challengeList.Add(q);
-                    }
+                    var query = from ch in challenge_context.ox_challenge.ToList() join co in company_context.ox_company.ToList() on ch.companyid equals co.userid where ch.type == techName && ch.salary == salary && co.city == city && ch.challengename.Contains(key) orderby ch.salary descending select ch;
+                    return query.ToList();
                 }
-
-                return challengeList;
+                else
+                    return null;
             }
             catch (InvalidOperationException e)
             {
