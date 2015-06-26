@@ -54,5 +54,6 @@ namespace OXCoder.IBLL
          */
         List<OXChallengeDetail> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn);
 
+        //List<ox_challenge> GetChallenge(int uid);
     }
 }

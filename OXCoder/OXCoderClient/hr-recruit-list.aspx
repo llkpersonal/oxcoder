@@ -65,7 +65,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
-				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好</span> <b class="caret"></b></a>
+				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="./hr-payment-info.html">账户余额</a></li>
 						<li><a href="./enterprise-info.html">企业信息</a></li>

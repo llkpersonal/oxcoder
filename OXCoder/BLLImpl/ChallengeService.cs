@@ -87,5 +87,12 @@ namespace OXCoder.BLLImpl
         {
             throw new NotImplementedException();
         }
+
+        //public List<ox_challenge> GetChallenge(int uid)
+        //{
+        //    IChallengeDao challengeDao = new ChallengeDao();
+        //    List<ox_challenge> list = challengeDao.GetChallengeByUid(uid);
+        //    return list;
+        //}
     }
 }

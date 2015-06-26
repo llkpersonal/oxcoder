@@ -13,6 +13,8 @@ namespace OXCoder.DALImpl
             throw new NotImplementedException();
         }
 
+        
+
         public List<DBModel.ox_challenge> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus)
         {
             DBModel.OXChallengeDataContext context = new DBModel.OXChallengeDataContext();
