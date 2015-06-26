@@ -104,24 +104,24 @@
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand hidden-sm" href="./user_index_files/user_index.html" style="padding: 0;">
+                <a class="navbar-brand hidden-sm" href="./user_index_files/user_index.aspx" style="padding: 0;">
                     <img src="./user_index_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
             </div>
             <div class="navbar-collapse collapse" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="./user_index_files/user_index.html">首页</a></li>
-                    <li><a href="http://www.oxcoder.com/user-recruit-list.htm">挑战</a></li>
+                    <li class="active"><a href="./user_index_files/user_index.aspx">首页</a></li>
+                    <li><a href="./user-recruit-list.aspx">挑战</a></li>
 
 
-                    <li><a href="http://www.oxcoder.com/user-resume.htm">个人中心</a></li>
+                    <li><a href="./user-resume.aspx">个人中心</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class="dropdown"><a href="http://www.oxcoder.com/index.htm#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好，</span> <%=Session["name"] %> <b class="caret"></b></a>
+                    <li class="dropdown"><a href="./index.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好，</span> <%=Session["name"] %> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://www.oxcoder.com/user-to-change-pwd.htm">修改密码</a></li>
-                            <li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
+                            <li><a href="./user-to-change-pwd.aspx">修改密码</a></li>
+                            <li><a href="./logout.aspx">注销</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -133,7 +133,7 @@
         function validateSession() {
             var k = 1
             if (k == null) {
-                location.replace("session-timeout-log.htm");
+                location.replace("session-timeout-log.aspx");
             }
         }
     </script>

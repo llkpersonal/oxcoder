@@ -14,6 +14,6 @@ namespace OXCoder.IDAL
         /*
          * 修改状态
          */
-        bool UpdateStatus(int newStatus);
+        bool UpdateStatus(int userId, int newStatus);
     }
 }
