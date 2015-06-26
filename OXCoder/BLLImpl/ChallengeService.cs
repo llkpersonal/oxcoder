@@ -21,7 +21,7 @@ namespace OXCoder.BLLImpl
             List<OXChallengeDetail> resList = new List<OXChallengeDetail>();
             foreach(ox_challenge c in list)
             {
-                OXChallengeDetail detail = (OXChallengeDetail)c;
+                OXChallengeDetail detail = new OXChallengeDetail(c);
                 detail.ProjectList = projectDao.GetProjectList(c.challengeid);
                 detail.Company = companyDao.FindCompanyByUid(c.companyid);
                 resList.Add(detail);
@@ -34,12 +34,14 @@ namespace OXCoder.BLLImpl
         {
             IChallengeDao challengeDao = new ChallengeDao();
             IProjectDao projectDao = new ProjectDao();
+            ICompanyDao companyDao = new CompanyDao();
             List<ox_challenge> list = challengeDao.GetChallengeListByUser(userId, userchallengeStatus, challengeStatus);
             List<OXChallengeDetail> resList = new List<OXChallengeDetail>();
             foreach (ox_challenge c in list)
             {
-                OXChallengeDetail detail = (OXChallengeDetail)c;
+                OXChallengeDetail detail = new OXChallengeDetail(c);
                 detail.ProjectList = projectDao.GetProjectList(c.challengeid);
+                detail.Company = companyDao.FindCompanyByUid(c.companyid);
                 resList.Add(detail);
             }
 
@@ -52,40 +54,38 @@ namespace OXCoder.BLLImpl
             challengeDao.AddChallengeBasicInfo(challengeid,companyid, challengename, challenglevel, photo, publicorprivate, salary, type);
         }
 
+
+        
+
         public List<OXChallengeDetail> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn)
-        {
-            return null;
-        }
-
-        void IChallengeService.AddNewChallenge(string challengeid, int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<OXChallengeDetail> IChallengeService.GetChallengeList(string techName, string salary, string city, string key, string orderByColumn)
         {
             IChallengeDao challengeDao = new ChallengeDao();
             IProjectDao projectDao = new ProjectDao();
+            ICompanyDao companyDao = new CompanyDao();
             List<ox_challenge> list = challengeDao.GetChallengeList(techName,salary,city,key,orderByColumn);
             List<OXChallengeDetail> resList = new List<OXChallengeDetail>();
             foreach (ox_challenge c in list)
             {
-                OXChallengeDetail detail = (OXChallengeDetail)c;
+                OXChallengeDetail detail = new OXChallengeDetail(c);
                 detail.ProjectList = projectDao.GetProjectList(c.challengeid);
+                detail.Company = companyDao.FindCompanyByUid(c.companyid);
                 resList.Add(detail);
             }
 
             return resList;
         }
 
-        List<OXChallengeDetail> IChallengeService.GetChallengeList(int orderByColumn)
+        public bool AcceptChallenge(int userId, string challengeId)
         {
-            throw new NotImplementedException();
+            IUserChallengeDao ucDao = new UserChallengeDao();
+            return ucDao.AddUserChallenge(userId, challengeId);
         }
 
-        List<OXChallengeDetail> IChallengeService.GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus)
-        {
-            throw new NotImplementedException();
-        }
+        //public List<ox_challenge> GetChallenge(int uid)
+        //{
+        //    IChallengeDao challengeDao = new ChallengeDao();
+        //    List<ox_challenge> list = challengeDao.GetChallengeByUid(uid);
+        //    return list;
+        //}
     }
 }

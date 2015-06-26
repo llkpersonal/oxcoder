@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,6 +53,12 @@ namespace OXCoder.IBLL
          * @return 
          */
         List<OXChallengeDetail> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn);
+
+
+        //List<ox_challenge> GetChallenge(int uid);
+
+
+        bool AcceptChallenge(int userId, string challengeId);
 
     }
 }

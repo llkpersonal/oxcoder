@@ -51,5 +51,21 @@ namespace OXCoder.DALImpl
             user.role = role;
             context.SubmitChanges();
         }
+
+        /*
+         * 根据userID修改用户信息
+         */
+        public bool ModifyInfo(int userId, string name, string gender, int age, string tel)
+        {
+            throw new NotImplementedException();
+        }
+
+        /*
+         * 根据email修改密码
+         */
+        public bool ModifyPwd(string email, string newPwd)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

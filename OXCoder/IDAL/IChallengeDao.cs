@@ -15,6 +15,7 @@ namespace OXCoder.IDAL
 
         List<ox_challenge> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus);
 
+
         void AddChallengeBasicInfo(string challengeid, int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type);
         
         /*

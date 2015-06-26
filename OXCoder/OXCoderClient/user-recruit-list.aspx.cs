@@ -27,7 +27,7 @@ namespace OXCoderClient
                 }
 
                 int status = Convert.ToInt32(Request.Params["reustate"]);
-                if (null == status || status < 0 || status > 3)
+                if (status < 0 || status > 3)
                 {
                     status = 0;
                 }
@@ -36,7 +36,7 @@ namespace OXCoderClient
             }
             else
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("signin.aspx");
             }
         }
     }

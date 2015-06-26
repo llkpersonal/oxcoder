@@ -104,6 +104,7 @@
     <Content Include="signup2-sub-handle.aspx" />
     <Content Include="signup2-sub.aspx" />
     <Content Include="test.aspx" />
+    <Content Include="user-choose-challenge.aspx" />
     <Content Include="user-index-handle.aspx" />
     <Content Include="user-index.aspx" />
     <Content Include="user-recruit-list.aspx" />
@@ -124,6 +125,40 @@
     <Content Include="user-recruit-list_files\style_new.css" />
     <Content Include="user-recruit-list_files\summernote.min.js" />
     <Content Include="user-recruit-list_files\wlogo_sm.png" />
+    <Content Include="user-resume.aspx" />
+    <Content Include="user-resume_files\bootstrap-filestyle.js" />
+    <Content Include="user-resume_files\bootstrap-switch.min.js" />
+    <Content Include="user-resume_files\bootstrap.min.js" />
+    <Content Include="user-resume_files\Chart.js" />
+    <Content Include="user-resume_files\csdn2.png" />
+    <Content Include="user-resume_files\github2.png" />
+    <Content Include="user-resume_files\jquery-1.11.0.min.js" />
+    <Content Include="user-resume_files\jquery.sparkline.min.js" />
+    <Content Include="user-resume_files\pic.gif" />
+    <Content Include="user-resume_files\quora2.png" />
+    <Content Include="user-resume_files\sf2.png" />
+    <Content Include="user-resume_files\sina2.png" />
+    <Content Include="user-resume_files\stackoverflow2.png" />
+    <Content Include="user-resume_files\style.css" />
+    <Content Include="user-resume_files\style_new.css" />
+    <Content Include="user-resume_files\summernote.min.js" />
+    <Content Include="user-resume_files\wlogo_sm.png" />
+    <Content Include="user-resume_files\zhihu2.png" />
+    <Content Include="user-to-change-pwd-handler.aspx" />
+    <Content Include="user-to-change-pwd.aspx" />
+    <Content Include="user-to-change-pwd_files\bootstrap-filestyle.js" />
+    <Content Include="user-to-change-pwd_files\bootstrap-select.min.js" />
+    <Content Include="user-to-change-pwd_files\bootstrap-switch.min.js" />
+    <Content Include="user-to-change-pwd_files\bootstrap.min.js" />
+    <Content Include="user-to-change-pwd_files\bootstrapValidator.js" />
+    <Content Include="user-to-change-pwd_files\jquery-1.11.0.min.js" />
+    <Content Include="user-to-change-pwd_files\jquery.sparkline.min.js" />
+    <Content Include="user-to-change-pwd_files\pic.gif" />
+    <Content Include="user-to-change-pwd_files\script.js" />
+    <Content Include="user-to-change-pwd_files\style.css" />
+    <Content Include="user-to-change-pwd_files\style_new.css" />
+    <Content Include="user-to-change-pwd_files\summernote.min.js" />
+    <Content Include="user-to-change-pwd_files\wlogo_sm.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +296,13 @@
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user-choose-challenge.aspx.cs">
+      <DependentUpon>user-choose-challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-choose-challenge.aspx.designer.cs">
+      <DependentUpon>user-choose-challenge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user-index-handle.aspx.cs">
       <DependentUpon>user-index-handle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +324,27 @@
     <Compile Include="user-recruit-list.aspx.designer.cs">
       <DependentUpon>user-recruit-list.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user-resume.aspx.cs">
+      <DependentUpon>user-resume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-resume.aspx.designer.cs">
+      <DependentUpon>user-resume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-to-change-pwd-handler.aspx.cs">
+      <DependentUpon>user-to-change-pwd-handler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-to-change-pwd-handler.aspx.designer.cs">
+      <DependentUpon>user-to-change-pwd-handler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-to-change-pwd.aspx.cs">
+      <DependentUpon>user-to-change-pwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-to-change-pwd.aspx.designer.cs">
+      <DependentUpon>user-to-change-pwd.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="signin_files\core.php" />
@@ -290,6 +353,10 @@
     <Content Include="index_files\z_stat.php" />
     <Content Include="user-recruit-list_files\core.php" />
     <Content Include="user-recruit-list_files\z_stat.php" />
+    <Content Include="user-to-change-pwd_files\core.php" />
+    <Content Include="user-to-change-pwd_files\z_stat.php" />
+    <Content Include="user-resume_files\core.php" />
+    <Content Include="user-resume_files\z_stat.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
