@@ -11,9 +11,9 @@ namespace OXCoder.IDAL
         /*
          * @param orderByColumn 按照什么字段排序  1：时间  2：热度  3：薪酬
          */
-        List<DBModel.ox_challenge> GetChallengeList(int orderByColumn);
+        List<ox_challenge> GetChallengeList(int orderByColumn);
 
-        List<DBModel.ox_challenge> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus);
+        List<ox_challenge> GetChallengeListByUser(int userId, int userchallengeStatus, string challengeStatus);
 
 
         void AddChallengeBasicInfo(string challengeid, int companyid, string challengename, int challenglevel, int photo, int publicorprivate, string salary, string type);
@@ -27,6 +27,6 @@ namespace OXCoder.IDAL
          * @param orderByColumn 排序字段 time,hotpoint,salary
          * @return 
          */
-        List<DBModel.ox_challenge> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn);
+        List<ox_challenge> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn);
     }
 }

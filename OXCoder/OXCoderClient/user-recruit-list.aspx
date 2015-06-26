@@ -122,24 +122,15 @@
 							<div class="col-xs-12 panel-header">
 								<div class="pull-left">
 									<h4 class="line-control">
-										<a href="./user-challenge-cover.aspx?reid=<%=c.challengeid %>">
-												<%=c.challengename %>
-										</a>
+										<a href="./user-challenge-cover.aspx?reid=<%=c.challengeid %>"><%=c.challengename %></a>
 									</h4>
 									<h4 class="line-control">
-										<a href="./user-corp-detail.aspx?cid=974">
-													 
-												<%=c.Company.companyname %>
-													
-										</a>
+										<a href="./user-corp-detail.aspx?cid=974"><%=c.Company.companyname %></a>
 									</h4>
 								</div>
 								<div class="pull-right client-info">
 									<span class="percent text-danger"><img class="img-circle" style="width: 60px; height: 60px" src="./logo/<%=c.Company.logo %>"></span>
 								</div>
-										
-									<span class="hot-tag">推荐</span>
-										
 							</div>
 
 							<div class="panel-body ">
@@ -149,7 +140,7 @@
 									<li>
 										<ul class="companyTags">
 											<%
-                                            String[] tags = c.tags.Split(',');
+                                            String[] tags = c.Company.tag.Split(',');
                                             foreach(String t in tags)
                                             {
                                                 Response.Write("<li>" + t + "</li>");

@@ -13,12 +13,12 @@ namespace OXCoder.IDAL
          * 根据挑战查出对应的Project的List，这里应该要用到多表联接查询
          * 
          */
-        ArrayList GetProjectList(string challengeId);
+        List<ox_project> GetProjectList(string challengeId);
 
         /*
          * 查询Project详细信息
          */
-        DBModel.ox_project GetProject(string projectId);
+        ox_project GetProject(string projectId);
 
         /*
          * 根据挑战类型查出对应的Project的List

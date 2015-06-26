@@ -37,7 +37,7 @@ namespace OXCoder.BLLImpl
             {
                 if (userDao.addUser(email, pwd, role))
                 {
-                    if (sendEmailForRegister(email))
+                    if (this.SendEmailForRegister(email))
                         return 0;
                     else
                         return 2;
@@ -47,7 +47,19 @@ namespace OXCoder.BLLImpl
             }
         }
 
-        public bool sendEmailForRegister(String email)
+        public bool ModifyInfo(int userId, string name, string gender, int age, string tel)
+        {
+            IDAL.IUserDao userDao = new UserDao();
+            return userDao.ModifyInfo(userId, name, gender, age, tel);
+        }
+
+        public bool ModifyPwd(string email, string newPwd)
+        {
+            IDAL.IUserDao userDao = new UserDao();
+            return userDao.ModifyPwd(email, newPwd);
+        }
+
+        public bool SendEmailForRegister(string email)
         {
             return true;
         }

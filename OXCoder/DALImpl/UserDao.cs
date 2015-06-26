@@ -11,7 +11,7 @@ namespace OXCoder.DALImpl
     {
         public ox_user FindUserByEmail(string email)
         {
-            DBModel.OXUserDataContext context = new OXUserDataContext();
+            OXUserDataContext context = new OXUserDataContext();
             try 
             { 
                 ox_user user = context.ox_user.Single(d => d.email == email);
@@ -30,7 +30,7 @@ namespace OXCoder.DALImpl
         }
         public bool addUser(String email, String pwd, int role)
         {
-            DBModel.OXUserDataContext context = new OXUserDataContext();
+            OXUserDataContext context = new OXUserDataContext();
             try
             {
                 string name = email.Split('@')[0];
@@ -46,10 +46,26 @@ namespace OXCoder.DALImpl
 
         public void ChangeRole(int uid, short role)
         {
-            DBModel.OXUserDataContext context = new OXUserDataContext();
+            OXUserDataContext context = new OXUserDataContext();
             ox_user user = context.ox_user.Single(d => d.id == uid);
             user.role = role;
             context.SubmitChanges();
+        }
+
+        /*
+         * 根据userID修改用户信息
+         */
+        public bool ModifyInfo(int userId, string name, string gender, int age, string tel)
+        {
+            throw new NotImplementedException();
+        }
+
+        /*
+         * 根据email修改密码
+         */
+        public bool ModifyPwd(string email, string newPwd)
+        {
+            throw new NotImplementedException();
         }
     }
 }
