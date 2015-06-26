@@ -57,7 +57,21 @@ namespace OXCoder.DALImpl
          */
         public bool ModifyInfo(int userId, string name, string gender, int age, string tel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                OXUserDataContext context = new OXUserDataContext();
+                ox_user user = context.ox_user.Single(d => d.id == userId);
+                user.name = name;
+                user.gender = gender;
+                user.age = age;
+                user.tel = tel;
+                context.SubmitChanges();
+                return true;
+            }
+            catch (InvalidOperationException e)
+            {
+                return false;
+            }           
         }
 
         /*
@@ -65,7 +79,18 @@ namespace OXCoder.DALImpl
          */
         public bool ModifyPwd(string email, string newPwd)
         {
-            throw new NotImplementedException();
+            try
+            {
+                OXUserDataContext context = new OXUserDataContext();
+                ox_user user = context.ox_user.Single(d => d.email == email);
+                user.pwd = newPwd;
+                context.SubmitChanges();
+                return true;
+            }
+            catch (InvalidOperationException e)
+            {
+                return false;
+            }     
         }
     }
 }
