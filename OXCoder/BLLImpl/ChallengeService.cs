@@ -81,11 +81,24 @@ namespace OXCoder.BLLImpl
             return ucDao.AddUserChallenge(userId, challengeId);
         }
 
+        public bool HasAcceptUserChallenge(int userId, string challengeId)
+        {
+            IUserChallengeDao ucDao = new UserChallengeDao();
+            return ucDao.HasUserChallenge(userId,challengeId);
+        }
+
         //public List<ox_challenge> GetChallenge(int uid)
         //{
         //    IChallengeDao challengeDao = new ChallengeDao();
         //    List<ox_challenge> list = challengeDao.GetChallengeByUid(uid);
         //    return list;
         //}
+
+
+        public bool CancelChallenge(int userId, string challengeId)
+        {
+            IUserChallengeDao ucDao = new UserChallengeDao();
+            return ucDao.DelUserChallenge(userId, challengeId);
+        }
     }
 }

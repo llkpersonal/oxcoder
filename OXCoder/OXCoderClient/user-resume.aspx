@@ -2,7 +2,7 @@
 <%@ Import Namespace="OXCoder.DBModel" %>
 
 <!DOCTYPE html>
-<!-- saved from url=(0038)http://www.oxcoder.com/user-resume.html -->
+<!-- saved from url=(0038)http://www.oxcoder.com/user-resume.aspx -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,23 +96,23 @@
 			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="./index..html" style="padding: 0;"><img src="./user-resume_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
+			<a class="navbar-brand hidden-sm" href="./index.aspx" style="padding: 0;"><img src="./user-resume_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
-				<li><a href="./index.html">首页</a></li>
-				<li><a href="./user-recruit-list.html">挑战</a></li>
+				<li><a href="./index.aspx">首页</a></li>
+				<li><a href="./user-recruit-list.aspx">挑战</a></li>
 				
 				
-				<li class="active"><a href="./user-resume_files/user-resume..html">个人中心</a></li>
+				<li class="active"><a href="./user-resume.aspx">个人中心</a></li>
 			</ul>
 			
 				<ul class="nav navbar-nav navbar-right">
 					
-					<li class="dropdown"><a href="./user-resume.html#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好</span> <b class="caret"></b></a>
+					<li class="dropdown"><a href="./user-resume.aspx#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好，</span> <%=Session["name"] %><b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="./user-to-change-pwd.html">修改密码</a></li>
-							<li><a href="./logout.html">注销</a></li>
+							<li><a href="./user-to-change-pwd.aspx">修改密码</a></li>
+							<li><a href="./logout.aspx">注销</a></li>
 						</ul></li>
 				</ul>
 			
@@ -123,7 +123,7 @@
     function validateSession() {
         var k = 1
         if (k == null) {
-            location.replace("session-timeout-log.html");
+            location.replace("session-timeout-log.aspx");
         }
     }
 </script>
@@ -238,7 +238,7 @@
 						<div class="col-md-4 center">
 							
 							
-								<a href="./user-resume.html#" id="sina" title="新浪微博" class="img-show"> <img src="./user-resume_files/sina2.png">
+								<a href="./user-resume.aspx#" id="sina" title="新浪微博" class="img-show"> <img src="./user-resume_files/sina2.png">
 								</a>
 							
 							
@@ -253,7 +253,7 @@
 						<div class="col-md-4 center">
 							
 							
-								<a href="./user-resume.html#" id="github" title="github" class="img-show"><img src="./user-resume_files/github2.png"></a>
+								<a href="./user-resume.aspx#" id="github" title="github" class="img-show"><img src="./user-resume_files/github2.png"></a>
 							
 							
 							
@@ -324,22 +324,22 @@
 						<!-- <h3><i class="fa fa-money"></i> 我的身价</h3> -->
 						<span style="padding: 10px; background-color: #3872a4; margin: 0px 0 0 -15px; color: #fff;">基本资料</span>
 						<h3>
-							你好
+							<%=user.name %>
 						</h3>
 						<p>
-							<span class="resume-label">性别:女
+							<span class="resume-label">性别:<%if("f".Equals(user.gender)) {%> 女<%} else {%>男<%} %>
 								
-							</span><span class="resume-label">年龄:18
+							</span><span class="resume-label">年龄:<%=user.age %>
 							</span>
 						</p>
 						<p>
-							<span class="resume-label">手机:13755757544</span>
+							<span class="resume-label">手机:<%=user.tel %></span>
 						</p>
 						<p>
-							<span class="resume-label">邮箱:12301128@bjtu.edu.cn</span>
+							<span class="resume-label">邮箱:<%=user.email %></span>
 						</p>
 						<p class="pull-right">
-							<a href="./user-resume-operation.action?type=info" class="resume-action">编辑</a>
+							<a href="./user-resume-operation.aspx" class="resume-action">编辑</a>
 						</p>
 					</div>
 					<!-- /.panel-body -->

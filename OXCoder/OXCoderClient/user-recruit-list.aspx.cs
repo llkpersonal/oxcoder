@@ -13,6 +13,7 @@ namespace OXCoderClient
     public partial class user_recruit_list : System.Web.UI.Page
     {
         protected List<OXCoder.DBModel.OXChallengeDetail> challengeList = null;
+        protected string flag = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +21,7 @@ namespace OXCoderClient
             {
                 IChallengeService challengeService = new ChallengeService();
                 int uid = Convert.ToInt32(Session["uid"]);
-                String flag = Request.Params["flag"];
+                flag = Request.Params["flag"];
                 if (null == flag)
                 {
                     flag = "underway";

@@ -14,7 +14,7 @@ namespace OXCoder.DALImpl
             OXUserChallengeDataContext context = new OXUserChallengeDataContext();
             try
             {
-                context.ox_user_challenge.InsertOnSubmit(new ox_user_challenge { userid = userId, challengeid = challengeId });
+                context.ox_user_challenge.InsertOnSubmit(new ox_user_challenge { userid = userId, challengeid = challengeId, status=1 });
                 context.SubmitChanges();
                 return true;
             }
@@ -53,6 +53,20 @@ namespace OXCoder.DALImpl
             {
                 return false;
             }      
+        }
+
+        public bool HasUserChallenge(int userId, string challengeId)
+        {
+            try
+            {
+                OXUserChallengeDataContext context = new OXUserChallengeDataContext();
+                var query = from uc in context.ox_user_challenge where uc.userid == userId && uc.challengeid == challengeId select uc;
+                return query.ToList().Count > 0;
+            }
+            catch (InvalidOperationException e)
+            {
+                return false;
+            }    
         }
     }
 }

@@ -177,7 +177,7 @@
                 <section class="middle">
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
                         <select id="select-retype" class="form-control">
-                            <option selected="" value="">技术方向</option>
+                            <option selected="" value="0">技术方向</option>
                             <option value="Java">Java</option>
                             <option value="Android">Android</option>
                             <option value="iOS">iOS</option>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="col-md-2 col-no-left-padding" style="margin-bottom: 10px;">
                         <select id="select-salary" class="form-control">
-                            <option selected="" value="">起始薪资</option>
+                            <option selected="" value="0">起始薪资</option>
                             <option value="2k~5k">2k~5k</option>
                             <option value="5k~8k">5k~8k</option>
                             <option value="8k~10k">8k~10k</option>
@@ -240,16 +240,16 @@
                         </select>
                     </div>
                     <div style="col-md-6">
-                        <form class="input-group" action="./user-recruit-list.aspx" method="get">
+                        <form class="input-group">
                             <input name="salary" id="input-salary" type="hidden" value="0">
                             <input name="province" id="input-province" type="hidden" value="">
                             <input name="retype" id="input-retype" type="hidden" value="0">
                             <input name="flag" id="input-flag" type="hidden" value="0">
                             <input name="selectedProvince" id="input-selected-province" type="hidden" value="14">
                             <input name="selectedCity" id="input-selected-city" type="hidden" value="1401">
-                            <input name="searchCondition" class="form-control" placeholder="请输入关键词，如公司名称等" value="">
+                            <input name="searchCondition" id="keyword" class="form-control" placeholder="请输入关键词，如公司名称等" value="">
                             <span class="input-group-btn">
-                                <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                            <button id="sub-key-btn" type="submit" class="btn"><i class="fa fa-search"></i></button>
                             </span>
                         </form>
                     </div>
@@ -258,9 +258,9 @@
             <div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top: 20px;">
                 <section id="middle" style="margin-bottom: 20px;">
                     排序： 
-                    <a href="javascript:orderDisplay('time');" class="btn btn-order" <%if (null == orderByColumn || "time".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>时间</a>
-                    <a href="javascript:orderDisplay('hotpoint');" class="btn btn-order" <%if ("hotpoint".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>热度</a>
-                    <a href="javascript:orderDisplay('salary');" class="btn btn-order" <%if ("salary".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>薪资</a>
+                    <a href="javascript:orderDisplay();" data-type="time" class="btn btn-order" <%if (null == orderByColumn || "time".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>时间</a>
+                    <a href="javascript:orderDisplay();" data-type="hotpoint" class="btn btn-order" <%if ("hotpoint".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>热度</a>
+                    <a href="javascript:orderDisplay();" data-type="salary" class="btn btn-order" <%if ("salary".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>薪资</a>
                 </section>
                 <!--  排序这边默认什么都不选。默认排序按推荐、热度、时间搞一个算法，推荐一直在最前
                     筛选地区那边默认为用户的期望工作地点 -->
@@ -305,9 +305,9 @@
                                                         <ul class="companyTags">
                                                             <%
                                                             String[] tags = c.Company.tag.Split(';');
-                                                            foreach(String t in tags)
+                                                            for(int i=0; i<tags.Length-1; ++i)
                                                             {
-                                                                Response.Write("<li>" + t + "</li>");
+                                                                Response.Write("<li>" + tags[i] + "</li>");
                                                             }
                                                             %>
                                                         </ul>
@@ -316,7 +316,7 @@
                                                     <li>
                                                         <ul>
                                                             <% foreach(ox_project p in c.ProjectList) {%>
-												                <li><a href="./index-battle-project-detail.aspx?pid=<%=p.projectid %>&reid=<%=c.challengeid %>"><%=p.description %></a></li>
+												                <li><a href="./recruit-project-detail.aspx?pid=<%=p.projectid %>&reid=<%=c.challengeid %>"><%=p.description %></a></li>
 											                <%} %>
                                                         </ul>
                                                     </li>
@@ -409,8 +409,31 @@
     </div>
     <script type="text/javascript">
 
-        function orderDisplay(type)
+        $("#select-retype").change(orderDisplay);
+        $("#select-salary").change(orderDisplay);
+        $("#province").change(orderDisplay);
+        $("#sub-key-btn").click(orderDisplay);
+
+        function orderDisplay()
         {
+            var query = "./user-index.aspx?";
+            if ($("#select-retype").val() != "0")
+            {
+                query += "retype=" + $("#select-retype").val();
+            }
+            if ($("#select-salary").val() != "0") {
+                query += "&salary=" + $("#select-salary").val();
+            }
+            if ($("#province").val() != "0") {
+                query += "&province=" + $("#province").val();
+            }
+            if ($("#keyword").val() != "") {
+                query += "&key=" + $("#keyword").val();
+            }
+
+            query += "&orderByColumn=" + $("a.btn.btn-order[id='btn-order-on']").attr("data-type");
+
+            location.href = query;
 
         }
 
@@ -495,7 +518,7 @@
             $.Woo(conf);
         })
     </script>
-    <script type="text/javascript" src="./user_index_files/index.js"></script>
+    
     <!-- 引入footer -->
 
 

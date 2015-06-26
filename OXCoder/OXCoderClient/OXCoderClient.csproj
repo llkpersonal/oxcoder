@@ -84,6 +84,7 @@
     <Content Include="index_files\website7.png" />
     <Content Include="index_files\wlogo_sm.png" />
     <Content Include="login-handle.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="recruit-project-detail_files\BiaoBai.html" />
     <Content Include="recruit-project-detail_files\bootstrap-filestyle%281%29.js" />
     <Content Include="recruit-project-detail_files\bootstrap-filestyle.js" />
@@ -128,9 +129,11 @@
     <Content Include="signup2-sub-handle.aspx" />
     <Content Include="signup2-sub.aspx" />
     <Content Include="test.aspx" />
+    <Content Include="user-cancel-challenge.aspx" />
     <Content Include="user-choose-challenge.aspx" />
     <Content Include="user-index-handle.aspx" />
     <Content Include="user-index.aspx" />
+    <Content Include="user-info-update.aspx" />
     <Content Include="user-recruit-list.aspx" />
     <Content Include="user-recruit-list_files\1.png" />
     <Content Include="user-recruit-list_files\432.png" />
@@ -149,6 +152,21 @@
     <Content Include="user-recruit-list_files\style_new.css" />
     <Content Include="user-recruit-list_files\summernote.min.js" />
     <Content Include="user-recruit-list_files\wlogo_sm.png" />
+    <Content Include="user-resume-operation.aspx" />
+    <Content Include="user-resume-operation_files\bootstrap-filestyle.js" />
+    <Content Include="user-resume-operation_files\bootstrap-select.min.js" />
+    <Content Include="user-resume-operation_files\bootstrap-switch.min.js" />
+    <Content Include="user-resume-operation_files\bootstrap.min.js" />
+    <Content Include="user-resume-operation_files\bootstrapValidator.js" />
+    <Content Include="user-resume-operation_files\jquery-1.11.0.min.js" />
+    <Content Include="user-resume-operation_files\jquery.city.select.js" />
+    <Content Include="user-resume-operation_files\jquery.sparkline.min.js" />
+    <Content Include="user-resume-operation_files\pic.gif" />
+    <Content Include="user-resume-operation_files\script.js" />
+    <Content Include="user-resume-operation_files\style.css" />
+    <Content Include="user-resume-operation_files\style_new.css" />
+    <Content Include="user-resume-operation_files\summernote.min.js" />
+    <Content Include="user-resume-operation_files\wlogo_sm.png" />
     <Content Include="user-resume.aspx" />
     <Content Include="user-resume_files\bootstrap-filestyle.js" />
     <Content Include="user-resume_files\bootstrap-switch.min.js" />
@@ -277,6 +295,13 @@
     <Compile Include="login-handle.aspx.designer.cs">
       <DependentUpon>login-handle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register-handle.aspx.cs">
       <DependentUpon>register-handle.aspx</DependentUpon>
@@ -327,6 +352,13 @@
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user-cancel-challenge.aspx.cs">
+      <DependentUpon>user-cancel-challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-cancel-challenge.aspx.designer.cs">
+      <DependentUpon>user-cancel-challenge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user-choose-challenge.aspx.cs">
       <DependentUpon>user-choose-challenge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -348,12 +380,26 @@
     <Compile Include="user-index.aspx.designer.cs">
       <DependentUpon>user-index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user-info-update.aspx.cs">
+      <DependentUpon>user-info-update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-info-update.aspx.designer.cs">
+      <DependentUpon>user-info-update.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user-recruit-list.aspx.cs">
       <DependentUpon>user-recruit-list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="user-recruit-list.aspx.designer.cs">
       <DependentUpon>user-recruit-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-resume-operation.aspx.cs">
+      <DependentUpon>user-resume-operation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-resume-operation.aspx.designer.cs">
+      <DependentUpon>user-resume-operation.aspx</DependentUpon>
     </Compile>
     <Compile Include="user-resume.aspx.cs">
       <DependentUpon>user-resume.aspx</DependentUpon>
@@ -390,6 +436,8 @@
     <Content Include="user-resume_files\z_stat.php" />
     <Content Include="recruit-project-detail_files\core.php" />
     <Content Include="recruit-project-detail_files\z_stat.php" />
+    <Content Include="user-resume-operation_files\core.php" />
+    <Content Include="user-resume-operation_files\z_stat.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

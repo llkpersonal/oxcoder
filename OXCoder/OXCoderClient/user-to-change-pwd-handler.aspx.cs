@@ -27,7 +27,7 @@ namespace OXCoderClient
                 {
                     IUserService userService = new UserService();
                     String email = (String)Session["user"];
-                    if (userService.CheckUserByEmailAndPassword(email, oldPwd))
+                    if (!userService.CheckUserByEmailAndPassword(email, oldPwd))
                     {
                         Response.Write("原密码错误！");
                     }

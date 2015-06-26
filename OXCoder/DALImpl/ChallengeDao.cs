@@ -32,16 +32,20 @@ namespace OXCoder.DALImpl
         {
             OXChallengeDataContext challenge_context = new OXChallengeDataContext();
             OXUserChallengeDataContext userChallenge_context = new OXUserChallengeDataContext();
-            int cstatus = 0;
+            int cstatus = 1;
 
-            if (challengeStatus.Equals("underway"))
+            if ("underway".Equals(challengeStatus))
                 cstatus = 1;
-            else if (challengeStatus.Equals("history"))
-                cstatus = 2;
+            else if ("history".Equals(challengeStatus))
+                cstatus = 0;
 
             try
             {
-                var query = from c in challenge_context.ox_challenge.ToList() join uc in userChallenge_context.ox_user_challenge.ToList() on c.challengeid equals uc.challengeid where c.status == cstatus && uc.userid == userId && uc.status == userchallengeStatus select c;
+                var query = from c in challenge_context.ox_challenge.ToList() 
+                            join uc in userChallenge_context.ox_user_challenge.ToList() 
+                            on c.challengeid equals uc.challengeid
+                            where c.status == cstatus && uc.userid == userId && (userchallengeStatus == 0 ? true : uc.status == userchallengeStatus) 
+                            select c;
 
                 return query.ToList();
             }

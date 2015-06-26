@@ -22,14 +22,22 @@ namespace OXCoderClient
                 if (challengeId != null)
                 {
                     IChallengeService challengeService = new ChallengeService();
-                    if (challengeService.AcceptChallenge(uid,challengeId))
+                    if (!challengeService.HasAcceptUserChallenge(uid, challengeId))
                     {
-                        Response.Write("user-rescruit-list.aspx");
+                        if (challengeService.AcceptChallenge(uid, challengeId))
+                        {
+                            Response.Redirect("user-recruit-list.aspx");
+                        }
+                        else
+                        {
+                            Response.Write("错误！");
+                        }
                     }
                     else
                     {
-                        Response.Write("错误！");
+                        Response.Redirect("user-recruit-list.aspx");
                     }
+                    
                     
                 }
             }

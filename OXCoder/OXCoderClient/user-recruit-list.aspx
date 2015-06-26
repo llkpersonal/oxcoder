@@ -58,7 +58,7 @@
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
 				<li><a href="./index.aspx">首页</a></li>
-				<li class="active"><a href="./user-recruit-list_files/user-recruit-list.aspxl">挑战</a></li>
+				<li class="active"><a href="./user-recruit-list.aspxl">挑战</a></li>
 				
 				
 				<li><a href="./user-resume.aspx">个人中心</a></li>
@@ -93,10 +93,10 @@
                             <li><a href="#pill-profile" data-toggle="pill">挑战历史</a></li>
                         </ul> -->
 					<h2 class="h2-tab">
-						<a href="./user-recruit-list.aspx?flag=underway">我接受的挑战</a>
+						<a href="./user-recruit-list.aspx?flag=underway" <%if("history".Equals(flag)) {%>class="off"<%} %>>我接受的挑战</a>
 					</h2>
 					<h2 class="h2-tab">
-						<a href="./user-recruit-list.aspx?flag=history" class="off">挑战历史</a>
+						<a href="./user-recruit-list.aspx?flag=history" <%if(!"history".Equals(flag)) {%>class="off"<%} %>>挑战历史</a>
 					</h2>
 				</section>
 			</div>
@@ -166,17 +166,19 @@
 									<li><i class="fa fa-user"></i> <%=c.codernum %>人已接受挑战</li>
 									
 									<li class="progress-info"><span class="ongoing"><br></span></li>
-										
+									
 								</ul>
 
 							</div>
 							<!-- /.panel-body -->
 							<div class="panel-footer align-center">
-							
-									<a href="./user-challenge-cover.aspx?reid=<%=c.challengeid %>"><button class="btn btn-new1">开始挑战</button></a>
-									<a href="./user-cancel-challenge.aspx?reid=<%=c.challengeid %>" class="btn btn-new2">放弃</a>
-										
-
+                                <%if ("history".Equals(flag)) {%>
+                                <a href="#" class="btn btn-new2">已经过期</a>
+                                <%} else {%>
+                                <a href="./user-challenge-cover.aspx?reid=<%=c.challengeid %>"><button class="btn btn-new1">开始挑战</button></a>
+								<a href="./user-cancel-challenge.aspx?reid=<%=c.challengeid %>" class="btn btn-new2">放弃</a>
+                                <%} %>
+																		
 							</div>
 							<!-- /.panel-footer -->
 						</div>

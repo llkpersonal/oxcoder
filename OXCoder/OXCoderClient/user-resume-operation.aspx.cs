@@ -10,7 +10,7 @@ using OXCoder.DBModel;
 
 namespace OXCoderClient
 {
-    public partial class user_resume : System.Web.UI.Page
+    public partial class user_resume_operation : System.Web.UI.Page
     {
         protected ox_user user = null;
 
@@ -18,7 +18,7 @@ namespace OXCoderClient
         {
             if (!IsPostBack)
             {
-                
+
                 if (null != Session && null != Session["user"])
                 {
                     String email = Session["user"].ToString();

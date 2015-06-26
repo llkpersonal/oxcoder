@@ -60,5 +60,9 @@ namespace OXCoder.IBLL
 
         bool AcceptChallenge(int userId, string challengeId);
 
+        bool HasAcceptUserChallenge(int userId, string challengeId);
+
+        bool CancelChallenge(int userId, string challengeId);
+
     }
 }
