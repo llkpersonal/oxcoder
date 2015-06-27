@@ -146,7 +146,7 @@ namespace OXCoderClient
                 {
                     if (selectedHtml != "")
                     {
-                        selectedHtml += "<div class=\"form-group form-actions\"><div class=\"col-md-12\" style=\"margin-bottom: 20px;\"><a href=\"hr-submit-new-recruit.aspx\" class=\"btn btn-new1 pull-right\">提交</a></div></div>";
+                        selectedHtml += "<div class=\"form-group form-actions\"><div class=\"col-md-12\" style=\"margin-bottom: 20px;\"><button class=\"btn btn-new1 pull-right\" onclick=\"submit_form();\">提交</button></div></div>";
                     }
                 }
             }

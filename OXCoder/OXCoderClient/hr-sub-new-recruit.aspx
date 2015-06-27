@@ -370,6 +370,11 @@
     if (($(document.body).height() + 50) < $(window).height()) {
         $(".afooter").addClass("navbar-fixed-bottom");
     };
+
+    function submit_form()
+    {
+        location.href="hr-submit-new-recruit.aspx";
+    }
 </script>
 
 
