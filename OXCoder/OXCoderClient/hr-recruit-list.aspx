@@ -98,10 +98,10 @@
 									<section>
 										<section id="middle">
 											<h2 class="h2-tab">
-												<a href="./hr-recruit-list.action?flag=underway">进行中的挑战</a>
+												<a href="./hr-recruit-list.aspx?flag=underway" <%if("history".Equals(flag)) {%>class="off"<%} %>>进行中的挑战</a>
 											</h2>
 											<h2 class="h2-tab">
-												<a href="./hr-recruit-list.action?flag=history" class="off">挑战历史</a>
+												<a href="./hr-recruit-list.aspx?flag=history" <%if(!"history".Equals(flag)) {%>class="off"<%} %>>挑战历史</a>
 											</h2>
 											<a href="./hr-new-recruit.aspx"><button class="btn btn-new1 pull-right" style="margin-top: 20px;">新增挑战邀请</button></a>
 										</section>

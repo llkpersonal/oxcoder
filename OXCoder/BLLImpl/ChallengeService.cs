@@ -100,5 +100,17 @@ namespace OXCoder.BLLImpl
             IUserChallengeDao ucDao = new UserChallengeDao();
             return ucDao.DelUserChallenge(userId, challengeId);
         }
+
+        public ox_challenge GetChallengeByChallengeId(string challengeid)
+        {
+            IChallengeDao challengeDao = new ChallengeDao();
+            return challengeDao.GetChallengeByChallengeId(challengeid);
+        }
+
+        public void ChangeStatusByChallengeId(string challengeid)
+        {
+            IChallengeDao challengeDao = new ChallengeDao();
+            challengeDao.ChangeStatusByChallengeId(challengeid);
+        }
     }
 }

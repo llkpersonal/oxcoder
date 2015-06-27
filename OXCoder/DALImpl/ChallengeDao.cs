@@ -118,5 +118,21 @@ namespace OXCoder.DALImpl
                 return null;
             }
         }
+
+        public ox_challenge GetChallengeByChallengeId(string challengeid)
+        {
+            OXChallengeDataContext challengeDC = new OXChallengeDataContext();
+            ox_challenge challenge = challengeDC.ox_challenge.Single(d => d.challengeid == challengeid);
+            return challenge;
+        }
+
+        public void ChangeStatusByChallengeId(string challengeid)
+        {
+            OXChallengeDataContext challengeDC = new OXChallengeDataContext();
+            ox_challenge challenge = challengeDC.ox_challenge.Single(d => d.challengeid == challengeid);
+            if (challenge.status == 0) challenge.status = 1;
+            else if (challenge.status == 1) challenge.status = 0;
+            challengeDC.SubmitChanges();
+        }
     }
 }

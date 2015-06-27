@@ -10,11 +10,23 @@ namespace OXCoder.BLLImpl
 {
     public class ProjectChallengeService : IProjectChallengeService
     {
-        public List<ResultList> GetProjectChallengeByUid(int uid) 
+        public List<ResultList> GetProjectChallengeByUidAndStatus(int uid,int status) 
         {
             IProjectChallengeDao projectChallengeDao = new ProjectChallengeDao();
-            List<ResultList> list = projectChallengeDao.GetProjectChallengeByUid(uid);
+            List<ResultList> list = projectChallengeDao.GetProjectChallengeByUidAndStatus(uid,status);
             return list;
+        }
+
+        public ox_project_challenge GetProjectChallengeByChallengeId(string challengeid)
+        {
+            IProjectChallengeDao projectChallengeDao = new ProjectChallengeDao();
+            return projectChallengeDao.GetProjectChallengeByChallengeId(challengeid);
+        }
+
+        public string GetThreeProjectNameByChallengeId(string challengeid)
+        {
+            IProjectChallengeDao projectChallengeDao = new ProjectChallengeDao();
+            return projectChallengeDao.GetProjectNameByChallengeId(challengeid);
         }
     }
 }
