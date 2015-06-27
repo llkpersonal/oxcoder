@@ -31,7 +31,7 @@ namespace OXCoderClient
                     }
                     if (flag)
                     {
-                        tagCookie.Value = tagCookie.Value + HttpUtility.UrlEncode(";" + Request.Params["chooseTagStr"]);
+                        tagCookie.Value = tagCookie.Value + HttpUtility.UrlEncode(";" + Request.Params["projectid"]);
                         //tagCookie.Values.Set("tags", tagCookie.Value);
                         Response.AppendCookie(tagCookie);
                     }
@@ -44,8 +44,34 @@ namespace OXCoderClient
                     tagCookie.Value = HttpUtility.UrlEncode(Request.Params["projectid"]);
                     Response.Cookies.Add(tagCookie);
                 }
-                Response.Redirect("hr-sub-new-recruit.aspx");
             }
+
+            if (Request.Params["flag"] == "del")
+            {
+                if (tagCookie != null)
+                {
+                    string tags = HttpUtility.UrlDecode(tagCookie.Value);
+                    string[] arrTags = tags.Split(';');
+                    tagCookie.Value = "";
+                    int n = 0;
+                    foreach (string tag in arrTags)
+                    {
+                        if (tag != Request.Params["projectid"])
+                        {
+                            if (n != 0) tagCookie.Value = tagCookie.Value + ";";
+                            tagCookie.Value += HttpUtility.UrlEncode(tag);
+                            n++;
+                        }
+                    }
+                    if (tagCookie.Value == "")
+                    {
+                        TimeSpan time = new TimeSpan(-1, 0, 0);
+                        tagCookie.Expires = DateTime.Now.Add(time);
+                    }
+                    Response.AppendCookie(tagCookie);
+                }
+            }
+            Response.Redirect("hr-sub-new-recruit.aspx");
         }
     }
 }
