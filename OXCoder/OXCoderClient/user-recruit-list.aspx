@@ -143,12 +143,11 @@
 									<li>
 										<ul class="companyTags">
 											<%
-                                            String[] tags = c.Company.tag.Split(';');
-                                            foreach(String t in tags)
+                                            string[] tags = c.Company.tag.Split(';');
+                                            for(int i=0; i<tags.Length-1; ++i)
                                             {
-                                                Response.Write("<li>" + t + "</li>");
+                                                Response.Write("<li>" + tags[i] + "</li>");
                                             }
-                                            
                                             %>
 													
 										</ul>
@@ -165,7 +164,7 @@
 										<%for(int i=0; i<c.challengelevel; ++i) {%>
                                         <i class="icon-star"></i>
 										<%} %>
-									</li><li><i class="icon-calendar"></i> <%=c.begintime %>~<%=c.endtime %></li>
+									</li><li><i class="icon-calendar"></i> <%=((DateTime)c.begintime).ToShortDateString() %> ~ <%=((DateTime)c.endtime).ToShortDateString() %></li>
 									<li><i class="icon-user"></i> <%=c.codernum %>人已接受挑战</li>
 									
 									<li class="progress-info"><span class="ongoing"><br></span></li>

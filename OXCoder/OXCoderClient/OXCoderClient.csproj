@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="coding-page.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="hr-info-step3-handle.aspx" />
     <Content Include="hr-info-step3-handle2.aspx" />
@@ -130,6 +131,7 @@
     <Content Include="signup2-sub.aspx" />
     <Content Include="test.aspx" />
     <Content Include="user-cancel-challenge.aspx" />
+    <Content Include="user-challenge-cover.aspx" />
     <Content Include="user-choose-challenge.aspx" />
     <Content Include="user-index-handle.aspx" />
     <Content Include="user-index.aspx" />
@@ -204,6 +206,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="coding-page.aspx.cs">
+      <DependentUpon>coding-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coding-page.aspx.designer.cs">
+      <DependentUpon>coding-page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,6 +367,13 @@
     </Compile>
     <Compile Include="user-cancel-challenge.aspx.designer.cs">
       <DependentUpon>user-cancel-challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-challenge-cover.aspx.cs">
+      <DependentUpon>user-challenge-cover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-challenge-cover.aspx.designer.cs">
+      <DependentUpon>user-challenge-cover.aspx</DependentUpon>
     </Compile>
     <Compile Include="user-choose-challenge.aspx.cs">
       <DependentUpon>user-choose-challenge.aspx</DependentUpon>
