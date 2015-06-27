@@ -13,6 +13,7 @@ namespace OXCoderClient
     public partial class hr_recruit_list : System.Web.UI.Page
     {
         protected string cname = string.Empty;
+        protected string challengeHtml = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -33,11 +34,16 @@ namespace OXCoderClient
             //List<ResultList> list = query.Cast<ResultList>().ToList();
             string start = "";
             string projectname = "";
+            string challengename = "";
+            string challengeid = "";
+            int newaccept;
+            int newfinish;
             foreach (ResultList list in lists)
             {
                 start = list.start;
                 projectname = list.projectname;
-
+                challengename = list.challengename;
+                challengeid = list.challengeid;
             }
 
         }

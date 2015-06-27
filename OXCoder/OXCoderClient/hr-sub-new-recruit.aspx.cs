@@ -49,7 +49,20 @@ namespace OXCoderClient
             string shorttype = type;
             if(flag > 0)
                 shorttype = type.Substring(0,flag);
-            string challengename = shorttype + "工程师";
+            string challengename="";
+            if (salary == "1" || salary == "2")
+            {
+                challengename = "[初级]"+shorttype + "工程师";
+            }
+            else if (salary == "3" || salary == "4")
+            {
+                challengename = "[中级]" + shorttype + "工程师";
+            }
+            else 
+            {
+                challengename = "[高级]" + shorttype + "工程师";
+            }
+            
             if (salary == "1") salary = "2k~5k";
             else if (salary == "2") salary = "5k~8k";
             else if (salary == "3") salary = "8k~10k";
