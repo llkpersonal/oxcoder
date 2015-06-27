@@ -29,7 +29,7 @@ namespace OXCoder.DALImpl
             OXUserChallengeDataContext context = new OXUserChallengeDataContext();
             try
             {
-                context.ox_user_challenge.DeleteOnSubmit(new ox_user_challenge { userid = userId, challengeid = challengeId });
+                context.ox_user_challenge.DeleteOnSubmit(context.ox_user_challenge.Single(c => c.userid == userId && c.challengeid == challengeId));
                 context.SubmitChanges();
                 return true;
             }
