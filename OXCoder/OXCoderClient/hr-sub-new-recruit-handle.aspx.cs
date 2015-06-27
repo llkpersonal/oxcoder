@@ -58,7 +58,7 @@ namespace OXCoderClient
                     {
                         if (tag != Request.Params["projectid"])
                         {
-                            if (n != 0) tagCookie.Value = tagCookie.Value + ";";
+                            if (n != 0) tagCookie.Value = tagCookie.Value + HttpUtility.UrlEncode(";");
                             tagCookie.Value += HttpUtility.UrlEncode(tag);
                             n++;
                         }
@@ -68,6 +68,7 @@ namespace OXCoderClient
                         TimeSpan time = new TimeSpan(-1, 0, 0);
                         tagCookie.Expires = DateTime.Now.Add(time);
                     }
+                    
                     Response.AppendCookie(tagCookie);
                 }
             }

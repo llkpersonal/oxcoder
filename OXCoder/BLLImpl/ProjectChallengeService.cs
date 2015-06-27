@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,7 @@ using OXCoder.IDAL;
 using OXCoder.DALImpl;
 using OXCoder.IBLL;
 using OXCoder.DBModel;
+
 namespace OXCoder.BLLImpl
 {
     public class ProjectChallengeService : IProjectChallengeService
@@ -27,6 +28,16 @@ namespace OXCoder.BLLImpl
         {
             IProjectChallengeDao projectChallengeDao = new ProjectChallengeDao();
             return projectChallengeDao.GetProjectNameByChallengeId(challengeid);
+        }
+        
+        public void AddProjectChallenges(string projectid,string challengeid)
+        {
+            IDAL.IProjectChallengeDao pcd = new DALImpl.ProjectChallengeDao();
+            string[] projects = projectid.Split(';');
+            foreach (string pid in projects)
+            {
+                pcd.AddProjectChallenge(pid, challengeid);
+            }
         }
     }
 }

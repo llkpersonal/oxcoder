@@ -12,6 +12,23 @@ namespace OXCoder.BLLImpl
     public class ChallengeService : IBLL.IChallengeService
     {
 
+        public OXChallengeDetail GetChallengeById(string challengeId)
+        {
+            IChallengeDao challengeDao = new ChallengeDao();
+            IProjectDao projectDao = new ProjectDao();
+            ICompanyDao companyDao = new CompanyDao();
+
+            ox_challenge challenge =  challengeDao.GetChallengeById(challengeId);
+            ox_company company = companyDao.FindCompanyByUid(challenge.companyid);
+            List<ox_project> projectList = projectDao.GetProjectList(challengeId);
+
+            OXChallengeDetail challengeDetail = new OXChallengeDetail(challenge);
+            challengeDetail.Company = company;
+            challengeDetail.ProjectList = projectList;
+
+            return challengeDetail;
+        }
+
         public List<DBModel.OXChallengeDetail> GetChallengeList(int orderByColumn)
         {
             IChallengeDao challengeDao = new ChallengeDao();

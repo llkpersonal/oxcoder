@@ -8,6 +8,7 @@ namespace OXCoder.IDAL
 {
     public interface IChallengeDao
     {
+        ox_challenge GetChallengeById(string challengeId);
         /*
          * @param orderByColumn 按照什么字段排序  1：时间  2：热度  3：薪酬
          */

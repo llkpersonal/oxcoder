@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="OXCoderClient.index" %>
 
 <!DOCTYPE html>
-<!-- saved from url=(0032)http://www.oxcoder.com/index.htm -->
+<!-- saved from url=(0032)http://www.oxcoder.com/index.aspx -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta property="wb:webmaster" content="caaa026a0027d2fc">
@@ -35,28 +35,33 @@
 <body style="">
 	<!-- 引入header -->
 
-
-
-
-
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand hidden-sm" href="./index_files/index.html" style="padding: 0;"><img src="./index_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
+				<a class="navbar-brand hidden-sm" href="./index_files/index.aspxl" style="padding: 0;"><img src="./index_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
 			</div>
 			<div class="navbar-collapse collapse" role="navigation">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="http://www.oxcoder.com/index.htm?pageflag=user">开发者</a></li>
-					<li><a href="http://www.oxcoder.com/index.htm?pageflag=cooper">企业</a></li>
-					<li><a href="http://www.oxcoder.com/oxcoder-customers.htm">客户案例</a></li>
-					<li><a href="http://www.oxcoder.com/oxcoder-reports.htm">媒体报道</a></li>
+					<li class="active"><a href="./user-index.aspx">开发者</a></li>
+					<li><a href="./index.aspx?pageflag=cooper">企业</a></li>
+					<li><a href="./oxcoder-customers.aspx">客户案例</a></li>
+					<li><a href="./oxcoder-reports.aspx">媒体报道</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+                    <%if(null == Session["uid"]){ %>
 					<li><a href="signin.aspx">登录</a></li>
 					<li><a href="register.aspx">注册</a></li>
+                    <%}else{ %>
+                    <li class="dropdown"><a href="./index.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好，</span> <%=Session["name"] %> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./user-to-change-pwd.aspx">修改密码</a></li>
+                            <li><a href="./logout.aspx">注销</a></li>
+                        </ul>
+                    </li>
+                    <%} %>
 				</ul>
 			</div>
 		</div>
@@ -71,7 +76,7 @@
 		<!-- <p class="lead">在企业发布的评测挑战中，发现欠缺的知识，并且针对性的学习。</p> -->
 		<p class="lead">在获得工作机会的同时，识别您在编程过程中的不足，提供量身定制的学习内容，提升您的编程能力！</p>
 	</div>
-	<a href="http://www.oxcoder.com/activity/index.htm" target="_blank"><img src="./index_files/banner3.png" class="img-resposive" style="width:100%;margin-top:-30px;"></a>
+	<a href="http://www.oxcoder.com/activity/index.aspx" target="_blank"><img src="./index_files/banner3.png" class="img-resposive" style="width:100%;margin-top:-30px;"></a>
 	<div class="container">
 		<!-- <div class="row featurette">
 				<div class="col-md-4" style="text-align:center;">
@@ -142,7 +147,7 @@
 					祝贺你！在如此短的时间内，你已经找到了最适合你的学习及工作方式。<br> <br>
 				</p>
 				<div class="col-md-12">
-					<a href="http://www.oxcoder.com/signup.htm?regflag=1"><button class="btn btn-lg btn-new5">
+					<a href="http://www.oxcoder.com/signup.aspx?regflag=1"><button class="btn btn-lg btn-new5">
 							马上体验 <i class="fa fa-chevron-right"></i>
 						</button></a>
 				</div>
@@ -183,7 +188,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					© 2015 oxcoder.com <a href="http://www.oxcoder.com/contact-us.htm">联系我们</a> <a href="http://jq.qq.com/?_wv=1027&k=eeKvVb" target="_blank">QQ交流群:77590762</a>
+					© 2015 oxcoder.com <a href="http://www.oxcoder.com/contact-us.aspx">联系我们</a> <a href="http://jq.qq.com/?_wv=1027&k=eeKvVb" target="_blank">QQ交流群:77590762</a>
 					<a href="http://www.mikecrm.com/f.php?t=7GdYKp" target="_blank">意见反馈</a>
 					<script type="text/javascript">
 					    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://"

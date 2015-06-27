@@ -34,6 +34,8 @@
 <!-- Custom styles for this template -->
 <link href="./recruit-project-detail_files/style.css" rel="stylesheet" type="text/css">
 
+<link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
+
 <!-- Max css -->
 <link href="./recruit-project-detail_files/style_new.css" rel="stylesheet" type="text/css">
 
@@ -119,7 +121,7 @@
 																<div class="col-md-6"></div>
 																<div class="col-md-12 col-sm-12 align-center">
 																	<div>
-																		<i class="fa fa-5x fa-rocket text-primary"></i>
+																		<i class="icon-5x fa-rocket text-primary"></i>
 																		<h2 class="text-primary">项目目标</h2>
 																		<p><%=projectDetail.description %></p>
 																		
@@ -134,7 +136,7 @@
 															<div class="row">
 																<div class="col-md-4 col-sm-6 align-center">
 																	<div class="box">
-																		<i class="fa fa-5x fa-check-square-o text-success"></i>
+																		<i class="icon-5x fa-check-square-o text-success"></i>
 																		<h4>
 																			<a href="./recruit-project-detail.aspx?pid=240&reid=1429#">知识点</a>
 																		</h4>
@@ -150,7 +152,7 @@
 
 																<div class="col-md-4 col-sm-6 align-center">
 																	<div class="box">
-																		<i class="fa fa-5x fa-terminal text-warning"></i>
+																		<i class="icon-5x fa-terminal text-warning"></i>
 																		<h4>
 																			<a href="./recruit-project-detail.aspx?pid=240&reid=1429#">开发能力</a>
 																		</h4>
@@ -164,16 +166,16 @@
 
 																<div class="col-md-4 col-sm-6 align-center">
 																	<div class="box">
-																		<i class="fa fa-5x fa-thumbs-o-up text-info"></i>
+																		<i class="icon-5x fa-thumbs-o-up text-info"></i>
 																		<h4>
 																			<a href="./recruit-project-detail.aspx?pid=240&reid=1429#">难度</a>
 																		</h4>
 																		<p>
-																					<i class="fa fa-star"></i>
+																					<i class="icon-star"></i>
 																				
-																					<i class="fa fa-star"></i>
+																					<i class="icon-star"></i>
 																				
-																					<i class="fa fa-star"></i>
+																					<i class="icon-star"></i>
 																				
 																			
 																			
