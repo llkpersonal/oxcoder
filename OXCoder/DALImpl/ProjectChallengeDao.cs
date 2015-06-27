@@ -24,8 +24,8 @@ namespace OXCoder.DALImpl
                                                   challengeid=b.challengeid,
                                                   companyid=b.companyid,
                                                   challengename=b.challengename,
-                                                  start=b.begintime.ToString(),
-                                                  end=b.endtime.ToString(),
+                                                  start=(DateTime)b.begintime,
+                                                  end = (DateTime)b.endtime,
                                                   challengelevel=Convert.ToInt32(b.challengelevel),
                                                   salary=b.salary,
                                                   projectname = GetProjectNameByChallengeId(b.challengeid)

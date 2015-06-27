@@ -12,10 +12,11 @@ namespace OXCoder.DBModel
         //public int pcid;
         public int companyid;
         public string challengename;
-        public string start;
-        public string end;
+        public DateTime start;
+        public DateTime end;
         public int challengelevel;
         public string salary;
         public string projectname;
+
     }
 }

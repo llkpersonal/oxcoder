@@ -108,55 +108,7 @@
 										<!-- /.page-header -->
 										<div id="Div1">
 											<div class="row">
-												
-												
-													
-														<div class="col-md-12">
-															<div class="panel panel-default project ">
-																<div class="panel-body">
-																	<div class="row">
-																		<!-- new start-->
-																		<div class="col-md-5">
-																			<h2 style="margin: 12px 0 2px 0;">
-																				<a href="./hr-recruit-resume-list.action?reid=1021&searchOrder=ranking">[初级]Java工程师</a>
-																			</h2>
-																			<div style="width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-																				<small>[2015/05/07]
-																						日期比较
-																					
-																						10000以内完美数
-																					
-																						数组排成较小的数
-																					</small>
-																			</div>
-
-																		</div>
-																		<div class="col-md-2">
-																			<ul class="list-unstyled" style="margin: 7px 0;">
-																				<li><span class="badge badge-info">0</span>个新接受</li>
-																				<li><span class="badge badge-danger">0</span>个新完成</li>
-																			</ul>
-																		</div>
-																		<div class="col-md-2">
-																			<ul class="list-unstyled" style="margin: 20px 0;">
-																				<li><span class="red">0.0</span>%已合格</li>
-																			</ul>
-																		</div>
-																		<div class="col-md-3">
-																			<a href="./hr-recruit-resume-list.action?reid=1021&searchOrder=ranking"><button type="button" class="btn btn-new1">去筛选</button></a> <a href="./hr-recruit-go-invite.action?reid=1021"><button type="button" class="btn btn-new1" style="margin: 16px 5px;">邀请</button></a>
-																		</div>
-																		<!-- new end-->
-																	</div>
-																	<!-- /.row -->
-
-
-																</div>
-																<!-- /.panel-footer -->
-															</div>
-															<!-- /.panel -->
-
-														</div>
-													
+												<%=challengeHtml %>
 												
 											</div>
 											<!-- /.row -->

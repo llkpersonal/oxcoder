@@ -230,7 +230,7 @@
 		<div class="panel-body">
 			<div class="stat-block stat-danger">
 				<div class="icon">
-					<b class="icon-cover"></b> <i class="fa fa-bell"></i>
+					<b class="icon-cover"></b> <i class="icon-bell"></i>
 				</div>
 				<div class="details">
 					<div class="number">
