@@ -8,6 +8,7 @@ namespace OXCoder.IBLL
 {
     public interface IChallengeService
     {
+        OXChallengeDetail GetChallengeById(string challengeId);
         /*
          * 按照降序的顺序得到挑战的list
          * @param orderByColumn 按照什么字段排序  1：时间  2：热度  3：薪酬

@@ -23,7 +23,7 @@ namespace OXCoderClient
                     IChallengeService challengeService = new ChallengeService();
                     if (challengeService.CancelChallenge(uid, challengeId))
                     {
-                        Response.Redirect("user-recruit.list.aspx");
+                        Response.Redirect("user-recruit-list.aspx");
                     }
                     else
                     {
