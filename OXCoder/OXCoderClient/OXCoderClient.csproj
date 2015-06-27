@@ -132,6 +132,23 @@
     <Content Include="test.aspx" />
     <Content Include="user-cancel-challenge.aspx" />
     <Content Include="user-challenge-cover.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="user-challenge-cover_files\bootstrap-filestyle.js" />
+    <Content Include="user-challenge-cover_files\bootstrap-select.min.js" />
+    <Content Include="user-challenge-cover_files\bootstrap-switch.min.js" />
+    <Content Include="user-challenge-cover_files\bootstrap.min.js" />
+    <Content Include="user-challenge-cover_files\flash.js" />
+    <Content Include="user-challenge-cover_files\jquery-1.11.0.min.js" />
+    <Content Include="user-challenge-cover_files\jquery.sparkline.min.js" />
+    <Content Include="user-challenge-cover_files\pic.gif" />
+    <Content Include="user-challenge-cover_files\script.js" />
+    <Content Include="user-challenge-cover_files\style.css" />
+    <Content Include="user-challenge-cover_files\style_new.css" />
+    <Content Include="user-challenge-cover_files\summernote.min.js" />
+    <Content Include="user-challenge-cover_files\webcam.js" />
+    <Content Include="user-challenge-cover_files\wlogo_sm.png" />
+>>>>>>> 6d9a1c96b5e0d6ff12b906dcf0a35879782ba02e
     <Content Include="user-choose-challenge.aspx" />
     <Content Include="user-index-handle.aspx" />
     <Content Include="user-index.aspx" />
@@ -454,6 +471,8 @@
     <Content Include="recruit-project-detail_files\z_stat.php" />
     <Content Include="user-resume-operation_files\core.php" />
     <Content Include="user-resume-operation_files\z_stat.php" />
+    <Content Include="user-challenge-cover_files\core.php" />
+    <Content Include="user-challenge-cover_files\z_stat.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
