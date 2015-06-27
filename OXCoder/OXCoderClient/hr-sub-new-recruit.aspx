@@ -110,6 +110,7 @@
 											<img src="./hr-sub-new-recruit_files/new_c2.png">
 										</div>
 										<h4>已选择挑战项目</h4>
+                                        <% if(selectedHtml==""){ %>
 										<div class="row col-md-12 col-no-left-padding">
 											
 												<div class="alert alert-info" style="text-align: center" role="alert">
@@ -121,6 +122,8 @@
 											
 											
 										</div>
+                                        <%} %>
+                                        <%=selectedHtml %>
 										<div class="row col-md-12">
 											<h4 class="pull-left">挑战项目</h4>
 											<div class="pull-right">
@@ -230,7 +233,7 @@
 		<div class="panel-body">
 			<div class="stat-block stat-danger">
 				<div class="icon">
-					<b class="icon-cover"></b> <i class="fa fa-bell"></i>
+					<b class="icon-cover"></b> <i class="icon-bell"></i>
 				</div>
 				<div class="details">
 					<div class="number">

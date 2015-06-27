@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using OXCoder.IDAL;
 using OXCoder.DBModel;
+using System.Globalization;
+
 namespace OXCoder.DALImpl
 {
     public class ChallengeDao : IDAL.IChallengeDao
@@ -69,6 +71,8 @@ namespace OXCoder.DALImpl
             challenge.publicorprivate = publicorprivate;
             challenge.salary = salary;
             challenge.type = type;
+            challenge.codernum = 0;
+            challenge.status = 1;
             challengeDataContext.ox_challenge.InsertOnSubmit(challenge);
             challengeDataContext.SubmitChanges();
         }
