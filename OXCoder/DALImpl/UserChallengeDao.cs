@@ -12,9 +12,10 @@ namespace OXCoder.DALImpl
         public bool AddUserChallenge(int userId, string challengeId)
         {
             OXUserChallengeDataContext context = new OXUserChallengeDataContext();
+            DateTime starttime = DateTime.Now;
             try
             {
-                context.ox_user_challenge.InsertOnSubmit(new ox_user_challenge { userid = userId, challengeid = challengeId, status=1 });
+                context.ox_user_challenge.InsertOnSubmit(new ox_user_challenge { userid = userId, challengeid = challengeId, status=1, starttime=starttime });
                 context.SubmitChanges();
                 return true;
             }
