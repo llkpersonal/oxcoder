@@ -89,11 +89,11 @@
             </div>
             <div class="navbar-collapse collapse" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li><a href="./index.html">首页</a></li>
-                    <li><a href="./user-recruit-list.html">挑战</a></li>
+                    <li><a href="./index.aspx">首页</a></li>
+                    <li><a href="./user-recruit-list.aspx">挑战</a></li>
 
 
-                    <li><a href="./user-resume.html">个人中心</a></li>
+                    <li><a href="./user-resume.aspx">个人中心</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">

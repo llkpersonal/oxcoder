@@ -42,6 +42,8 @@
     <!-- Custom styles for this template -->
     <link href="./user_index_files/style.css" rel="stylesheet" type="text/css">
 
+
+    <link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
     <!-- Max css -->
     <link href="./user_index_files/style_new.css" rel="stylesheet" type="text/css">
     <link href="./user_index_files/carousel.css" rel="stylesheet" type="text/css">
@@ -249,7 +251,7 @@
                             <input name="selectedCity" id="input-selected-city" type="hidden" value="1401">
                             <input name="searchCondition" id="keyword" class="form-control" placeholder="请输入关键词，如公司名称等" value="">
                             <span class="input-group-btn">
-                            <button id="sub-key-btn" type="submit" class="btn"><i class="fa fa-search"></i></button>
+                            <button id="sub-key-btn" type="submit" class="btn"><i class="icon-search"></i></button>
                             </span>
                         </form>
                     </div>
@@ -258,9 +260,9 @@
             <div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top: 20px;">
                 <section id="middle" style="margin-bottom: 20px;">
                     排序： 
-                    <a href="javascript:orderDisplay();" data-type="time" class="btn btn-order" <%if (null == orderByColumn || "time".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>时间</a>
-                    <a href="javascript:orderDisplay();" data-type="hotpoint" class="btn btn-order" <%if ("hotpoint".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>热度</a>
-                    <a href="javascript:orderDisplay();" data-type="salary" class="btn btn-order" <%if ("salary".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>薪资</a>
+                    <a href="javascript:void(0);" data-type="time" class="btn btn-order" <%if (null == orderByColumn || "time".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>时间</a>
+                    <a href="javascript:void(0);" data-type="hotpoint" class="btn btn-order" <%if ("hotpoint".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>热度</a>
+                    <a href="javascript:void(0);" data-type="salary" class="btn btn-order" <%if ("salary".Equals(orderByColumn)) {%>id="btn-order-on"<%} %>>薪资</a>
                 </section>
                 <!--  排序这边默认什么都不选。默认排序按推荐、热度、时间搞一个算法，推荐一直在最前
                     筛选地区那边默认为用户的期望工作地点 -->
@@ -322,11 +324,11 @@
                                                     </li>
                                                     <li>难度：
                                                         <%for(int i=0; i<c.challengelevel; ++i) {%>
-                                                        <i class="fa fa-star"></i>
+                                                        <i class="icon-star"></i>
 										                <%} %>
                                                     </li>
-                                                    <li><i class="fa fa-calendar"></i> <%=c.begintime %>~<%=c.endtime %></li>
-									                <li><i class="fa fa-user"></i> <%=c.codernum %>人已接受挑战</li>
+                                                    <li><i class="icon-calendar"></i> <%=((DateTime)c.begintime).ToShortDateString() %>~<%=((DateTime)c.endtime).ToShortDateString() %></li>
+									                <li><i class="icon-user"></i> <%=c.codernum %>人已接受挑战</li>
                                                 </ul>
                                             </div>
                                             <!-- /.panel-body -->
@@ -413,6 +415,12 @@
         $("#select-salary").change(orderDisplay);
         $("#province").change(orderDisplay);
         $("#sub-key-btn").click(orderDisplay);
+        
+        $("a.btn.btn-order").click(function () {
+            $("a.btn.btn-order").removeAttr("id");
+            $(this).attr("id", "btn-order-on");
+            orderDisplay();
+        });
 
         function orderDisplay()
         {
