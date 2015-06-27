@@ -9,6 +9,8 @@ namespace OXCoder.IDAL
     public interface IProjectChallengeDao
     {
         string GetProjectNameByChallengeId(string challengeid);
+        List<ResultList> GetProjectChallengeByUidAndStatus(int uid, int status);
+        ox_project_challenge GetProjectChallengeByChallengeId(string challengeid);
         List<ResultList> GetProjectChallengeByUid(int uid);
         void AddProjectChallenge(string projectid, string challengeid);
     }

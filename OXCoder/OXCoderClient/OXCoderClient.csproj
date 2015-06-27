@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="enterprise-info.aspx" />
     <Content Include="coding-page.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="hr-info-step3-handle.aspx" />
@@ -65,6 +66,8 @@
     <Content Include="hr-info-step3.aspx" />
     <Content Include="hr-new-recruit.aspx" />
     <Content Include="hr-recruit-list.aspx" />
+    <Content Include="hr-recruit-resume-list.aspx" />
+    <Content Include="hr-recruit-switch.aspx" />
     <Content Include="hr-sub-new-recruit-handle.aspx" />
     <Content Include="hr-sub-new-recruit.aspx" />
     <Content Include="hr-submit-new-recruit.aspx" />
@@ -221,6 +224,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="enterprise-info.aspx.cs">
+      <DependentUpon>enterprise-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterprise-info.aspx.designer.cs">
+      <DependentUpon>enterprise-info.aspx</DependentUpon>
     <Compile Include="coding-page.aspx.cs">
       <DependentUpon>coding-page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,6 +285,20 @@
     </Compile>
     <Compile Include="hr-recruit-list.aspx.designer.cs">
       <DependentUpon>hr-recruit-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-recruit-resume-list.aspx.cs">
+      <DependentUpon>hr-recruit-resume-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-recruit-resume-list.aspx.designer.cs">
+      <DependentUpon>hr-recruit-resume-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-recruit-switch.aspx.cs">
+      <DependentUpon>hr-recruit-switch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-recruit-switch.aspx.designer.cs">
+      <DependentUpon>hr-recruit-switch.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-sub-new-recruit-handle.aspx.cs">
       <DependentUpon>hr-sub-new-recruit-handle.aspx</DependentUpon>

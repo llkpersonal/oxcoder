@@ -61,7 +61,7 @@
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
 				<li><a href="./index.aspx">首页</a></li>
-				<li class="active"><a href="./user-recruit-list.aspxl">挑战</a></li>
+				<li class="active"><a href="./user-recruit-list.aspx">挑战</a></li>
 				
 				
 				<li><a href="./user-resume.aspx">个人中心</a></li>

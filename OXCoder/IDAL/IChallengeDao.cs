@@ -29,5 +29,9 @@ namespace OXCoder.IDAL
          * @return 
          */
         List<ox_challenge> GetChallengeList(string techName, string salary, string city, string key, string orderByColumn);
+
+        ox_challenge GetChallengeByChallengeId(string challengeid);
+
+        void ChangeStatusByChallengeId(string challengeid);
     }
 }
