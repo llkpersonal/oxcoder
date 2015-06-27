@@ -10,6 +10,19 @@ namespace OXCoder.DALImpl
 {
     public class ChallengeDao : IDAL.IChallengeDao
     {
+        public ox_challenge GetChallengeById(string challengeId)
+        {
+            OXChallengeDataContext context = new OXChallengeDataContext();
+            try
+            {
+                return context.ox_challenge.Single(c => c.challengeid == challengeId);
+            }
+            catch (InvalidOperationException e)
+            {
+                return null;
+            }
+        }
+
         public List<ox_challenge> GetChallengeList(int orderByColumn)
         {
             OXChallengeDataContext context = new OXChallengeDataContext();

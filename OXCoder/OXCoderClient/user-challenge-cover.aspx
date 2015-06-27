@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="user-challenge-cover.aspx.cs" Inherits="OXCoderClient.user_challenge_cover" %>
-
+<%@ Import Namespace="OXCoder.DBModel" %>
 <!DOCTYPE html>
 <!-- saved from url=(0060)./user-challenge-cover.action?reid=1001 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="BootstrapStyler">
 
-<title>猿圈 [初级]php工程师—北京友诚创网络科技有限公司挑战详情
+<title>猿圈 <%=challengeDetail.challengename %>—<%=challengeDetail.Company.companyname %>
 </title>
 
 <!-- Bootstrap core CSS -->
@@ -101,19 +101,23 @@
 									<section>
 										<div class="page-header" style="border-bottom: none;">
 											<h1>
-												[初级]php工程师
+                                                <%=challengeDetail.challengename %>
 												——
-												北京友诚创网络科技有限公司
+												<%=challengeDetail.Company.companyname %>
 											</h1>
 											<div class="challenge-simple-desc">
 												<span class="desc-label">月薪： 
-													2k~5k
+													<%=challengeDetail.salary %>
 												     
-												</span> <span class="desc-label">职位诱惑：
-														股份期权&nbsp;
-														扁平管理&nbsp;
-														领导好&nbsp;</span> <span class="desc-label">时间： 2015-05-05~ 2015-06-04
-												</span> <span class="desc-label">12人已接受挑战</span>
+												</span>
+                                                <span class="desc-label">职位诱惑：
+														<% string[] t = challengeDetail.Company.tag.Split(';');
+                                                           for(int i = 0; i < t.Length-1; ++i) { 
+                                                        %>
+                                                        <%=t[i] %>
+                                                        <%} %>
+                                                </span> <span class="desc-label">时间： <%=((DateTime)challengeDetail.begintime).ToShortDateString() %> ~ <%=((DateTime)challengeDetail.endtime).ToShortDateString() %>
+												</span> <span class="desc-label"><%=challengeDetail.codernum %>人已接受挑战</span>
 												<p>
 													
 												</p>
@@ -122,7 +126,7 @@
 										<!-- /.page-header -->
 										<div id="Div1">
 											<div class="row">
-												
+												<%foreach(ox_project p in challengeDetail.ProjectList) {%>
 													<div class="col-md-4">
 														<div class="panel panel-default project">
 															<div class="panel-body">
@@ -130,17 +134,10 @@
 																	<div class="col-xs-12">
 																		<div class="pull-left">
 																			<h4>
-																				<a href="javascript:;">人民币变美元</a>
+																				<a href="javascript:;"><%=p.projectname %></a>
 																			</h4>
 																			<h5 class="text-muted">
-
-																				
-																				
-																					考察开发者对字符串的高级应用
-
-																				
-
-
+                                                                                <%=p.description %>
 																			</h5>
 																		</div>
 																		<div class="pull-right client-info"></div>
@@ -151,11 +148,7 @@
 																<hr>
 																<h4>开发能力</h4>
 																<div class="well">
-																	
-																	
-																		掌握对字符串的高级应用
-
-																	
+																	<%=p.description %>
 																</div>
 															</div>
 															<!-- /.panel-body -->
@@ -167,15 +160,9 @@
 																	<!-- /.col-sm-4 -->
 																	<div class="col-sm-8">
 																		<p>
-																			
-																			
-																				<i class="icon-star"></i>
-																			
-																			
-																			
-																			
-																			
-																			
+                                                                            <%for(int i=0; i<challengeDetail.challengelevel; ++i) {%>
+                                                                            <i class="icon-star"></i>
+                                                                            <%} %>
 																		</p>
 																	</div>
 
@@ -190,141 +177,7 @@
 
 													</div>
 												
-													<div class="col-md-4">
-														<div class="panel panel-default project">
-															<div class="panel-body">
-																<div class="row">
-																	<div class="col-xs-12">
-																		<div class="pull-left">
-																			<h4>
-																				<a href="javascript:;">快速排序</a>
-																			</h4>
-																			<h5 class="text-muted">
-
-																				
-																				
-																					考察开发者的基本排序，还有在php中对数组的操作。
-
-																				
-
-
-																			</h5>
-																		</div>
-																		<div class="pull-right client-info"></div>
-																	</div>
-																	<!-- /.col-xs-12 -->
-																</div>
-																<!-- /.row -->
-																<hr>
-																<h4>开发能力</h4>
-																<div class="well">
-																	
-																	
-																		掌握基本排序，还有在php中对数组的操作。
-
-																	
-																</div>
-															</div>
-															<!-- /.panel-body -->
-															<div class="panel-footer">
-																<div class="row">
-																	<div class="col-sm-4">
-																		<span class="small muted">项目难度</span>
-																	</div>
-																	<!-- /.col-sm-4 -->
-																	<div class="col-sm-8">
-																		<p>
-																			
-																			
-																			
-																				<i class="icon-star"></i>
-																				<i class="icon-star"></i>
-																			
-																			
-																			
-																			
-																			
-																		</p>
-																	</div>
-
-																	<!-- /.col-sm-8 -->
-																</div>
-																<!-- /.row -->
-
-															</div>
-															<!-- /.panel-footer -->
-														</div>
-														<!-- /.panel -->
-
-													</div>
-												
-													<div class="col-md-4">
-														<div class="panel panel-default project">
-															<div class="panel-body">
-																<div class="row">
-																	<div class="col-xs-12">
-																		<div class="pull-left">
-																			<h4>
-																				<a href="javascript:;">冒泡排序php</a>
-																			</h4>
-																			<h5 class="text-muted">
-
-																				
-																				
-																					考察开发者对排序和数组的掌握
-
-																				
-
-
-																			</h5>
-																		</div>
-																		<div class="pull-right client-info"></div>
-																	</div>
-																	<!-- /.col-xs-12 -->
-																</div>
-																<!-- /.row -->
-																<hr>
-																<h4>开发能力</h4>
-																<div class="well">
-																	
-																	
-																		排序和数组的应用
-
-																	
-																</div>
-															</div>
-															<!-- /.panel-body -->
-															<div class="panel-footer">
-																<div class="row">
-																	<div class="col-sm-4">
-																		<span class="small muted">项目难度</span>
-																	</div>
-																	<!-- /.col-sm-4 -->
-																	<div class="col-sm-8">
-																		<p>
-																			
-																			
-																			
-																				<i class="icon-star"></i>
-																				<i class="icon-star"></i>
-																			
-																			
-																			
-																			
-																			
-																		</p>
-																	</div>
-
-																	<!-- /.col-sm-8 -->
-																</div>
-																<!-- /.row -->
-
-															</div>
-															<!-- /.panel-footer -->
-														</div>
-														<!-- /.panel -->
-
-													</div>
+												<%} %>	
 												
 											</div>
 										</div>
