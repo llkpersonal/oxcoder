@@ -31,13 +31,13 @@ namespace OXCoderClient
             HttpCookie cookie = Request.Cookies[name];
             if(cookie != null)
             {
-                cookie.Value = value;
+                cookie.Value = HttpUtility.UrlEncode(value);
                 Response.AppendCookie(cookie);
             }
             else
             {
                 cookie = new HttpCookie(name);
-                cookie.Value = value;
+                cookie.Value = HttpUtility.UrlEncode(value);
                 Response.Cookies.Add(cookie);
             }
         }
@@ -131,8 +131,26 @@ namespace OXCoderClient
                 if (!AlreadyExists(arrTags, project.projectid))
                     projectHtml = projectHtml + "<div class=\"col-md-4\"><div class=\"panel panel-default project\"><div class=\"panel-body\" style=\"padding-bottom: 0;\"><div class=\"row\"><div class=\"col-xs-12\"><div class=\"pull-left\"><h4>" + project.projectname + "</h4><h5 class=\"text-muted\">" + shorttype + "项目 </h5></div><div class=\"pull-right client-info\"><a style=\"color: white\" href=\"hr-sub-new-recruit-handle.aspx?flag=new&projectid=" + project.projectid + "\" class=\"btn btn-primary btn-sm\">添加</a></div></div><!-- /.col-xs-12 --><div class=\"col-md-12\" style=\"min-height: 68px;\"><ul class=\"companyTags\">" + htmlTags + "</ul></div></div><!-- /.row --></div><!-- /.panel-body --><div class=\"panel-footer\"><div class=\"row\"><div class=\"col-sm-4\"><span class=\"small muted\">项目难度</span></div><!-- /.col-sm-4 --><div class=\"col-sm-8\"><p>" + htmlDifficulty + "</p></div><!-- /.col-sm-8 --></div><!-- /.row --></div><!-- /.panel-footer --></div><!-- /.panel --></div>";
                 else
-                    selectedHtml = selectedHtml + "<div class=\"col-md-4\"><div class=\"panel panel-default project\"><div class=\"panel-body\" style=\"padding-bottom: 0;\"><div class=\"row\"><div class=\"col-xs-12\"><div class=\"pull-left\"><h4>"+project.projectname+"</h4></div><div class=\"pull-right client-info\"><a style=\"color: white\" href=\"hr-sub-new-recruit-handle.aspx?flag=del&projectid="+project.projectid+"\" class=\"btn btn-primary btn-sm\">删除</a></div></div><!-- /.col-xs-12 --><div class=\"col-md-12\" style=\"min-height: 68px;\"><ul class=\"companyTags\">"+htmlTags+"</ul></div></div><!-- /.row --></div><!-- /.panel-body --><div class=\"panel-footer\"><div class=\"row\"><div class=\"col-sm-4\"><span class=\"small muted\">项目难度</span></div><!-- /.col-sm-4 --><div class=\"col-sm-8\"><p>"+htmlDifficulty+"</p></div><!-- /.col-sm-8 --></div><!-- /.row --></div><!-- /.panel-footer --></div><!-- /.panel --></div>";
-            }           
+                    selectedHtml = selectedHtml + "<div class=\"col-md-4\"><div class=\"panel panel-default project\"><div class=\"panel-body\" style=\"padding-bottom: 0;\"><div class=\"row\"><div class=\"col-xs-12\"><div class=\"pull-left\"><h4>" + project.projectname + "</h4></div><div class=\"pull-right client-info\"><a style=\"color: white\" href=\"hr-sub-new-recruit-handle.aspx?flag=del&projectid=" + project.projectid + "\" class=\"btn btn-primary btn-sm\">删除</a></div></div><!-- /.col-xs-12 --><div class=\"col-md-12\" style=\"min-height: 68px;\"><ul class=\"companyTags\">" + htmlTags + "</ul></div></div><!-- /.row --></div><!-- /.panel-body --><div class=\"panel-footer\"><div class=\"row\"><div class=\"col-sm-4\"><span class=\"small muted\">项目难度</span></div><!-- /.col-sm-4 --><div class=\"col-sm-8\"><p>" + htmlDifficulty + "</p></div><!-- /.col-sm-8 --></div><!-- /.row --></div><!-- /.panel-footer --></div><!-- /.panel --></div>";
+            }
+            if (arrTags != null)
+            {
+                if (arrTags.Length < 3)
+                {
+                    if (selectedHtml != "")
+                    {
+                        selectedHtml += "<div class=\"form-group form-actions\"><div class=\"col-md-12\" style=\"margin-bottom: 20px;\"><button disabled=\"\" type=\"submit\" class=\"btn btn-new1 pull-right\">请选择3道题目</button></div></div>";
+                    }
+                }
+                else
+                {
+                    if (selectedHtml != "")
+                    {
+                        selectedHtml += "<div class=\"form-group form-actions\"><div class=\"col-md-12\" style=\"margin-bottom: 20px;\"><a href=\"hr-submit-new-recruit.aspx\" class=\"btn btn-new1 pull-right\">提交</a></div></div>";
+                    }
+                }
+            }
+            
         }
     }
 }

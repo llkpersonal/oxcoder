@@ -47,5 +47,15 @@ namespace OXCoder.DALImpl
             }
             return projectName;
         }
+
+        public void AddProjectChallenge(string projectid,string challengeid)
+        {
+            OXProjectChallengeDataContext dc = new OXProjectChallengeDataContext();
+            ox_project_challenge pc = new ox_project_challenge();
+            pc.challengeid = challengeid;
+            pc.projectid = projectid;
+            dc.ox_project_challenge.InsertOnSubmit(pc);
+            dc.SubmitChanges();
+        }
     }
 }

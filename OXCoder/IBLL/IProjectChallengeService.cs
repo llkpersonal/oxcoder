@@ -8,5 +8,6 @@ namespace OXCoder.IBLL
     public interface IProjectChallengeService
     {
         List<ResultList> GetProjectChallengeByUid(int uid);
+        void AddProjectChallenges(string projectid, string challengeid);
     }
 }

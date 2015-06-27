@@ -103,7 +103,7 @@ namespace OXCoder.DBModel
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_projectid", DbType="NChar(255)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_projectid", DbType="NChar(36)")]
 		public string projectid
 		{
 			get
@@ -123,7 +123,7 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challengeid", DbType="NChar(255)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challengeid", DbType="NChar(36)")]
 		public string challengeid
 		{
 			get
@@ -143,7 +143,7 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pcid", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pcid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int pcid
 		{
 			get

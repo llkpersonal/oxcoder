@@ -199,7 +199,7 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_begintime", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_begintime", DbType="DateTime")]
 		public System.Nullable<System.DateTime> begintime
 		{
 			get
@@ -219,7 +219,7 @@ namespace OXCoder.DBModel
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_endtime", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_endtime", DbType="DateTime")]
 		public System.Nullable<System.DateTime> endtime
 		{
 			get

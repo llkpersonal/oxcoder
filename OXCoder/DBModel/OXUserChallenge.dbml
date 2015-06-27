@@ -2,7 +2,7 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=172.31.34.190;Initial Catalog=oxcoderdb;User ID=oxcoder" SettingsObjectName="OXCoder.DBModel.Properties.Settings" SettingsPropertyName="oxcoderdbConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ox_user_challenge" Member="ox_user_challenge">
     <Type Name="ox_user_challenge">
-      <Column Name="ucid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ucid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="challengeid" Type="System.String" DbType="NChar(36)" CanBeNull="true" />
       <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
