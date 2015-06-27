@@ -230,6 +230,7 @@
     </Compile>
     <Compile Include="enterprise-info.aspx.designer.cs">
       <DependentUpon>enterprise-info.aspx</DependentUpon>
+    </Compile>
     <Compile Include="coding-page.aspx.cs">
       <DependentUpon>coding-page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
