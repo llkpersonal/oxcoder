@@ -24,6 +24,20 @@ namespace OXCoder.DALImpl
             
         }
 
+        public ox_user FindUserByUid(int uid)
+        {
+            OXUserDataContext context = new OXUserDataContext();
+            try
+            {
+                ox_user user = context.ox_user.Single(d => d.id == uid);
+                return user;
+            }
+            catch (InvalidOperationException e)
+            {
+                return null;
+            }
+
+        }
         public bool AddCompanyBasicInfo()
         {
             return true;

@@ -16,6 +16,7 @@ namespace OXCoder.IDAL
          */
         ox_user FindUserByEmail(string email);
 
+        ox_user FindUserByUid(int uid);
         /**
          * 当注册用户时 增加用户
          */

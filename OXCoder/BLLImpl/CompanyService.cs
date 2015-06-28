@@ -31,7 +31,9 @@ namespace OXCoder.BLLImpl
             ICompanyDao companyDao = new CompanyDao();
             companyDao.UpdateCompanyBasicInformation(uid, cname, briefname, logo, website, province, city, size, desc);
             IUserDao userDao = new UserDao();
-            userDao.ChangeRole(uid, 3);
+            int status = userDao.FindUserByUid(uid).role;
+            if(status == 2)
+                userDao.ChangeRole(uid, 3);
         }
         public ox_company GetCompanyByUid(int uid)
         {

@@ -17,6 +17,7 @@
 
 <!-- Font Awesome CSS -->
 <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+    <link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
 <!-- Bootstrap Switch -->
 <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -64,17 +65,21 @@
                         <li><a href="javascript:;">挑战管理</a></li>
                         <li><a href="javascript:;">人才推荐</a></li>
                     </ul>
+                    <%if(status.Equals(4)) {%><!--#include file="hr-header.aspx"--><%} 
+                    else{%>
+
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="http://www.oxcoder.com/hr-info-step3-to.htm#" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
+                            <a href="signup2-sub.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:;">去打赏</a></li>
                                 <li><a href="javascript:;">企业信息</a></li>
                                 <li><a href="javascript:;">修改密码</a></li>
-                                <li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
+                                <li><a href="logout.aspx">注销</a></li>
                             </ul>
                         </li>
                     </ul>
+                    <%} %>
                 </div>
             </div>
         </div>

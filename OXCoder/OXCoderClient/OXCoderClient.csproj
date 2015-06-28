@@ -73,6 +73,7 @@
     <Content Include="hr-sub-new-recruit-handle.aspx" />
     <Content Include="hr-sub-new-recruit.aspx" />
     <Content Include="hr-submit-new-recruit.aspx" />
+    <Content Include="hr-to-change-pwd.aspx" />
     <Content Include="hr-to-new-info-handle.aspx" />
     <Content Include="hr-to-new-info.aspx" />
     <Content Include="index.aspx" />
@@ -337,6 +338,13 @@
     </Compile>
     <Compile Include="hr-submit-new-recruit.aspx.designer.cs">
       <DependentUpon>hr-submit-new-recruit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-to-change-pwd.aspx.cs">
+      <DependentUpon>hr-to-change-pwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-to-change-pwd.aspx.designer.cs">
+      <DependentUpon>hr-to-change-pwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-to-new-info-handle.aspx.cs">
       <DependentUpon>hr-to-new-info-handle.aspx</DependentUpon>

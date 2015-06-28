@@ -16,6 +16,7 @@
 
 <!-- Font Awesome CSS -->
 <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+    <link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
 <!-- Bootstrap Switch -->
 <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -62,16 +63,7 @@
 				<li class="active"><a href="http://www.oxcoder.com/hr-recruit-list.htm">挑战管理</a></li>
 				<li><a href="http://www.oxcoder.com/recommend-user.htm">人才推荐</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				
-				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.oxcoder.com/hr-payment-info.htm">去打赏</a></li>
-						<li><a href="http://www.oxcoder.com/enterprise-info.htm">企业信息</a></li>
-						<li><a href="http://www.oxcoder.com/hr-to-change-pwd.htm">修改密码</a></li>
-						<li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
-					</ul></li>
-			</ul>
+			<!--#include file="hr-header.aspx"-->
 		</div>
 	</div>
 </div>

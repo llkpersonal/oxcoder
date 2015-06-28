@@ -16,6 +16,7 @@
 
 <!-- Font Awesome CSS -->
 <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+    <link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
 <!-- Bootstrap Switch -->
 <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -67,12 +68,12 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="http://www.oxcoder.com/hr-to-new-info.action#" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=email %></span> <b class="caret"></b></a>
+                            <a href="hr-to-new-info.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=email %></span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:;">账户余额</a></li>
                                 <li><a href="javascript:;">企业信息</a></li>
                                 <li><a href="javascript:;">修改密码</a></li>
-                                <li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
+                                <li><a href="logout.aspx">注销</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -101,7 +102,7 @@
                                      <input type="file" name="image" tabindex="-1" style="position: fixed; left: -500px;" id="corp-pic" accept="image/*" data-bv-field="image">
                                     <div class="bootstrap-filestyle input-group">
                                         
-                                        <span class="input-group-btn" tabindex="0"> </span>
+                                        <span class="input-group-btn " tabindex="0"><i class="icon-folder-open"></i></span>
 
                                     </div>
                                      <span>如营业执照、组织代码证、税务登记证或工牌等扫描文件</span><span class="help-block has-error" id="hint2">

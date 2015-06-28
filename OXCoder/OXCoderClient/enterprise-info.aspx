@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="BootstrapStyler">
 
-<title>猿圈 你好的企业信息
+<title>猿圈 <%=cname %>的企业信息
 </title>
 
 <!-- Bootstrap core CSS -->
@@ -17,6 +17,7 @@
 
 <!-- Font Awesome CSS -->
 <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+<link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
 <!-- Bootstrap Switch -->
 <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -59,19 +60,11 @@
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
-				<li><a href="http://www.oxcoder.com/hr-recruit-list.htm">挑战管理</a></li>
-				<li><a href="http://www.oxcoder.com/recommend-user.htm">人才推荐</a></li>
+				<li><a href="hr-recruit-list.aspx">挑战管理</a></li>
+				<li><a href="recommend-user.aspx">人才推荐</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				
-				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text">你好</span> <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.oxcoder.com/hr-payment-info.htm">账户余额</a></li>
-						<li><a href="./enterprise-info_files/enterprise-info.html">企业信息</a></li>
-						<li><a href="http://www.oxcoder.com/hr-to-change-pwd.htm">修改密码</a></li>
-						<li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
-					</ul></li>
-			</ul>
+			 
+                <!--#include file="hr-header.aspx"--> 
 		</div>
 	</div>
 </div>
@@ -89,83 +82,12 @@
 				<section class="middle">
 					<h2 class="col-md-12">
 						<i class="fa  fa-th-large"></i>
-						你好
+						<%=cname %>
 						进行中的挑战
 					</h2>
 					
-					
+					        <%=challengeHtml %>
 						
-							<div class="col-md-4">
-								<section id="middle">
-									<div class="panel panel-default shadow-effect">
-										<div class="col-xs-12 panel-header">
-											<div class="pull-left">
-												<h4 class="line-control">
-													<a href="javascript:;">[初级]Java工程师</a>
-												</h4>
-												<h4 class="line-control">
-													<a href="javascript:;">你好</a>
-												</h4>
-											</div>
-											<div class="pull-right client-info">
-												<span class="percent text-danger"><img class="img-circle" style="width: 60px; height: 60px" src="./enterprise-info_files/998.jpeg"></span>
-											</div>
-											
-										</div>
-
-										<div class="panel-body ">
-											<ul class="list-unstyled">
-												<li>月薪： 
-													
-													2k~5k
-												     
-												</li>
-												<li>职位诱惑：</li>
-												<li>
-													<ul class="companyTags">
-														<!-- <li>弹性工作</li>
-														<li>技能培训</li>
-														<li>节日礼物</li> -->
-														
-															<li>帅哥多</li>
-														
-															<li>美女多</li>
-														
-															<li>领导好</li>
-														
-													</ul>
-												</li>
-												<li>挑战项目：</li>
-												<li>
-													<ul>
-														
-															<li><a href="http://www.oxcoder.com/enterprise-info.htm#">日期比较</a></li>
-														
-															<li><a href="http://www.oxcoder.com/enterprise-info.htm#">10000以内完美数</a></li>
-														
-															<li><a href="http://www.oxcoder.com/enterprise-info.htm#">数组排成较小的数</a></li>
-														
-													</ul>
-												</li>
-												<li>难度： 
-														
-														
-														
-															<i class="fa fa-star"></i>
-														
-													
-												</li><li><i class="fa fa-calendar"></i>
-												2015-05-07~2015-05-07</li>
-												<li><i class="fa fa-user"></i>
-												0人已接受挑战</li>
-											</ul>
-										</div>
-										<!-- /.panel-body -->
-										
-										<!-- /.panel-footer -->
-									</div>
-								</section>
-							</div>
 						
 					
 				</section>
@@ -178,33 +100,33 @@
 						<div class="panel-body">
 							<h2 class="grey">
 								<img src="./enterprise-info_files/998.jpeg" height="40px" width="40px;">
-								你好
+								<%=cname %>
 							</h2>
 							<p>
-								<span class="resume-label">你好</span>
+								<span class="resume-label"><%=cname %></span>
 							</p>
 							<p>
-								<span class="resume-label">地点:北京-东城区</span> <span class="resume-label">规模:
-									少于15人     
+								<span class="resume-label">地点:<%=position %></span> <span class="resume-label">规模:
+									<%=size %>     
 								</span>
 							</p>
 							<p>
-								<span class="resume-label">公司网址:<a href="http:"></a></span>
+								<span class="resume-label">公司网址:<a href="http://<%=website %>"><%=website %></a></span>
 							</p>
 							<ul class="companyTags">
 								<!-- <li>弹性工作</li>
 													<li>技能培训</li>
 													<li>节日礼物</li> -->
 								
-									<li>帅哥多</li>
+									<li><%=tags[0] %></li>
 								
-									<li>美女多</li>
+									<li><%=tags[1] %></li>
 								
-									<li>领导好</li>
+									<li><%=tags[2] %></li>
 								
 							</ul>
 							<p class="pull-right">
-								<a href="http://www.oxcoder.com/enterprise-info-change.action" class="resume-action">编辑</a>
+								<a href="signup2-sub.aspx" class="resume-action">编辑</a>
 							</p>
 						</div>
 						<!-- /.panel-body -->
@@ -213,15 +135,15 @@
 
 						<div class="panel-body">
 							<h3>
-								<i class="fa fa-align-left"></i> 公司简介
+								<i class="icon-align-left"></i> 公司简介
 							</h3>
 							<p>
-								很棒
+								<%=desc %>
 								
 								
 							</p>
 							<p class="pull-right">
-								<a href="http://www.oxcoder.com/enterprise-info-change.action" class="resume-action">编辑</a>
+								<a href="signup2-sub.aspx" class="resume-action">编辑</a>
 							</p>
 						</div>
 						<!-- /.panel-body -->

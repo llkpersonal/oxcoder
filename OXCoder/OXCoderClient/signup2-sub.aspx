@@ -16,6 +16,7 @@
 
         <!-- Font Awesome CSS -->
         <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+    <link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
         <!-- Bootstrap Switch -->
         <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -63,17 +64,21 @@
                         <li><a href="javascript:;">挑战管理</a></li>
                         <li><a href="javascript:;">人才推荐</a></li>
                     </ul>
+                    <%if(status.Equals(4)) {%><!--#include file="hr-header.aspx"--><%} 
+                    else{%>
+
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="http://www.oxcoder.com/signup2-sub.action#" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
+                            <a href="signup2-sub.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:;">去打赏</a></li>
                                 <li><a href="javascript:;">企业信息</a></li>
                                 <li><a href="javascript:;">修改密码</a></li>
-                                <li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
+                                <li><a href="logout.aspx">注销</a></li>
                             </ul>
                         </li>
                     </ul>
+                    <%} %>
                 </div>
             </div>
         </div>
@@ -96,7 +101,7 @@
 
                                 <div class="form-group">
                                     <label><h3 class="grey">公司简称</h3></label>
-                                    <input type="text" id="corp-sname" name="cnameshort" class="form-control" data-bv-field="cnameshort">
+                                    <input type="text" id="corp-sname" name="cnameshort" class="form-control" data-bv-field="cnameshort" value=<%=shortname %>>
                                     <span class="text-danger" id="error1" style="display:none;">请输入公司简称</span>
                                     <span class="help-block has-error" id="hint1"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司全称</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">公司全称不能超过30个字符</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="cnameshort" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司简称</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="cnameshort" data-bv-result="NOT_VALIDATED" style="display: none;">公司简称不能超过30个字符</small></span>
                                 </div>
@@ -114,13 +119,13 @@
 
                                 <div class="form-group">
                                     <label><h3 class="grey">公司网址</h3></label>
-                                    <input type="text" id="" name="website" class="form-control" data-bv-field="website">
+                                    <input type="text" id="" name="website" class="form-control" data-bv-field="website" value=<%=website %>>
                                     <span class="help-block">非必填</span>
                                 <small class="help-block" data-bv-validator="uri" data-bv-for="website" data-bv-result="NOT_VALIDATED" style="display: none;">请输入正确的网站链接</small></div>
                                 <div class="form-group">
                                     <label><h3 class="grey">所在城市</h3></label>
                                     <div id="warp">
-                                        <select name="prov" id="province" class="form-control" style="width:200px; display:inline-block;">
+                                        <select name="prov" id="province" class="form-control" style="width:200px; display:inline-block;" >
                                             
                                         <option name="11" value="北京">北京</option><option name="12" value="天津">天津</option><option name="13" value="河北">河北</option><option name="14" value="山西">山西</option><option name="15" value="内蒙古">内蒙古</option><option name="21" value="辽宁">辽宁</option><option name="22" value="吉林">吉林</option><option name="23" value="黑龙江">黑龙江</option><option name="31" value="上海">上海</option><option name="32" value="江苏">江苏</option><option name="33" value="浙江">浙江</option><option name="34" value="安徽">安徽</option><option name="35" value="福建">福建</option><option name="36" value="江西">江西</option><option name="37" value="山东">山东</option><option name="41" value="河南">河南</option><option name="42" value="湖北">湖北</option><option name="43" value="湖南">湖南</option><option name="44" value="广东">广东</option><option name="45" value="广西">广西</option><option name="46" value="海南">海南</option><option name="50" value="重庆">重庆</option><option name="51" value="四川">四川</option><option name="52" value="贵州">贵州</option><option name="53" value="云南">云南</option><option name="54" value="西藏">西藏</option><option name="61" value="陕西">陕西</option><option name="62" value="甘肃">甘肃</option><option name="63" value="青海">青海</option><option name="64" value="宁夏">宁夏</option><option name="65" value="新疆">新疆</option><option name="71" value="台湾">台湾</option><option name="81" value="香港">香港</option><option name="82" value="澳门">澳门</option><option name="100" value="其他">其他</option><option name="400" value="海外">海外</option></select>
                                         <select name="city" id="city" class="form-control" style="width:200px; display:inline-block;">
@@ -145,7 +150,7 @@
                                 <small class="help-block" data-bv-validator="notEmpty" data-bv-for="scale" data-bv-result="NOT_VALIDATED" style="display: none;">请选择公司规模</small></span></div>
                                 <div class="form-group">
                                     <label><h3 class="grey">公司简介</h3></label>
-                                    <textarea id="corp-info" name="cdes" rows="9" class="form-control" placeholder="请详细描述公司简介、企业文化等" data-bv-field="cdes"></textarea>
+                                    <textarea id="corp-info" name="cdes" rows="9" class="form-control" placeholder="请详细描述公司简介、企业文化等" data-bv-field="cdes" ><%=desc %></textarea>
                                     <span class="help-block has-error" id="hint4">
                                 <small class="help-block" data-bv-validator="notEmpty" data-bv-for="cdes" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司简介</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="cdes" data-bv-result="NOT_VALIDATED" style="display: none;">公司简介不能超过500个字符</small></span></div>
                                 <div class="form-group form-actions pull-right">
@@ -194,6 +199,8 @@
         <script type="text/javascript">
 
             $(document).ready(function () {
+                //alert("aaa");
+                
                 $('#defaultForm').bootstrapValidator({
                     message: 'This value is not valid',
                     fields: {
@@ -259,9 +266,9 @@
                         }
                     }
                 });
+                
             });
         </script>
-        
 
 <script type="text/javascript">
 
@@ -878,7 +885,10 @@
             $("#city").val($("#input-citywork").val());
         }
         // window.prettyPrint && prettyPrint();
-
+        $("#province").val("<%=province%>");
+        $("#city").val("<%=city%>");
+        $("#corp-big").val("<%=size%>");
+        //alert("aa");
     });
 
 

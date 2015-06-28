@@ -16,6 +16,7 @@
 
 <!-- Font Awesome CSS -->
 <link href="http://www.oxcoder.com/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+<link href="Font-Awesome-3.2.1\css\font-awesome.min.css" rel="stylesheet">
 
 <!-- Bootstrap Switch -->
 <link href="http://www.oxcoder.com/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet">
@@ -55,23 +56,14 @@
 			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="./index.html" style="padding: 0;"><img src="./hr-info-step3-sub_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
+			<a class="navbar-brand hidden-sm" href="./index.aspx" style="padding: 0;"><img src="./hr-info-step3-sub_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
-				<li><a href="./hr-recruit-list.html">挑战管理</a></li>
-				<li><a href="./recommend-user.html">人才推荐</a></li>
+				<li><a href="./hr-recruit-list.aspx">挑战管理</a></li>
+				<li><a href="./recommend-user.aspx">人才推荐</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				
-				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="./hr-payment-info.html">账户余额</a></li>
-						<li><a href="./enterprise-info.html">企业信息</a></li>
-						<li><a href="./hr-to-change-pwd.html">修改密码</a></li>
-						<li><a href="./logout.html">注销</a></li>
-					</ul></li>
-			</ul>
+			<!--#include file="hr-header.aspx"-->
 		</div>
 	</div>
 </div>
