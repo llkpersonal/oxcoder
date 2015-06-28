@@ -6,6 +6,7 @@ using OXCoder.IBLL;
 using OXCoder.DBModel;
 using OXCoder.IDAL;
 using OXCoder.DALImpl;
+using System.IO;
 namespace OXCoder.BLLImpl
 {
     public class ProjectService:IProjectService
@@ -22,5 +23,16 @@ namespace OXCoder.BLLImpl
             IProjectDao projectDao = new ProjectDao();
             return projectDao.GetProject(projectId);
         }
+
+        public void AddProject(string projectname,string template,string description,int difficulty,string tags,string type)
+        {
+            IProjectDao projectDao = new ProjectDao();
+            string projectid = projectDao.AddProject(projectname, description, difficulty, tags, type);
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString()+"\\template\\"+projectid+".template";
+            StreamWriter writer = new StreamWriter(path);
+            writer.WriteLine(template);
+            writer.Close();
+        }
+        
     }
 }

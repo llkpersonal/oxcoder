@@ -16,7 +16,8 @@ namespace OXCoderClient
         protected string province = null;
         protected string key = null;
         protected string orderByColumn = null;
-
+        protected string cname = null;
+        protected int role = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -24,6 +25,11 @@ namespace OXCoderClient
             {
                 if (null != Session && null != Session["uid"])
                 {
+                    IUserService userService = new UserService();
+                    ICompanyService companyService = new CompanyService();
+                    role = userService.GetUser(Session["user"].ToString()).role;
+                    if (role == 4)
+                        cname = companyService.GetCompanyByUid(Convert.ToInt32(Session["uid"])).companyname;
                     IChallengeService challengeService = new ChallengeService();
                     
                     techName = Request.Params["retype"];//salary=0&province=0&retype=0

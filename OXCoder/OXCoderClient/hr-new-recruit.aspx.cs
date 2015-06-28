@@ -12,11 +12,14 @@ namespace OXCoderClient
     public partial class hr_new_recruit : System.Web.UI.Page
     {
         protected string cname = string.Empty;
+        protected string clogo = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             int uid = Convert.ToInt32(Session["uid"]);
             ICompanyService companyService = new CompanyService();
-            cname = companyService.GetCompanyByUid(uid).companyname;
+            ox_company company = companyService.GetCompanyByUid(uid);
+            cname = company.companyname;
+            clogo = "logo/"+company.logo;
         }
     }
 }

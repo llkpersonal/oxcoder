@@ -49,6 +49,10 @@ namespace OXCoderClient
                 {
                     Response.Redirect("hr-recruit-list.aspx");
                 }
+                else if (role == 100)
+                {
+                    Response.Redirect("admin-add-project.aspx");
+                }
                 //Response.Write("登录成功"+role);
                 
             }

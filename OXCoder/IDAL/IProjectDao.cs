@@ -24,5 +24,7 @@ namespace OXCoder.IDAL
          * 根据挑战类型查出对应的Project的List
          */
         List<ox_project> GetProjectByType(string type);
+
+        string AddProject(string projectname, string description, int difficulty, string tags, string type);
     }
 }

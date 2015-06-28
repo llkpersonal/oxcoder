@@ -56,7 +56,7 @@
 			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/index.htm" style="padding: 0;"><img src="./hr-recruit-resume-list_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
+			<a class="navbar-brand hidden-sm" href="user-index.aspx" style="padding: 0;"><img src="./hr-recruit-resume-list_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">

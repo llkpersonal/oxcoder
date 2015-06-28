@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin-add-project.aspx" />
     <Content Include="coding-page-handle.aspx" />
     <Content Include="coding-page_files\ace.js" />
     <Content Include="coding-page_files\avalon.js" />
@@ -86,6 +87,7 @@
     <Content Include="hr-info-step3-handle2.aspx" />
     <Content Include="hr-info-step3-info.aspx" />
     <Content Include="hr-info-step3.aspx" />
+    <Content Include="hr-navigation.aspx" />
     <Content Include="hr-new-recruit.aspx" />
     <Content Include="hr-recruit-list.aspx" />
     <Content Include="hr-recruit-resume-list.aspx" />
@@ -93,6 +95,7 @@
     <Content Include="hr-sub-new-recruit-handle.aspx" />
     <Content Include="hr-sub-new-recruit.aspx" />
     <Content Include="hr-submit-new-recruit.aspx" />
+    <Content Include="hr-to-change-pwd-handle.aspx" />
     <Content Include="hr-to-change-pwd.aspx" />
     <Content Include="hr-to-new-info-handle.aspx" />
     <Content Include="hr-to-new-info.aspx" />
@@ -113,6 +116,7 @@
     <Content Include="index_files\wlogo_sm.png" />
     <Content Include="login-handle.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="newproject.aspx" />
     <Content Include="recruit-project-detail_files\BiaoBai.html" />
     <Content Include="recruit-project-detail_files\bootstrap-filestyle%281%29.js" />
     <Content Include="recruit-project-detail_files\bootstrap-filestyle.js" />
@@ -248,6 +252,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-add-project.aspx.cs">
+      <DependentUpon>admin-add-project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-add-project.aspx.designer.cs">
+      <DependentUpon>admin-add-project.aspx</DependentUpon>
+    </Compile>
     <Compile Include="coding-page-handle.aspx.cs">
       <DependentUpon>coding-page-handle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -311,6 +322,13 @@
     <Compile Include="hr-info-step3.aspx.designer.cs">
       <DependentUpon>hr-info-step3.aspx</DependentUpon>
     </Compile>
+    <Compile Include="hr-navigation.aspx.cs">
+      <DependentUpon>hr-navigation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-navigation.aspx.designer.cs">
+      <DependentUpon>hr-navigation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="hr-new-recruit.aspx.cs">
       <DependentUpon>hr-new-recruit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -360,6 +378,13 @@
     <Compile Include="hr-submit-new-recruit.aspx.designer.cs">
       <DependentUpon>hr-submit-new-recruit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="hr-to-change-pwd-handle.aspx.cs">
+      <DependentUpon>hr-to-change-pwd-handle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-to-change-pwd-handle.aspx.designer.cs">
+      <DependentUpon>hr-to-change-pwd-handle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="hr-to-change-pwd.aspx.cs">
       <DependentUpon>hr-to-change-pwd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -401,6 +426,13 @@
     </Compile>
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newproject.aspx.cs">
+      <DependentUpon>newproject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newproject.aspx.designer.cs">
+      <DependentUpon>newproject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register-handle.aspx.cs">
