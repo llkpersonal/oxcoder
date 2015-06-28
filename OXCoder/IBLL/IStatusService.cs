@@ -9,7 +9,7 @@ namespace OXCoder.IBLL
 {
     public interface IStatusService
     {
-        bool AddUserStatus(int uid, string challengeId);
+        bool AddUserStatus(int uid, string challengeId, int language);
 
         bool DelStatus(string statusId);
 
@@ -23,6 +23,8 @@ namespace OXCoder.IBLL
          *          sending 正在判题
          *          finish  完成判题
          */
-        ox_status GetStatus(string status);
+        ox_status GetStatus(int ucid, string status);
+
+        List<ox_status> GetStatusByUcid(int ucid);
     }
 }

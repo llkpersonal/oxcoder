@@ -44,6 +44,7 @@
     <Compile Include="IProjectChallengeService.cs" />
     <Compile Include="IProjectService.cs" />
     <Compile Include="IStatusService.cs" />
+    <Compile Include="IUserChallengeService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

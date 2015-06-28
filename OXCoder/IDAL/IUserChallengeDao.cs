@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using OXCoder.DBModel;
+
 
 namespace OXCoder.IDAL
 {
@@ -14,9 +16,11 @@ namespace OXCoder.IDAL
         /*
          * 修改状态
          */
-        bool UpdateStatus(int userId, int newStatus);
+        bool UpdateStatus(int ucId, int newStatus);
 
-        bool HasUserChallenge(int userId, string challengeId);
+        bool HasUserChallenge(int ucId, string challengeId);
+
+        ox_user_challenge GetUserChallenge(int userId, string challengeId);
 
     }
 }

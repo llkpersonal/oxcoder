@@ -19,5 +19,7 @@ namespace OXCoder.IDAL
         List<ox_status> GetStatus(int ucid);
 
         bool DelStatus(string statusId);
+
+        List<ox_status> GetStatusByUcid(int ucid);
     }
 }

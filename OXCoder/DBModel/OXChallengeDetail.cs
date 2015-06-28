@@ -22,6 +22,13 @@ namespace OXCoder.DBModel
             set { company = value; }
         }
 
+        private int userStatus;
+        public int UserStatus
+        {
+            get { return userStatus; }
+            set { userStatus = value; }
+        }
+
         public OXChallengeDetail(ox_challenge o)
         {
             this.begintime = o.begintime;

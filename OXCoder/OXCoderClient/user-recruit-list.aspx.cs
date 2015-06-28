@@ -14,6 +14,7 @@ namespace OXCoderClient
     {
         protected List<OXCoder.DBModel.OXChallengeDetail> challengeList = null;
         protected string flag = null;
+        protected int[] uucid = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,6 +35,13 @@ namespace OXCoderClient
                 }
                 challengeList = challengeService.GetChallengeListByUser(uid, status, flag);
                 
+                uucid = new int[challengeList.Count];
+                int i=0;
+                IUserChallengeService ucService = new UserChallengeService();
+                foreach(OXCoder.DBModel.OXChallengeDetail c in challengeList)
+                {
+                    uucid[i++] = ucService.GetUserChallenge(uid, c.challengeid).ucid;
+                }
             }
             else
             {

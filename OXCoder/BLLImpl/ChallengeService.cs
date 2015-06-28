@@ -52,6 +52,7 @@ namespace OXCoder.BLLImpl
             IChallengeDao challengeDao = new ChallengeDao();
             IProjectDao projectDao = new ProjectDao();
             ICompanyDao companyDao = new CompanyDao();
+            IUserChallengeDao ucDao = new UserChallengeDao();
             List<ox_challenge> list = challengeDao.GetChallengeListByUser(userId, userchallengeStatus, challengeStatus);
             List<OXChallengeDetail> resList = new List<OXChallengeDetail>();
             foreach (ox_challenge c in list)
@@ -59,6 +60,7 @@ namespace OXCoder.BLLImpl
                 OXChallengeDetail detail = new OXChallengeDetail(c);
                 detail.ProjectList = projectDao.GetProjectList(c.challengeid);
                 detail.Company = companyDao.FindCompanyByUid(c.companyid);
+                detail.UserStatus = Convert.ToInt32(ucDao.GetUserChallenge(userId, c.challengeid).status);
                 resList.Add(detail);
             }
 

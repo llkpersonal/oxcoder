@@ -36,11 +36,11 @@ namespace OXCoder.DALImpl
             return AdList.ToList();
         }
 
-        public ox_project_challenge GetProjectChallengeByChallengeId(string challengeid)
+        public List<ox_project_challenge> GetProjectChallengeByChallengeId(string challengeid)
         {
             OXProjectChallengeDataContext projectChallengeDC = new OXProjectChallengeDataContext();
-            ox_project_challenge projectChallenge = projectChallengeDC.ox_project_challenge.Single(d => d.challengeid == challengeid);
-            return projectChallenge;
+            var query = from pc in projectChallengeDC.ox_project_challenge where pc.challengeid == challengeid select pc;
+            return query.ToList<ox_project_challenge>();
         }
 
         public string GetProjectNameByChallengeId(string challengeid)

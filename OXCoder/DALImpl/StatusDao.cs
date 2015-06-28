@@ -46,5 +46,12 @@ namespace OXCoder.DALImpl
             context.SubmitChanges();
             return true;
         }
+
+        public List<ox_status> GetStatusByUcid(int ucid)
+        {
+            OXStatusDataContext context = new OXStatusDataContext();
+            return (from s in context.ox_status where s.ucid == ucid select s).ToList<ox_status>();
+        }
+
     }
 }

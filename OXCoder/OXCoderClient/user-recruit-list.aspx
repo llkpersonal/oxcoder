@@ -116,7 +116,7 @@
 					</div>
 					
 				</section>
-				<% foreach(OXChallengeDetail c in challengeList) {%>
+				<%int j = 0; foreach (OXChallengeDetail c in challengeList){%>
 				<div class="col-md-3">
 					<section id="Section5">
 						<div class="panel panel-default shadow-effect">
@@ -154,7 +154,7 @@
 									<li>
 										<ul>
 											<% foreach(ox_project p in c.ProjectList) {%>
-												<li><a href="./recruit-project-detail.aspx?pid=<%=p.projectid %>&reid=<%=c.challengeid %>"><%=p.description %></a></li>
+												<li><a href="./recruit-project-detail.aspx?pid=<%=p.projectid %>&reid=<%=c.challengeid %>"><%=p.projectname %></a></li>
 											<%} %>	
 										</ul>
 									</li>
@@ -165,7 +165,15 @@
 									</li><li><i class="icon-calendar"></i> <%=((DateTime)c.begintime).ToShortDateString() %> ~ <%=((DateTime)c.endtime).ToShortDateString() %></li>
 									<li><i class="icon-user"></i> <%=c.codernum %>人已接受挑战</li>
 									
-									<li class="progress-info"><span class="ongoing"><br></span></li>
+									<li class="progress-info">
+                                        <span class="ongoing">
+                                            <%if (c.UserStatus == 1){ %>
+                                            <br>
+                                            <%} else { %>
+                                            <p style="text-align:center; color:green;">已完成挑战</p>
+                                            <%} %>
+                                        </span>
+									</li>
 									
 								</ul>
 
@@ -175,9 +183,12 @@
                                 <%if ("history".Equals(flag)) {%>
                                 <a href="#" class="btn btn-new2">已经过期</a>
                                 <%} else {%>
+                                <%if (c.UserStatus == 1){ %>
                                 <a href="./user-challenge-cover.aspx?reid=<%=c.challengeid %>"><button class="btn btn-new1">开始挑战</button></a>
 								<a href="./user-cancel-challenge.aspx?reid=<%=c.challengeid %>" class="btn btn-new2">放弃</a>
-                                <%} %>
+                                <%} else {%>
+                                <a href="./user-recruit-result.aspx?uucid=<%=uucid[j++] %>"><button class="btn">查看结果</button></a>
+                                <%}} %>
 																		
 							</div>
 							<!-- /.panel-footer -->

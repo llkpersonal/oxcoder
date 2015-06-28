@@ -18,7 +18,7 @@ namespace OXCoder.BLLImpl
             return list;
         }
 
-        public ox_project_challenge GetProjectChallengeByChallengeId(string challengeid)
+        public List<ox_project_challenge> GetProjectChallengeByChallengeId(string challengeid)
         {
             IProjectChallengeDao projectChallengeDao = new ProjectChallengeDao();
             return projectChallengeDao.GetProjectChallengeByChallengeId(challengeid);

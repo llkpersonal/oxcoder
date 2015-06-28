@@ -40,12 +40,12 @@ namespace OXCoder.DALImpl
             }
         }
 
-        public bool UpdateStatus(int userId, int newStatus)
+        public bool UpdateStatus(int ucId, int newStatus)
         {
             try
             {
                 OXUserChallengeDataContext context = new OXUserChallengeDataContext();
-                ox_user_challenge userChallenge = context.ox_user_challenge.Single(d => d.userid == userId);
+                ox_user_challenge userChallenge = context.ox_user_challenge.Single(d => d.ucid == ucId);
                 userChallenge.status = newStatus;
                 context.SubmitChanges();
                 return true;
@@ -68,6 +68,15 @@ namespace OXCoder.DALImpl
             {
                 return false;
             }    
+        }
+
+
+        public ox_user_challenge GetUserChallenge(int userId, string challengeId)
+        {
+            OXUserChallengeDataContext context = new OXUserChallengeDataContext();
+            //var query = from uc in context.ox_user_challenge where uc.userid == userId && uc.challengeid == challengeId select uc;
+            //List<ox_user_challenge> list = query.ToList();
+            return context.ox_user_challenge.Single(uc => uc.userid == userId  && uc.challengeid == challengeId);
         }
     }
 }

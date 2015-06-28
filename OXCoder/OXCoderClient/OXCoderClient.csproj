@@ -58,6 +58,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="coding-page-handle.aspx" />
+    <Content Include="coding-page_files\ace.js" />
+    <Content Include="coding-page_files\avalon.js" />
+    <Content Include="coding-page_files\bootstrap.js" />
+    <Content Include="coding-page_files\bootstrap.min.js" />
+    <Content Include="coding-page_files\codingConstant.js" />
+    <Content Include="coding-page_files\codingProjectInfo.js" />
+    <Content Include="coding-page_files\codingStatistics.js" />
+    <Content Include="coding-page_files\codingUI.js" />
+    <Content Include="coding-page_files\ext-language_tools.js" />
+    <Content Include="coding-page_files\font-awesome.min.css" />
+    <Content Include="coding-page_files\jquery-1.11.1.min.js" />
+    <Content Include="coding-page_files\jquery-ui-1.10.0.custom.css" />
+    <Content Include="coding-page_files\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="coding-page_files\max.css" />
+    <Content Include="coding-page_files\mode-java.js" />
+    <Content Include="coding-page_files\theme-idle_fingers.js" />
+    <Content Include="coding-page_files\tourist.css" />
+    <Content Include="coding-page_files\video-js.css" />
+    <Content Include="coding-page_files\video.js" />
+    <Content Include="coding-page_files\waiting.gif" />
     <Content Include="enterprise-info.aspx" />
     <Content Include="coding-page.aspx" />
     <Content Include="HomePage.aspx" />
@@ -175,6 +195,7 @@
     <Content Include="user-recruit-list_files\style_new.css" />
     <Content Include="user-recruit-list_files\summernote.min.js" />
     <Content Include="user-recruit-list_files\wlogo_sm.png" />
+    <Content Include="user-recruit-result.aspx" />
     <Content Include="user-resume-operation.aspx" />
     <Content Include="user-resume-operation_files\bootstrap-filestyle.js" />
     <Content Include="user-resume-operation_files\bootstrap-select.min.js" />
@@ -479,6 +500,13 @@
     </Compile>
     <Compile Include="user-recruit-list.aspx.designer.cs">
       <DependentUpon>user-recruit-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-recruit-result.aspx.cs">
+      <DependentUpon>user-recruit-result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-recruit-result.aspx.designer.cs">
+      <DependentUpon>user-recruit-result.aspx</DependentUpon>
     </Compile>
     <Compile Include="user-resume-operation.aspx.cs">
       <DependentUpon>user-resume-operation.aspx</DependentUpon>
