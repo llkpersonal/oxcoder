@@ -12,13 +12,14 @@ namespace OXCoder.DALImpl
     {
 
         //public IQueryable<ResultList> AdList;
-        public List<ResultList> GetProjectChallengeByUid(int uid)
+        public List<ResultList> GetProjectChallengeByUidAndStatus(int uid,int status)
         {
             OXProjectChallengeDataContext projectChallengeDC = new OXProjectChallengeDataContext();
             OXChallengeDataContext challengeDC = new OXChallengeDataContext();
             OXProjectDataContext projectDC = new OXProjectDataContext();
             //string aa = GetProjectNameByChallengeId("35ed938b-9d21-4943-92a3-4a5fdd5a2fe0");
-            var AdList = from b in challengeDC.ox_challenge where b.companyid == uid
+            var AdList = from b in challengeDC.ox_challenge where b.companyid == uid && b.status == status
+                                              orderby b.begintime descending
                                               select new ResultList
                                               {
                                                   challengeid=b.challengeid,
@@ -33,6 +34,14 @@ namespace OXCoder.DALImpl
                 //projectChallengeDC.ox_project_challenge.Where(d => d.companyid == uid).ToList();
             return AdList.ToList();
         }
+
+        public ox_project_challenge GetProjectChallengeByChallengeId(string challengeid)
+        {
+            OXProjectChallengeDataContext projectChallengeDC = new OXProjectChallengeDataContext();
+            ox_project_challenge projectChallenge = projectChallengeDC.ox_project_challenge.Single(d => d.challengeid == challengeid);
+            return projectChallenge;
+        }
+
         public string GetProjectNameByChallengeId(string challengeid)
         {
             OXProjectChallengeDataContext projectChallengeDC = new OXProjectChallengeDataContext();

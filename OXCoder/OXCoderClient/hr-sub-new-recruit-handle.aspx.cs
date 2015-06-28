@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using OXCoder.IBLL;
+using OXCoder.BLLImpl;
+using OXCoder.DBModel;
 
 namespace OXCoderClient
 {
@@ -12,6 +15,22 @@ namespace OXCoderClient
         protected void Page_Load(object sender, EventArgs e)
         {
             HttpCookie tagCookie = Request.Cookies["project"];
+            if (Request.Params["flag"] == "random")
+            {
+                IProjectService projectService = new ProjectService();
+                string type = Request.Cookies["type"].Value;
+                int flag = type.IndexOf("(");
+                string shorttype = type;
+                if (flag > 0)
+                    shorttype = type.Substring(0, flag);
+                List<ox_project> list = projectService.GetProject(shorttype);
+                int cnt = list.Count;
+                Random rand = new Random();
+                int num = rand.Next(0, cnt - 3);
+                HttpCookie cookie = new HttpCookie("project");
+                cookie.Value = HttpUtility.UrlEncode(list[num].projectid + ";" + list[num + 1].projectid + ";" + list[num + 2].projectid);
+                Response.Cookies.Add(cookie);
+            }
             if (Request.Params["flag"] == "new")
             {
                 if (tagCookie != null)

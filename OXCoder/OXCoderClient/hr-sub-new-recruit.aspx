@@ -116,7 +116,7 @@
 												<div class="alert alert-info" style="text-align: center" role="alert">
 													还没有选择测试题目
 													
-														<a href="http://www.oxcoder.com/hr-set-challenge.action?relevel=1&flag=random" style="margin-left: 20px;">智能生成</a>
+														<a href="hr-sub-new-recruit-handle.aspx?flag=random" style="margin-left: 20px;">智能生成</a>
 													
 												</div>
 											
@@ -370,6 +370,10 @@
     if (($(document.body).height() + 50) < $(window).height()) {
         $(".afooter").addClass("navbar-fixed-bottom");
     };
+
+    function submit_form() {
+        location.href = "hr-submit-new-recruit.aspx";
+    }
 </script>
 
 

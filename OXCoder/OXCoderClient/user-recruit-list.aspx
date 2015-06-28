@@ -60,10 +60,8 @@
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
-				<li><a href="./user-index.aspx">挑战首页</a></li>
+                <li><a href="./user-index.aspx">挑战首页</a></li>
 				<li class="active"><a href="./user-recruit-list.aspx">我的挑战</a></li>
-				
-				
 				<li><a href="./user-resume.aspx">个人中心</a></li>
 			</ul>
 			

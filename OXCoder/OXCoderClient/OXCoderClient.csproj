@@ -57,16 +57,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="enterprise-info.aspx" />
     <Content Include="coding-page.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="hr-header.aspx" />
     <Content Include="hr-info-step3-handle.aspx" />
     <Content Include="hr-info-step3-handle2.aspx" />
     <Content Include="hr-info-step3-info.aspx" />
     <Content Include="hr-info-step3.aspx" />
     <Content Include="hr-new-recruit.aspx" />
     <Content Include="hr-recruit-list.aspx" />
+    <Content Include="hr-recruit-resume-list.aspx" />
+    <Content Include="hr-recruit-switch.aspx" />
     <Content Include="hr-sub-new-recruit-handle.aspx" />
     <Content Include="hr-sub-new-recruit.aspx" />
+    <Content Include="hr-submit-new-recruit.aspx" />
     <Content Include="hr-to-new-info-handle.aspx" />
     <Content Include="hr-to-new-info.aspx" />
     <Content Include="index.aspx" />
@@ -220,6 +225,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="enterprise-info.aspx.cs">
+      <DependentUpon>enterprise-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterprise-info.aspx.designer.cs">
+      <DependentUpon>enterprise-info.aspx</DependentUpon>
+    </Compile>
     <Compile Include="coding-page.aspx.cs">
       <DependentUpon>coding-page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,6 +245,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-header.aspx.cs">
+      <DependentUpon>hr-header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-header.aspx.designer.cs">
+      <DependentUpon>hr-header.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-info-step3-handle.aspx.cs">
       <DependentUpon>hr-info-step3-handle.aspx</DependentUpon>
@@ -276,6 +295,20 @@
     <Compile Include="hr-recruit-list.aspx.designer.cs">
       <DependentUpon>hr-recruit-list.aspx</DependentUpon>
     </Compile>
+    <Compile Include="hr-recruit-resume-list.aspx.cs">
+      <DependentUpon>hr-recruit-resume-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-recruit-resume-list.aspx.designer.cs">
+      <DependentUpon>hr-recruit-resume-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-recruit-switch.aspx.cs">
+      <DependentUpon>hr-recruit-switch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-recruit-switch.aspx.designer.cs">
+      <DependentUpon>hr-recruit-switch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="hr-sub-new-recruit-handle.aspx.cs">
       <DependentUpon>hr-sub-new-recruit-handle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +322,13 @@
     </Compile>
     <Compile Include="hr-sub-new-recruit.aspx.designer.cs">
       <DependentUpon>hr-sub-new-recruit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr-submit-new-recruit.aspx.cs">
+      <DependentUpon>hr-submit-new-recruit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-submit-new-recruit.aspx.designer.cs">
+      <DependentUpon>hr-submit-new-recruit.aspx</DependentUpon>
     </Compile>
     <Compile Include="hr-to-new-info-handle.aspx.cs">
       <DependentUpon>hr-to-new-info-handle.aspx</DependentUpon>
