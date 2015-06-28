@@ -57,7 +57,7 @@
 			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/index.htm" style="padding: 0;"><img src="./hr-to-change-pwd_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
+			<a class="navbar-brand hidden-sm" href="user-index.aspx" style="padding: 0;"><img src="./hr-to-change-pwd_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
@@ -81,7 +81,7 @@
 			<div class="col-md-6 col-md-push-3 col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2">
 				<div id="content">
 					<div class="row">
-						<form action="http://www.oxcoder.com/hr-change-pwd.action" class="form-horizontal bv-form" enctype="multipart/form-data" method="post" id="defaultForm" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+						<form action="hr-to-change-pwd-handle.aspx" class="form-horizontal bv-form" enctype="multipart/form-data" method="post" id="defaultForm" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 							<div class="form-group">
 								<label for="exampleInputEmail">旧密码</label> <input name="old" type="password" class="form-control" id="exampleInputEmail" placeholder="请输入旧密码" data-bv-field="old">
 							<small class="help-block" data-bv-validator="notEmpty" data-bv-for="old" data-bv-result="NOT_VALIDATED" style="display: none;">请输入旧密码</small></div>

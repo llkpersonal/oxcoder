@@ -16,6 +16,8 @@ namespace OXCoderClient
         protected string cname = string.Empty;
         protected string challengeHtml = string.Empty;
         protected string flag = string.Empty;
+        protected string clogo = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -39,7 +41,9 @@ namespace OXCoderClient
             //读取公司名
             int uid = Convert.ToInt32(Session["uid"]);
             ICompanyService companyService = new CompanyService();
-            cname = companyService.GetCompanyByUid(uid).companyname;
+            ox_company company = companyService.GetCompanyByUid(uid);
+            cname = company.companyname;
+            clogo = "logo/"+company.logo;
             title = "猿圈 挑战管理";
 
             IProjectChallengeService projectChallengeService = new ProjectChallengeService();

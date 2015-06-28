@@ -98,8 +98,7 @@
 
     <!-- 引入header -->
 
-
-
+    <%if(role.Equals(0)) {%>
     <div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
         <div class="container">
             <div class="navbar-header">
@@ -131,6 +130,9 @@
             </div>
         </div>
     </div>
+    <%} else{%>
+    <!--#include file="hr-navigation.aspx"-->
+    <%} %>
     <script type="text/javascript">
         function validateSession() {
             var k = 1
@@ -160,12 +162,12 @@
             </div>
         </div>
 
-        <a class="left carousel-control" href="http://www.oxcoder.com/index.htm#myCarousel" role="button" data-slide="prev">
+        <a class="left carousel-control" href="user-index.aspx#myCarousel" role="button" data-slide="prev">
             <!--
 <span class="glyphicon glyphicon-chevron-left"></span>
         <span class="sr-only">Previous</span>
 -->
-        </a><a class="right carousel-control" href="http://www.oxcoder.com/index.htm#myCarousel" role="button" data-slide="next">
+        </a><a class="right carousel-control" href="user-index.aspx#myCarousel" role="button" data-slide="next">
             <!--
         <span class="glyphicon glyphicon-chevron-right"></span>
         <span class="sr-only">Next</span>
