@@ -318,7 +318,7 @@
                                                     <li>
                                                         <ul>
                                                             <% foreach(ox_project p in c.ProjectList) {%>
-												                <li><a href="./recruit-project-detail.aspx?pid=<%=p.projectid %>&reid=<%=c.challengeid %>"><%=p.description %></a></li>
+												                <li><a href="./recruit-project-detail.aspx?pid=<%=p.projectid %>&reid=<%=c.challengeid %>"><%=p.projectname %></a></li>
 											                <%} %>
                                                         </ul>
                                                     </li>

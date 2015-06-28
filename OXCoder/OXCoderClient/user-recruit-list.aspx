@@ -56,14 +56,12 @@
 			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="./index.html" style="padding: 0;"><img src="./user-recruit-list_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
+			<a class="navbar-brand hidden-sm" href="./index.aspx" style="padding: 0;"><img src="./user-recruit-list_files/wlogo_sm.png" style="max-height: 35px; margin: 7px;"></a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
-				<li><a href="./index.aspx">首页</a></li>
-				<li class="active"><a href="./user-recruit-list.aspx">挑战</a></li>
-				
-				
+                <li><a href="./user-index.aspx">挑战首页</a></li>
+				<li class="active"><a href="./user-recruit-list.aspx">我的挑战</a></li>
 				<li><a href="./user-resume.aspx">个人中心</a></li>
 			</ul>
 			

@@ -14,8 +14,8 @@ namespace OXCoderClient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (null != Session)
+
+            if (null != Session && null != Session["uid"])
             {
                 Int32 uid = Convert.ToInt32(Session["uid"]);
                 String challengeId = Request.Params["reid"];
@@ -43,7 +43,7 @@ namespace OXCoderClient
             }
             else
             {
-                Response.Write("signin.aspx");
+                Response.Redirect("signin.aspx");
             }
         }
     }
