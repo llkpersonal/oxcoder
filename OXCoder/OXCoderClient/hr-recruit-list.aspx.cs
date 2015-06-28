@@ -12,6 +12,7 @@ namespace OXCoderClient
 {
     public partial class hr_recruit_list : System.Web.UI.Page
     {
+        protected string title = string.Empty;
         protected string cname = string.Empty;
         protected string challengeHtml = string.Empty;
         protected string flag = string.Empty;
@@ -39,6 +40,7 @@ namespace OXCoderClient
             int uid = Convert.ToInt32(Session["uid"]);
             ICompanyService companyService = new CompanyService();
             cname = companyService.GetCompanyByUid(uid).companyname;
+            title = "猿圈 挑战管理";
 
             IProjectChallengeService projectChallengeService = new ProjectChallengeService();
             List<ResultList> lists = projectChallengeService.GetProjectChallengeByUidAndStatus(uid,status);

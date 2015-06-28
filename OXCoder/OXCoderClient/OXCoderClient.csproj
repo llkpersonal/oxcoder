@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -60,6 +60,7 @@
     <Content Include="enterprise-info.aspx" />
     <Content Include="coding-page.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="hr-header.aspx" />
     <Content Include="hr-info-step3-handle.aspx" />
     <Content Include="hr-info-step3-handle2.aspx" />
     <Content Include="hr-info-step3-info.aspx" />
@@ -245,6 +246,13 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="hr-header.aspx.cs">
+      <DependentUpon>hr-header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr-header.aspx.designer.cs">
+      <DependentUpon>hr-header.aspx</DependentUpon>
+    </Compile>
     <Compile Include="hr-info-step3-handle.aspx.cs">
       <DependentUpon>hr-info-step3-handle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,6 +325,7 @@
     </Compile>
     <Compile Include="hr-submit-new-recruit.aspx.cs">
       <DependentUpon>hr-submit-new-recruit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="hr-submit-new-recruit.aspx.designer.cs">
       <DependentUpon>hr-submit-new-recruit.aspx</DependentUpon>
