@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hr-sub-new-recruit.aspx.cs" Inherits="OXCoderClient.hr_sub_new_recruit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hr-sub-new-recruit.aspx.cs" Inherits="OXCoderClient.hr_sub_new_recruit" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0048)http://www.oxcoder.com/hr-sub-new-recruit.action -->
