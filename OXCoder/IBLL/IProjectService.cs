@@ -11,5 +11,7 @@ namespace OXCoder.IBLL
         List<ox_project> GetProject(string type);
 
         ox_project GetProjectDetail(string projectId);
+
+        void AddProject(string projectname, string template, string description, int difficulty, string tags, string type);
     }
 }

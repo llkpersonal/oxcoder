@@ -34,3 +34,7 @@ E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\bin\Debug\DALImpl.dll
 E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\bin\Debug\IDAL.dll
 E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\bin\Debug\DALImpl.pdb
 E:\course\NET架构与应用\project\oxcoder\OXCoder\IBLL\bin\Debug\IDAL.pdb
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\DALImpl.dll
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\IDAL.dll
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\DALImpl.pdb
+Y:\code\csharp\oxcoder\OXCoder\IBLL\bin\Debug\IDAL.pdb

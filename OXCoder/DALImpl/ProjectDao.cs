@@ -46,5 +46,20 @@ namespace OXCoder.DALImpl
             List<ox_project> list = projectDC.ox_project.Where(d => d.type == type).ToList();
             return list;
         }
+
+        public string AddProject(string projectname,string description,int difficulty,string tags,string type)
+        {
+            OXProjectDataContext pdc = new OXProjectDataContext();
+            ox_project project = new ox_project();
+            project.projectname = projectname;
+            project.description = description;
+            project.difficulty = difficulty;
+            project.projectid = Guid.NewGuid().ToString();
+            project.tags = tags;
+            project.type = type;
+            pdc.ox_project.InsertOnSubmit(project);
+            pdc.SubmitChanges();
+            return project.projectid;
+        }
     }
 }
