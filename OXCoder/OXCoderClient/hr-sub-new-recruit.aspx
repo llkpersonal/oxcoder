@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hr-sub-new-recruit.aspx.cs" Inherits="OXCoderClient.hr_sub_new_recruit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hr-sub-new-recruit.aspx.cs" Inherits="OXCoderClient.hr_sub_new_recruit" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0048)http://www.oxcoder.com/hr-sub-new-recruit.action -->
@@ -116,7 +116,7 @@
 												<div class="alert alert-info" style="text-align: center" role="alert">
 													还没有选择测试题目
 													
-														<a href="http://www.oxcoder.com/hr-sub-new-recruit-handle.aspx?flag=random" style="margin-left: 20px;">智能生成</a>
+														<a href="hr-sub-new-recruit-handle.aspx?flag=random" style="margin-left: 20px;">智能生成</a>
 													
 												</div>
 											
@@ -371,9 +371,8 @@
         $(".afooter").addClass("navbar-fixed-bottom");
     };
 
-    function submit_form()
-    {
-        location.href="hr-submit-new-recruit.aspx";
+    function submit_form() {
+        location.href = "hr-submit-new-recruit.aspx";
     }
 </script>
 
