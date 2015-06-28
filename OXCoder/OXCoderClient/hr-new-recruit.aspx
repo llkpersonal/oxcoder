@@ -87,7 +87,7 @@
 			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/index.htm" style="padding: 0;"><img src="./hr-new-recruit_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
+			<a class="navbar-brand hidden-sm" href="user-index.aspx" style="padding: 0;"><img src="./hr-new-recruit_files/wlogo_sm.png" style="max-height: 35px;margin:7px;"></a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
@@ -276,7 +276,7 @@
 		<div class="panel-heading">
 			<div class="panel-title">
 				<div class="media">
-					<a class="pull-left"> <img src="./hr-new-recruit_files/1082.jpg" class="media-object">
+					<a class="pull-left"> <img src="<%=clogo %>" class="media-object">
 					</a>
 					<div class="media-body">
 						<h4 class="media-heading">

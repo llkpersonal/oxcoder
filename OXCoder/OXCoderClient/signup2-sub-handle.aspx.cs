@@ -18,7 +18,8 @@ namespace OXCoderClient
             string briefname = Request.Params["cnameshort"];
             HttpFileCollection files = Request.Files;
             HttpPostedFile file = files[0];
-            file.SaveAs("D:\\logo" + uid + ".jpg");
+            string CurrentDirectory = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
+            file.SaveAs(CurrentDirectory+"\\logo\\logo" + uid + ".jpg");
             string website = Request.Params["website"];
             string province = Request.Form["prov"];
             string city = Request.Form["city"];

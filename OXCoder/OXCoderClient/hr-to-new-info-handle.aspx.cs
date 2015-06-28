@@ -22,7 +22,7 @@ namespace OXCoderClient
             ICompanyService companyService = new CompanyService();
             IUserService userService = new UserService();
             string email = Session["user"].ToString();
-            if (userService.GetUser(email).role == 2)
+            if (userService.GetUser(email).role == 1)
             {
                 companyService.AddNewCompany(Convert.ToInt32(Session["uid"]), cname, telephone, Session["uid"] + ".jpg");
             }
