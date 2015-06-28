@@ -119,9 +119,9 @@
 <body style="position: relative" avalonctrl="codingModel">
 	<div class="navbar navbar-coding navbar-fixed-top" style="text-align: center; border-radius: 0; -webkit-border-radius: 0;">
 		<div class="navbar-header">
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/user-recruit-list.aspx" style="font-size: 13px;"><i class="icon-chevron-left" style="padding-right: 5px;"></i>返回</a>
+			<a class="navbar-brand hidden-sm" href="./user-recruit-list.aspx" style="font-size: 13px;"><i class="icon-chevron-left" style="padding-right: 5px;"></i>返回</a>
 		</div>
-		<a href="http://www.oxcoder.com/coding-page.aspx?reid=1531#" style="font-size: 20px; line-height: 50px;">oxcoder</a>
+		<a href="#" style="font-size: 20px; line-height: 50px;">oxcoder</a>
 		<div class="top-bar-new" style="width: 260px; cursor: default;">
 
 			
@@ -157,7 +157,7 @@
 				<span>手势缩放文本</span> &nbsp;<small>Android项目</small>
 			</h3>
 		</div>
-		<div class="step-header page-header" style="padding: 15px; margin: 0;">
+		<div class="step-header page-header" style="padding: 15px; margin: 0; display:none;">
 			<h4 id="clock">
 				<i class="icon-clock-o" style="margin-right: 10px;"></i>倒计时：<font id="count-down" style="color: rgb(0, 0, 0);">386</font>
 			</h4>

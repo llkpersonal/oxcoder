@@ -2,3 +2,5 @@
 OXCoder/*/obj/Debug
 OXCoder/*/bin/Debug
 *.cache
+*.dll
+*.pdb

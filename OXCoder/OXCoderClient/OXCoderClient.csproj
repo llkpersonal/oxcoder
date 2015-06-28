@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="coding-page-handle.aspx" />
     <Content Include="enterprise-info.aspx" />
     <Content Include="coding-page.aspx" />
     <Content Include="HomePage.aspx" />
@@ -225,6 +226,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="coding-page-handle.aspx.cs">
+      <DependentUpon>coding-page-handle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coding-page-handle.aspx.designer.cs">
+      <DependentUpon>coding-page-handle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="enterprise-info.aspx.cs">
       <DependentUpon>enterprise-info.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

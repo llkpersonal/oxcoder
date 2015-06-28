@@ -184,10 +184,9 @@
 									</section>
 								</div>
 								
-								
 									<div style="text-align: center;" class="col-md-12">
 									
-									 <a id="btn-run-not-sub" href="./coding-page.action?reid=1001"><button class="btn btn-new1">开始挑战</button></a>
+									 <a id="btn-run-not-sub" href="./coding-page.aspx?reid=<%=challengeDetail.challengeid %>"><button class="btn btn-new1">开始挑战</button></a>
 									
 									
 										 

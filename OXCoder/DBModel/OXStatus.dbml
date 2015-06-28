@@ -2,14 +2,16 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=172.31.34.190;Initial Catalog=oxcoderdb;User ID=oxcoder" SettingsObjectName="OXCoder.DBModel.Properties.Settings" SettingsPropertyName="oxcoderdbConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ox_status" Member="ox_status">
     <Type Name="ox_status">
-      <Column Name="statusid" Type="System.String" DbType="NChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="projectid" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="statusid" Type="System.String" DbType="NChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="projectid" Type="System.String" DbType="NChar(36)" CanBeNull="true" />
       <Column Name="status" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="sourcecode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="submittime" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="submittime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="time" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="memory" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ucid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="language" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

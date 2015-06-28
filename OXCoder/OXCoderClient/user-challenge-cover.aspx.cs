@@ -16,8 +16,24 @@ namespace OXCoderClient
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            IChallengeService challengeService = new ChallengeService();
-            challengeDetail = challengeService.GetChallengeById(Request.Params["reid"]);
+            if (!IsPostBack)
+            {
+                if (null != Session && null != Session["uid"])
+                {
+                    string reid = Request.Params["reid"];
+                    if (null == reid)
+                    {
+                        IChallengeService challengeService = new ChallengeService();
+                        challengeDetail = challengeService.GetChallengeById(reid);
+                    }
+                    else
+                    {
+                        Response.Write("参数错误！");
+                    }
+                    
+                }
+            }
+            
         }
     }
 }

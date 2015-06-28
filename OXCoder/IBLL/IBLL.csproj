@@ -43,13 +43,22 @@
     <Compile Include="ICompanyService.cs" />
     <Compile Include="IProjectChallengeService.cs" />
     <Compile Include="IProjectService.cs" />
+    <Compile Include="IStatusService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DALImpl\DALImpl.csproj">
+      <Project>{0881cc30-6e88-46b9-9ddc-495ed1571c27}</Project>
+      <Name>DALImpl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DBModel\DBModel.csproj">
       <Project>{0b901116-c4b2-4270-aa8f-2c020d032f52}</Project>
       <Name>DBModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{a4e28db2-fb4c-4661-9f46-59a03756ab92}</Project>
+      <Name>IDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
