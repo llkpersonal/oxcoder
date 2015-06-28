@@ -40,7 +40,7 @@ namespace OXCoderClient
             challengename = challenge.challengename;
 
             projectname = projectChallengeService.GetThreeProjectNameByChallengeId(challengeid);
-
+            acceptnum = Convert.ToInt32(challenge.codernum);
             flag = Request.Params["flag"];
 
         }

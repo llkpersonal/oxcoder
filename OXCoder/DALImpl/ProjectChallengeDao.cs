@@ -29,7 +29,8 @@ namespace OXCoder.DALImpl
                                                   end = (DateTime)b.endtime,
                                                   challengelevel=Convert.ToInt32(b.challengelevel),
                                                   salary=b.salary,
-                                                  projectname = GetProjectNameByChallengeId(b.challengeid)
+                                                  projectname = GetProjectNameByChallengeId(b.challengeid),
+                                                  codernum = Convert.ToInt32(b.codernum)
                                               };  
                 //projectChallengeDC.ox_project_challenge.Where(d => d.companyid == uid).ToList();
             return AdList.ToList();

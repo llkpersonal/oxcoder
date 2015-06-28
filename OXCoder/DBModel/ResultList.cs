@@ -17,6 +17,6 @@ namespace OXCoder.DBModel
         public int challengelevel;
         public string salary;
         public string projectname;
-
+        public int codernum;
     }
 }

@@ -14,13 +14,15 @@ namespace OXCoderClient
     {
         protected string cname = string.Empty;
         protected string tagsHtml = "";
-
+        protected int status = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             ICompanyService companyService = new CompanyService();
             int uid = Convert.ToInt32(Session["uid"]);
             ox_company company = companyService.GetCompanyByUid(uid);
             cname = company.companyname;
+            IUserService userService = new UserService();
+            status = userService.GetUser(Session["User"].ToString()).role;
             HttpCookie tagCookie = Request.Cookies["tags"];
             if (tagCookie == null) return;
             string tags = HttpUtility.UrlDecode(tagCookie.Value);

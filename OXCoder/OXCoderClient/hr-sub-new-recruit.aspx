@@ -63,16 +63,7 @@
 				<li class="active"><a href="http://www.oxcoder.com/hr-recruit-list.htm">挑战管理</a></li>
 				<li><a href="http://www.oxcoder.com/recommend-user.htm">人才推荐</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				
-				<li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><%=cname %></span> <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.oxcoder.com/hr-payment-info.htm">账户余额</a></li>
-						<li><a href="http://www.oxcoder.com/enterprise-info.htm">企业信息</a></li>
-						<li><a href="http://www.oxcoder.com/hr-to-change-pwd.htm">修改密码</a></li>
-						<li><a href="http://www.oxcoder.com/logout.htm">注销</a></li>
-					</ul></li>
-			</ul>
+			<!--#include file="hr-header.aspx"-->
 		</div>
 	</div>
 </div>
@@ -244,7 +235,7 @@
 			</div>
 			<div class="stat-block stat-success">
 				<div class="icon">
-					<b class="icon-cover"></b> <i class="fa fa-bar-chart-o"></i>
+					<b class="icon-cover"></b> <i class="icon-bar-chart-o"></i>
 				</div>
 				<div class="details">
 					<div class="number">
@@ -255,7 +246,7 @@
 			</div>
 			<div class="stat-block stat-primary">
 				<div class="icon">
-					<b class="icon-cover"></b> <i class="fa fa-tachometer"></i>
+					<b class="icon-cover"></b> <i class="icon-tachometer"></i>
 				</div>
 				<div class="details">
 					<div class="number">
@@ -273,7 +264,7 @@
 							<!-- 									<div class="panel-body"> -->
 							<!-- 										<div class="stat-block stat-danger"> -->
 							<!-- 											<div class="icon"> -->
-							<!-- 												<b class="icon-cover"></b> <i class="fa fa-bell"></i> -->
+							<!-- 												<b class="icon-cover"></b> <i class="icon-bell"></i> -->
 							<!-- 											</div> -->
 							<!-- 											<div class="details"> -->
 							<!-- 												<div class="number"> -->
@@ -284,7 +275,7 @@
 							<!-- 										</div> -->
 							<!-- 										<div class="stat-block stat-success"> -->
 							<!-- 											<div class="icon"> -->
-							<!-- 												<b class="icon-cover"></b> <i class="fa fa-bar-chart-o"></i> -->
+							<!-- 												<b class="icon-cover"></b> <i class="icon-bar-chart-o"></i> -->
 							<!-- 											</div> -->
 							<!-- 											<div class="details"> -->
 							<!-- 												<div class="number"> -->
@@ -295,7 +286,7 @@
 							<!-- 										</div> -->
 							<!-- 										<div class="stat-block stat-primary"> -->
 							<!-- 											<div class="icon"> -->
-							<!-- 												<b class="icon-cover"></b> <i class="fa fa-tachometer"></i> -->
+							<!-- 												<b class="icon-cover"></b> <i class="icon-tachometer"></i> -->
 							<!-- 											</div> -->
 							<!-- 											<div class="details"> -->
 							<!-- 												<div class="number"> -->
