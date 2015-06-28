@@ -132,8 +132,6 @@
     <Content Include="test.aspx" />
     <Content Include="user-cancel-challenge.aspx" />
     <Content Include="user-challenge-cover.aspx" />
-<<<<<<< HEAD
-=======
     <Content Include="user-challenge-cover_files\bootstrap-filestyle.js" />
     <Content Include="user-challenge-cover_files\bootstrap-select.min.js" />
     <Content Include="user-challenge-cover_files\bootstrap-switch.min.js" />
@@ -148,7 +146,6 @@
     <Content Include="user-challenge-cover_files\summernote.min.js" />
     <Content Include="user-challenge-cover_files\webcam.js" />
     <Content Include="user-challenge-cover_files\wlogo_sm.png" />
->>>>>>> 6d9a1c96b5e0d6ff12b906dcf0a35879782ba02e
     <Content Include="user-choose-challenge.aspx" />
     <Content Include="user-index-handle.aspx" />
     <Content Include="user-index.aspx" />
