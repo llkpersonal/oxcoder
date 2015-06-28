@@ -11,7 +11,10 @@ namespace OXCoderClient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Convert.ToInt32(Session["uid"]) != 15)
+            {
+                Response.Write("没有权限！");
+            }
         }
     }
 }
